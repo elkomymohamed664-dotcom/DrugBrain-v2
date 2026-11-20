@@ -778,6 +778,83 @@ main{position:relative;z-index:1}
 .section-head,.checker-grid,.scenarios,.mini-cast,.result-section{position:relative;z-index:2}
 .pill{opacity:.4}
 
+
+/* ===== v14 · phone: plants visible on the first screen, page stops being a marathon ===== */
+.page{overflow-x:clip}
+.hero-beams{inset:0}
+
+@media(max-width:860px){
+ .hero{padding-block:26px 20px;gap:14px}
+ .hero h1{font-size:38px;line-height:1.34;margin-block:11px 10px;letter-spacing:-.8px}
+ .hero-description{font-size:13px;line-height:1.8}
+ .hero-actions{margin-top:16px}
+ .hero-note{margin-top:11px;font-size:10px}
+ .botanical-scene{max-width:360px;margin:8px auto 0}
+ .herbarium{padding-bottom:6px}
+ .specimen{height:172px}
+ .specimen.middle{height:200px}
+ .specimen figcaption{line-height:30px;font-size:10px}
+ .specimen img{height:calc(100% - 30px)}
+ .hero-person{margin-bottom:9px;padding:6px 12px 6px 7px;gap:9px}
+ .hero-person .hp-frame{width:40px;height:40px}
+ .hp-bubble{max-width:170px;font-size:10px}
+ .scene-badge{margin-top:8px;font-size:9.5px;padding:5px 10px}
+ .hero-trust{padding-block:12px}
+ .hero-trust .trust-item{min-height:48px;padding:9px 6px}
+ .hero-trust .trust-num{font-size:18px}
+ .cast-portrait{aspect-ratio:5/4}
+ .cast-card:last-child .cast-portrait{aspect-ratio:5/4}
+ .page-nav{padding:4px 0 30px}
+}
+
+@media(max-width:640px){
+ .hero{padding-block:18px 13px;gap:0}
+ .hero h1{font-size:31px;line-height:1.3;margin-block:8px 7px;letter-spacing:-.5px}
+ .hero-description{font-size:12.5px;line-height:1.75}
+ .hero-actions{margin-top:13px;gap:6px}
+ .hero-actions .btn{padding:9px 13px;font-size:11.5px}
+ .hero-note{font-size:9.5px;margin-top:9px}
+ .scroll-cue{display:none}
+ .botanical-scene{max-width:300px;margin:5px auto 0}
+ .herbarium{max-width:100%;gap:7px;padding-bottom:6px}
+ .specimen{height:150px;width:32%}
+ .specimen.middle{height:174px}
+ .specimen figcaption{line-height:26px;font-size:9px;letter-spacing:.2px}
+ .specimen img{height:calc(100% - 26px)}
+ .specimen .specimen-no{display:none}
+ .hero-person{margin-bottom:8px;gap:8px;padding:5px 11px 5px 6px}
+ .hero-person .hp-frame{width:34px;height:34px;padding:2px}
+ .hp-say b{font-size:7px;letter-spacing:.4px}
+ .hp-bubble{max-width:118px;font-size:9px;line-height:1.6}
+ .scene-badge{margin-top:7px;font-size:8.5px;padding:4px 9px;letter-spacing:.2px}
+ .hero-trust .trust-item{min-height:42px;padding:7px 4px;gap:1px}
+ .hero-trust .trust-num{font-size:16px}
+ .hero-trust .trust-item>span:last-child{font-size:9.5px}
+ .cast-portrait{aspect-ratio:4/3}
+ .cast-card:last-child .cast-portrait{aspect-ratio:4/3}
+ .cast-card figcaption{padding:9px 11px 11px}
+ .cast-card figcaption strong{font-size:12px}
+ .cast-card figcaption span{font-size:10px;line-height:1.6}
+ .cast-card figcaption em{font-size:8.5px;margin-top:6px}
+ .bus-scene{margin-block:16px 6px}
+ .home-card{padding:17px 16px}
+ .home-cards{padding:6px 0 26px;gap:11px}
+ .section{padding-block:30px}
+ .section-head h2{font-size:23px}
+ .carousel-scene{height:250px}
+ .journey{gap:10px}
+ .journey-stop{padding:15px 13px}
+ .ticker{margin:12px 0 4px}
+}
+
+@media(max-width:360px){
+ .hero h1{font-size:28px}
+ .specimen{height:132px}
+ .specimen.middle{height:152px}
+ .hp-bubble{max-width:96px}
+ .botanical-scene{max-width:272px}
+}
+
 </style>
 </head>
 <body>
