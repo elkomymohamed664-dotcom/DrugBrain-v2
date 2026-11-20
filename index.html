@@ -236,6 +236,157 @@ footer{position:relative;z-index:1}
 details[open]>*:not(summary){animation:stepIn .3s ease}
 .booklet-banner:before{content:"";position:absolute;top:0;bottom:0;width:38%;left:-50%;background:linear-gradient(100deg,transparent,rgba(240,215,167,.09),transparent);transform:skewX(-16deg);animation:bannerShine 7s ease-in-out infinite;pointer-events:none}
 @keyframes bannerShine{0%,55%{left:-50%}85%,100%{left:130%}}
+
+/* ===== Wow features (v6) ===== */
+.quiz-card{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg,rgba(23,52,46,.72),rgba(12,36,36,.55));backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:26px 28px;max-width:760px;margin-inline:auto;transform-style:preserve-3d;box-shadow:0 24px 48px rgba(0,0,0,.3)}
+.quiz-progress{display:flex;align-items:center;gap:14px;font-size:12px;color:var(--muted);margin-bottom:16px}
+.quiz-bar{flex:1;height:6px;border-radius:99px;background:#203d34;overflow:hidden}
+.quiz-bar span{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:99px;transition:width .4s ease}
+.quiz-q{font-size:20px;line-height:1.8;margin-bottom:18px}
+.quiz-opts{display:grid;gap:10px}
+.quiz-opt{display:flex;align-items:center;gap:12px;text-align:start;border:1px solid #365044;border-radius:12px;background:#0d2424;padding:14px 16px;color:var(--text);font-size:14px;transition:transform .18s,border-color .18s,background .18s,box-shadow .18s}
+.quiz-opt:hover:not(:disabled){transform:translateY(-2px);border-color:var(--gold);background:#19392f;box-shadow:0 10px 22px rgba(0,0,0,.28)}
+.quiz-opt:disabled{cursor:default;opacity:.9}
+.quiz-opt-key{flex-shrink:0;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(216,187,130,.5);color:var(--gold);font-size:13px}
+.quiz-opt.is-correct{border-color:var(--green);background:rgba(143,199,172,.12)}
+.quiz-opt.is-correct .quiz-opt-key{background:var(--green);color:#0d2424;border-color:var(--green)}
+.quiz-opt.is-wrong{border-color:var(--red);background:rgba(242,160,147,.1)}
+.quiz-opt.is-wrong .quiz-opt-key{background:var(--red);color:#0d2424;border-color:var(--red)}
+.quiz-feedback{margin-top:16px;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:13px;animation:stepIn .35s ease}
+.quiz-feedback.ok{border-color:rgba(143,199,172,.5)}
+.quiz-feedback.no{border-color:rgba(242,160,147,.5)}
+.quiz-feedback p{color:var(--muted);margin:6px 0 10px;line-height:1.9}
+.quiz-next{margin-top:16px}
+.quiz-result{text-align:center;padding:14px 6px;animation:cardIn .5s cubic-bezier(.22,.9,.3,1) backwards}
+.quiz-stars{font-size:30px;letter-spacing:6px;color:#365044}
+.quiz-stars .on{color:var(--gold);text-shadow:0 0 18px rgba(216,187,130,.5)}
+.quiz-score{font-family:Manrope,sans-serif;font-size:52px;color:var(--gold2);line-height:1.2;margin:8px 0}
+.quiz-result p{color:var(--muted);font-size:14px;max-width:440px;margin:0 auto 20px;line-height:1.9}
+.compare-wrap{margin-top:44px}
+.compare-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:rgba(13,37,36,.6)}
+table.compare{width:100%;border-collapse:collapse;min-width:640px;font-size:13px}
+table.compare th,table.compare td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:start;vertical-align:top;line-height:1.8}
+table.compare thead th{font-size:15px;color:var(--gold2);background:rgba(216,187,130,.06)}
+table.compare tbody th{color:var(--gold);font-weight:600;white-space:nowrap}
+table.compare td.col-hi,table.compare th.col-hi{background:rgba(216,187,130,.08)}
+.compare-note{font-size:12px;color:var(--muted);margin-top:12px}
+.journey-wrap{padding:6px 0 10px}
+.journey{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:8px}
+.journey:before{content:"";position:absolute;top:34px;inset-inline:8%;height:2px;background:repeating-linear-gradient(90deg,rgba(216,187,130,.5) 0 10px,transparent 10px 20px);animation:dashMove 1.2s linear infinite}
+@keyframes dashMove{to{background-position:20px 0}}
+.journey-stop{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;border:1px solid var(--line);border-radius:16px;padding:22px 16px;background:linear-gradient(160deg,rgba(23,52,46,.66),rgba(12,36,36,.5));transition:transform .25s,border-color .25s,box-shadow .25s}
+.journey-stop:hover{transform:translateY(-5px) rotateX(4deg);border-color:rgba(216,187,130,.6);box-shadow:0 18px 34px rgba(0,0,0,.3)}
+.journey-num{position:absolute;top:-11px;inset-inline-start:14px;width:26px;height:26px;border-radius:50%;background:var(--gold);color:#132b28;font-family:Manrope,sans-serif;font-size:12px;font-weight:700;display:grid;place-items:center;box-shadow:0 4px 0 rgba(0,0,0,.25)}
+.journey-stop .icon{width:30px;height:30px;color:var(--gold)}
+.journey-stop h3{font-size:16px}
+.journey-stop p{font-size:12px;color:var(--muted);line-height:1.8}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:22px}
+.stat{text-align:center;border:1px solid var(--line);border-radius:14px;padding:18px 10px;background:rgba(13,37,36,.55)}
+.stat-num{display:block;font-family:Manrope,sans-serif;font-size:34px;color:var(--gold2);line-height:1.2}
+.stat-label{font-size:12px;color:var(--muted)}
+.evidence-meter{margin:12px 0 4px}
+.meter-top{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:11px;color:var(--muted);margin-bottom:6px}
+.meter-top strong{color:var(--gold);font-weight:600}
+.meter-bar{height:7px;border-radius:99px;background:#203d34;overflow:hidden}
+.meter-bar span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--gold),var(--gold2));transition:width .9s cubic-bezier(.22,.9,.3,1)}
+@media(max-width:860px){.journey{grid-template-columns:1fr 1fr}.journey:before{display:none}.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.journey{grid-template-columns:1fr}.quiz-card{padding:20px 18px}.quiz-q{font-size:17px}}
+
+/* ===== v7 · case clinic · SBAR note · patient card ===== */
+.case-clinic{margin-top:38px;border-top:1px solid var(--line);padding-top:36px}
+.case-head{margin-bottom:20px}
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.case-card{position:relative;display:flex;flex-direction:column;gap:9px;text-align:start;padding:20px 18px 16px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(158deg,rgba(27,63,52,.72),rgba(12,32,29,.94));color:inherit;font:inherit;cursor:pointer;overflow:hidden;transition:transform .45s cubic-bezier(.22,.9,.3,1),border-color .3s,box-shadow .35s;box-shadow:0 12px 26px rgba(0,0,0,.18)}
+.case-card:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,0%),rgba(215,194,148,.18),transparent 62%);opacity:0;transition:opacity .35s;pointer-events:none}
+.case-card:hover,.case-card:focus-visible{transform:translateY(-6px);border-color:rgba(215,194,148,.5);box-shadow:0 24px 44px rgba(0,0,0,.34);outline:none}
+.case-card:hover:after,.case-card:focus-visible:after{opacity:1}
+.case-card .case-num{position:absolute;inset-inline-end:15px;top:9px;font-family:Manrope,sans-serif;font-size:42px;line-height:1;color:rgba(215,194,148,.11);letter-spacing:-2px}
+.case-tag{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;font-size:9.5px;letter-spacing:.5px;padding:5px 9px;border-radius:99px;border:1px solid rgba(215,194,148,.34);background:rgba(215,194,148,.08);color:var(--gold2)}
+.case-card h3{font-size:15px;line-height:1.7;margin:2px 0 0;padding-inline-end:26px}
+.case-card p{font-size:11.5px;line-height:1.9;color:#a6b8a8;margin:0}
+.case-go{margin-top:auto;padding-top:8px;display:inline-flex;align-items:center;gap:7px;font-size:11px;color:var(--gold);letter-spacing:.2px}
+.case-go .icon{width:14px;height:14px;transition:transform .3s}
+.case-card:hover .case-go .icon{transform:translateX(-3px)}
+[dir=rtl] .case-card:hover .case-go .icon{transform:translateX(3px)}
+.case-panel{animation:caseIn .45s cubic-bezier(.22,.9,.3,1) both}
+@keyframes caseIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.case-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.case-back{display:inline-flex;align-items:center;gap:7px;background:none;border:1px solid var(--line);border-radius:8px;padding:7px 11px;color:#cfd8c9;font:inherit;font-size:11px;cursor:pointer;transition:.25s}
+.case-back:hover{border-color:var(--gold);color:var(--gold)}
+.case-progress{display:flex;align-items:center;gap:6px}
+.case-progress i{width:28px;height:3px;border-radius:99px;background:rgba(255,255,255,.13);transition:background .3s}
+.case-progress i.on{background:var(--gold);box-shadow:0 0 12px rgba(215,194,148,.5)}
+.case-progress span{font-size:10px;letter-spacing:.4px;color:var(--muted);margin-inline-start:4px}
+.case-scenario{position:relative;border:1px dashed rgba(215,194,148,.32);border-radius:12px;padding:15px 17px;font-size:12.5px;line-height:2;color:#dfe5d5;background:rgba(215,194,148,.055)}
+.case-scenario:before{content:"CASE";position:absolute;inset-inline-end:14px;top:-8px;font-family:Manrope,sans-serif;font-size:8.5px;letter-spacing:2px;padding:2px 7px;border-radius:99px;background:#0d211e;border:1px solid rgba(215,194,148,.3);color:var(--gold)}
+.case-step{margin-top:12px;border:1px solid var(--line);border-radius:12px;padding:15px 16px;background:rgba(255,255,255,.022)}
+.case-step-q{display:flex;gap:9px;font-size:13px;font-weight:600;line-height:1.8;margin:0 0 11px;color:#e7ecdd}
+.case-step-q b{flex:none;width:21px;height:21px;border-radius:7px;display:grid;place-items:center;background:rgba(215,194,148,.14);color:var(--gold);font-family:Manrope,sans-serif;font-size:10.5px;margin-top:2px}
+.case-opts{display:grid;gap:8px}
+.case-opt{display:flex;align-items:flex-start;gap:10px;width:100%;text-align:start;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:10px;padding:11px 13px;font:inherit;font-size:12px;line-height:1.85;color:#cbd5c6;cursor:pointer;transition:border-color .25s,background .25s,transform .25s}
+.case-opt .key{flex:none;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-family:Manrope,sans-serif;font-size:10px;border:1px solid rgba(215,194,148,.35);color:var(--gold);margin-top:1px}
+.case-opt:hover:not(:disabled){border-color:rgba(215,194,148,.6);background:rgba(215,194,148,.06);transform:translateY(-2px)}
+.case-opt:disabled{cursor:default}
+.case-opt:disabled:not(.is-ok):not(.is-bad){opacity:.5}
+.case-opt.is-ok{border-color:rgba(95,174,123,.75);background:rgba(95,174,123,.13)}
+.case-opt.is-ok .key{border-color:#5fae7b;color:#a8dcb8}
+.case-opt.is-bad{border-color:rgba(201,106,92,.7);background:rgba(201,106,92,.11)}
+.case-opt.is-bad .key{border-color:#c96a5c;color:#e6a79c}
+.case-feedback{margin-top:10px;border-radius:10px;padding:11px 13px;font-size:11.5px;line-height:1.95;border:1px solid;animation:fbIn .35s ease both}
+@keyframes fbIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.case-feedback.ok{border-color:rgba(95,174,123,.4);background:rgba(95,174,123,.09);color:#c6e6cd}
+.case-feedback.bad{border-color:rgba(201,106,92,.4);background:rgba(201,106,92,.08);color:#eccfc8}
+.case-feedback strong{display:block;margin-bottom:3px;font-size:11px;letter-spacing:.4px}
+.case-feedback .citation{margin-top:6px;display:inline-block}
+.case-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.case-verdict{margin-top:14px;border:1px solid rgba(215,194,148,.34);border-radius:14px;padding:17px 18px;background:linear-gradient(150deg,rgba(215,194,148,.1),rgba(13,34,30,.6));animation:caseIn .5s both}
+.case-verdict h3{font-size:15px;margin:0 0 8px;color:var(--gold2);display:flex;gap:8px;align-items:center}
+.case-verdict p{font-size:12.5px;line-height:2;color:#dfe5d5;margin:0 0 10px}
+.case-verdict ul{margin:0 0 10px;padding-inline-start:18px;display:grid;gap:6px}
+.case-verdict li{font-size:11.5px;line-height:1.85;color:#c3cfc1}
+.grade-chip{display:inline-flex;align-items:center;gap:6px;font-size:10px;letter-spacing:.4px;padding:5px 10px;border-radius:99px;border:1px solid rgba(95,174,123,.45);background:rgba(95,174,123,.12);color:#a8dcb8;margin-bottom:10px}
+.grade-chip.soft{border-color:rgba(215,194,148,.45);background:rgba(215,194,148,.1);color:var(--gold2)}
+/* SBAR + counselling sheet */
+.sbar-sheet,.counsel-card{border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.024);padding:15px 16px}
+.sbar-block{display:grid;grid-template-columns:32px 1fr;gap:11px;padding:11px 0;border-top:1px dashed rgba(215,194,148,.18)}
+.sbar-block:first-child{border-top:0;padding-top:0}
+.sbar-letter{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:rgba(215,194,148,.13);border:1px solid rgba(215,194,148,.3);color:var(--gold);font-family:Manrope,sans-serif;font-weight:600;font-size:13px}
+.sbar-block h4{margin:0 0 5px;font-size:9.5px;letter-spacing:1px;color:var(--gold2);text-transform:uppercase}
+.sbar-block p,.sbar-block li{font-size:11.5px;line-height:1.95;color:#cbd5c6;margin:0}
+.sbar-block ul{margin:4px 0 0;padding-inline-start:16px;display:grid;gap:4px}
+.sbar-meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-family:Manrope,Plex,sans-serif;font-size:9.5px;letter-spacing:.6px;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:9px;margin-bottom:11px}
+.counsel-grid{display:grid;gap:11px}
+.counsel-row{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start}
+.counsel-row .cdot{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;background:rgba(215,194,148,.1);color:var(--gold);border:1px solid rgba(215,194,148,.24);font-size:12px}
+.counsel-row h4{margin:0 0 3px;font-size:11.5px;color:#e7ecdd}
+.counsel-row p{margin:0;font-size:11.5px;line-height:1.9;color:#b9c6b8}
+.counsel-foot{margin-top:13px;border-top:1px dashed rgba(215,194,148,.2);padding-top:10px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:10px;color:var(--muted)}
+.dialog-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+#v7-print{display:none}
+.v7-print-sheet{border:1px solid #c9c0a9;border-radius:10px;padding:18px;font-family:Plex,Manrope,sans-serif;color:#1d2b20}
+.v7-print-sheet h2{font-size:15px;margin:0 0 4px}
+.v7-print-sheet h3{font-size:11px;letter-spacing:.6px;margin:12px 0 4px;color:#5a6b4f;text-transform:uppercase}
+.v7-print-sheet p,.v7-print-sheet li{font-size:11px;line-height:1.8;margin:2px 0}
+.v7-print-sheet ul{padding-inline-start:16px}
+.v7-print-sheet .pfoot{margin-top:14px;border-top:1px solid #d8d2c2;padding-top:7px;font-size:9px;color:#6b7561}
+@media print{
+ body.v7-printing main,body.v7-printing .site-header,body.v7-printing .team-section,body.v7-printing .page-nav,body.v7-printing .toast,body.v7-printing #info-dialog,body.v7-printing .scroll-progress,body.v7-printing .aurora,body.v7-printing #v7-print~*{display:none!important}
+ body.v7-printing #v7-print{display:block!important}
+ body.v7-printing{background:#fff!important}
+}
+@media(max-width:980px){.case-grid{grid-template-columns:1fr 1fr}
+ .case-card:last-child{grid-column:1/-1}}
+@media(max-width:640px){.case-grid{grid-template-columns:1fr}
+ .case-card:last-child{grid-column:auto}
+ .case-card h3{font-size:14px}
+ .case-scenario{font-size:12px}
+ .case-step{padding:13px}
+ .case-top{gap:9px}}
+@media(prefers-reduced-motion:reduce){
+ .case-card,.case-card:after,.case-panel,.case-verdict,.case-feedback{transition:none!important;animation:none!important}
+ .case-card:hover{transform:none}
+}
+
 </style>
 </head>
 <body>
@@ -275,7 +426,7 @@ details[open]>*:not(summary){animation:stepIn .3s ease}
 <a class="skip-link" href="#/safety" data-page-link="safety" data-en="Skip to the safety checker">انتقل لفاحص الأمان</a>
 <header class="site-header"><div class="container header-inner">
 <a class="brand" href="#/home" data-page-link="home" aria-label="PHYTO MOTION — home"><svg class="brand-mark" viewBox="0 0 43 50" aria-hidden="true"><path d="M21.5 46V18M21.5 34C6 35 5 19 5 19c13-1 18 7 16.5 15ZM21.5 26C37 27 38 10 38 10c-13-1-18 8-16.5 16ZM21.5 18C11 16 14 3 14 3c10 2 11 9 7.5 15Z"/><path d="m10 24 11.5 10M33 15 21.5 26"/><path d="M8 45h27" opacity=".6"/></svg><div class="wordmark"><strong>PHYTO</strong><small>MOTION CARE KIT</small></div></a>
-<nav class="nav" aria-label="Main navigation"><a href="#/home" data-page-link="home" data-en="Home">الرئيسية</a><a href="#/safety" data-page-link="safety" data-en="Safety checker">فاحص الأمان</a><a href="#/plants" data-page-link="plants" data-en="The plants">دليل النباتات</a><a href="#/library" data-page-link="library" data-en="The library">المكتبة</a></nav>
+<nav class="nav" aria-label="Main navigation"><a href="#/home" data-page-link="home" data-en="Home">الرئيسية</a><a href="#/safety" data-page-link="safety" data-en="Safety checker">فاحص الأمان</a><a href="#/plants" data-page-link="plants" data-en="The plants">دليل النباتات</a><a href="#/library" data-page-link="library" data-en="The library">المكتبة</a><a href="#/quiz" data-page-link="quiz" data-en="Quiz yourself">اختبر نفسك</a></nav>
 <div class="header-tools"><div class="affiliation-mini"><img src="data:image/webp;base64,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" alt="شعار جامعة المنصورة الأهلية" width="36" height="36"><span data-en="Mansoura National University<br>Faculty of Pharmacy">جامعة المنصورة الأهلية<br>كلية الصيدلة</span></div><button id="lang-button" class="lang-button" type="button" aria-label="Switch to English">EN</button></div>
 </div></header>
 <main>
@@ -287,6 +438,7 @@ details[open]>*:not(summary){animation:stepIn .3s ease}
 <div class="container hero-trust"><div class="trust-item"><span class="trust-num">03</span><span data-en="plants, compared">نباتات نكتشفها معًا</span></div><div class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg><span data-en="Three simple steps">٣ خطوات بسيطة</span></div><div class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span data-en="No sign-up. No saved answers.">بدون تسجيل أو حفظ بياناتك</span></div><div class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span data-en="References you can explore">مراجع علمية تقدر ترجع لها</span></div></div>
 <div class="home-cards"><a class="home-card" href="#/safety" data-page-link="safety"><span class="home-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span><h3 data-en="Safety checker">فاحص الأمان</h3><p data-en="Three steps: your age, health and medicines — then precautions, possible effects and your next step.">٣ خطوات: سنّك وحالتك الصحية وأدويتك — وبعدها التحذيرات والتأثير المحتمل والخطوة التالية.</p><span class="home-card-link"><span data-en="Start now">ابدأ دلوقتي</span><svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></span></a><a class="home-card" href="#/plants" data-page-link="plants"><span class="home-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span><h3 data-en="The plants">دليل النباتات</h3><p data-en="Meet ginger, peppermint and henbane — each plant has its own story and its own precautions.">اتعرّف على الزنجبيل والنعناع الفلفلي والسُّكران — كل نبات ليه قصته وتحذيراته.</p><span class="home-card-link"><span data-en="Explore the guide">تصفّح الدليل</span><svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></span></a><a class="home-card" href="#/library" data-page-link="library"><span class="home-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span><h3 data-en="The library">المكتبة</h3><p data-en="The safety booklet, common questions and the scientific reference list — all in one place.">كتيّب الأمان والأسئلة الشائعة وقائمة المراجع العلمية — كلها في مكان واحد.</p><span class="home-card-link"><span data-en="Open the library">افتح المكتبة</span><svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></div>
 <div class="carousel-wrap"><div class="section-head carousel-head"><div><div class="section-number"><span class="latin">3D</span><span data-en="THE 3D TOUR">الجولة ثلاثية الأبعاد</span></div><h2 data-en="Spin the plants.">لفّ النباتات.</h2></div><p data-en="A little 3D tour of the three plants — drag to spin, tap a plant to open its guide.">جولة ثلاثية الأبعاد للنباتات التلاتة — اسحب عشان تلف، واضغط على نبات عشان تفتح دليله.</p></div><div class="carousel-scene" id="carousel-scene"><div class="carousel-ring" id="carousel-ring"><button type="button" class="carousel-panel" data-page-link="plants" aria-label="Ginger"><img alt="Ginger"><span>Ginger</span></button><button type="button" class="carousel-panel" data-page-link="plants" aria-label="Peppermint"><img alt="Peppermint"><span>Peppermint</span></button><button type="button" class="carousel-panel" data-page-link="plants" aria-label="Hyoscyamus"><img alt="Hyoscyamus"><span>Hyoscyamus</span></button></div></div><div class="carousel-controls"><button type="button" class="btn btn-sm" id="car-prev" aria-label="Previous plant"><svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></button><span class="carousel-hint" data-en="Drag to spin · tap a plant for its guide">اسحب للفّ · اضغط على نبات لدليله</span><button type="button" class="btn btn-sm" id="car-next" aria-label="Next plant"><svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></button></div></div>
+<div class="journey-wrap"><div class="section-head"><div><div class="section-number"><span class="latin">3D</span><span data-en="THE JOURNEY">الرحلة</span></div><h2 data-en="Your safe-decision journey.">رحلة قرارك الآمن.</h2></div><p data-en="Four stops, in order — each one builds on the last.">٤ محطات بالترتيب — كل واحدة بتبني على اللي قبلها.</p></div><div class="journey"><a class="journey-stop" href="#/safety" data-page-link="safety"><span class="journey-num">1</span><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg><h3 data-en="Know your situation">اعرف حالتك</h3><p data-en="Your age, health and medicines">سنّك وحالتك الصحية وأدويتك</p></a><a class="journey-stop" href="#/plants" data-page-link="plants"><span class="journey-num">2</span><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg><h3 data-en="Compare the plants">قارن النباتات</h3><p data-en="Evidence and precautions, side by side">قوة الدليل والاحتياطات جنبًا إلى جنب</p></a><a class="journey-stop" href="#/quiz" data-page-link="quiz"><span class="journey-num">3</span><svg class="icon" aria-hidden="true"><use href="#i-question"/></svg><h3 data-en="Quiz yourself">اختبر نفسك</h3><p data-en="Five questions with references">٥ أسئلة بمراجع علمية</p></a><a class="journey-stop" href="#/library" data-page-link="library"><span class="journey-num">4</span><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><h3 data-en="Read the references">اقرأ المراجع</h3><p data-en="The booklet and the reading list">الكتيب وقائمة القراءة</p></a></div><div class="stats"><div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label" data-en="plants compared">نباتات نقارنها</span></div><div class="stat"><span class="stat-num" data-count="5">0</span><span class="stat-label" data-en="quiz questions">أسئلة اختبار</span></div><div class="stat"><span class="stat-num" data-count="15">0</span><span class="stat-label" data-en="scientific references">مرجعًا علميًا</span></div><div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label" data-en="checker steps">خطوات الفاحص</span></div></div></div>
 </div>
 <section id="safety" class="container section page" data-page="safety" aria-labelledby="safety-heading">
 <div class="section-head"><div><div class="section-number"><span class="latin">01</span><span data-en="BEFORE YOU TRAVEL">قبل رحلتك</span></div><h2 id="safety-heading" data-en="Let’s understand your situation.">خلّينا نفهم حالتك.</h2></div><p data-en="Your age, health and medicines make a difference. The result explains why, what could happen, and your next step.">سنّك وحالتك الصحية وأدويتك بيفرقوا. النتيجة هتوضح السبب، التأثير المحتمل، والخطوة اللي بعدها.</p></div>
@@ -299,13 +451,15 @@ details[open]>*:not(summary){animation:stepIn .3s ease}
 <section id="results" class="result-section" aria-labelledby="results-title" tabindex="-1" hidden></section>
 </section>
 <section id="plants" class="section plants-section page" data-page="plants"><div class="container"><div class="section-head"><div><div class="section-number"><span class="latin">02</span><span data-en="THE BOTANICAL GUIDE">دليل النباتات</span></div><h2 data-en="Every plant has its own story.">كل نبات ليه قصته.</h2></div><p data-en="Get to know the plants in the kit, without confusing a familiar name with a proven treatment.">اتعرّف على نباتات الكيت، من غير ما نخلط بين الاسم المألوف والعلاج المثبت.</p></div><div class="plant-grid" id="plant-grid"></div><p class="plant-caution"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span data-en="The illustrations are educational, not a way to identify wild plants. Henbane is for education only: never taste it or offer it for use.">الرسومات للتعليم، مش وسيلة للتعرّف على نباتات برّية. السُّكران للعرض التوعوي فقط: مايتذاقش ومايتقدّمش للاستخدام.</span></p>
+<div class="compare-wrap"><div class="section-head"><div><div class="section-number"><span class="latin">VS</span><span data-en="SIDE BY SIDE">جنبًا إلى جنب</span></div><h2 data-en="Compare at a glance.">قارن في لمحة.</h2></div><p data-en="A quick summary — for details, use the checker and the references.">ملخص سريع — للتفاصيل استخدم الفاحص والمراجع.</p></div><div class="compare-scroll"><table class="compare"><thead><tr><th></th><th data-en="Ginger">الزنجبيل</th><th data-en="Peppermint">النعناع الفلفلي</th><th data-en="Henbane">السُّكران</th></tr></thead><tbody><tr><th data-en="Scientific name">الاسم العلمي</th><td class="latin">Zingiber officinale</td><td class="latin">Mentha × piperita</td><td class="latin">Hyoscyamus niger</td></tr><tr><th data-en="Evidence for motion sickness">الدليل لدوار الحركة</th><td data-en="Limited, not strongly proven">محدود وغير مثبت بقوة</td><td data-en="Not proven as a motion-sickness treatment">غير مثبت كعلاج لدوار الحركة</td><td data-en="Not applicable — toxic plant">لا ينطبق — نبات سام</td></tr><tr><th data-en="Key precautions">احتياطات رئيسية</th><td data-en="Gallstones · blood thinners · pregnancy">حصوات المرارة · أدوية السيولة · الحمل</td><td data-en="Reflux · gallstones · oil for children">ارتجاع · حصوات المرارة · الزيت للأطفال</td><td data-en="Avoid self-use entirely">تجنب الاستخدام الذاتي تمامًا</td></tr><tr><th data-en="Possible interactions">تفاعلات محتملة</th><td data-en="Blood thinners · blood pressure · diabetes">سيولة · ضغط · سكري</td><td data-en="Sedatives (with the oil)">مهدئات (مع الزيت)</td><td data-en="Anticholinergic — high risk">مضادات كولين — خطورة عالية</td></tr><tr><th data-en="Verdict">الحكم</th><td data-en="Ask a professional first">استشارة أولًا</td><td data-en="Ask a professional first">استشارة أولًا</td><td data-en="Avoid self-use">تجنب الاستخدام الذاتي</td></tr></tbody></table></div><p class="compare-note" data-en="Educational summary only — check the safety checker and references for details.">ملخص توعوي فقط — راجع فاحص الأمان والمراجع للتفاصيل.</p></div>
 </div></section>
 <section id="library" class="section library-section page" data-page="library"><div class="container"><div class="section-head"><div><div class="section-number"><span class="latin">03</span><span data-en="THE LIBRARY">المكتبة</span></div><h2 data-en="Library &amp; references">المكتبة والمراجع</h2></div><p data-en="The safety booklet, common questions and the scientific reference list — all in one place.">كتيّب الأمان والأسئلة الشائعة وقائمة المراجع العلمية — كلها في مكان واحد.</p></div>
 <div class="booklet-banner"><div class="booklet-copy"><div class="eyebrow" data-en="A LITTLE GUIDE TO TAKE WITH YOU">معرفة تفضل معاك</div><h3 data-en="Keep the guide close.">خُد المعرفة معاك.</h3><p data-en="Explore the project’s Arabic safety booklet, or the English academic monograph. Educational reading to discuss with your pharmacist.">تصفّح كتيّب الأمان العربي للمشروع، أو المونوغراف العلمي بالإنجليزي. معلومات توعوية تناقشها مع الصيدلي.</p><div class="booklet-actions"><a class="btn btn-primary" href="https://drive.google.com/file/d/1epngKqshEJzKUZC-aN2zd6aPYZ0X5M_M/view?usp=sharing" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span data-en="Open the safety booklet">افتح كتيّب الأمان</span><svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a><a class="text-link" href="https://drive.google.com/file/d/1Vh-n4XXJlD8nBxHnSYSQqatLfjdGF5Wp/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span data-en="Faculty monograph (EN)">النسخة العلمية للدكاترة (EN)</span><svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a></div><p class="booklet-meta" data-en="PDF · A5 · GOOGLE DRIVE · INTERNET REQUIRED">PDF · A5 · GOOGLE DRIVE · يتطلب اتصالًا بالإنترنت</p></div><div class="book-stack" aria-hidden="true"><div class="book-back"></div><div class="book-cover"><small>PHYTO MOTION CARE KIT</small><svg class="icon"><use href="#i-leaf"/></svg><strong>SAFETY<br>FIRST.</strong><span class="arabic-title">دليل الاستخدام الآمن</span><small class="cover-footer">KNOWLEDGE BEFORE THE JOURNEY</small></div></div></div>
 <div class="faq"><details><summary data-en="Is peppermint tea the same as its oil?">شاي النعناع هو نفسه الزيت؟</summary><p><span data-en="No. Essential oil is highly concentrated. A labelled, formulated medicine is also different from a bottle of essential oil. Never swallow undiluted essential oil, put it in the nose, or use it on a young child’s face. Tea may still worsen reflux.">لأ. الزيت العطري شديد التركيز. والدواء المُصنّع بتركيز مضبوط غير زجاجة الزيت الخام. ما تبلعش الزيت المركز أو تحطّه داخل الأنف أو على وش طفل صغير. وحتى الشاي ممكن يزوّد الارتجاع.</span> <a class="citation" href="https://www.nccih.nih.gov/health/peppermint-oil" target="_blank" rel="noopener noreferrer">NCCIH [1]</a> <a class="citation" href="https://www.ema.europa.eu/en/documents/herbal-monograph/european-union-herbal-monograph-mentha-x-piperita-l-folium-revision-1_en.pdf" target="_blank" rel="noopener noreferrer">EMA [3]</a></p></details><details><summary data-en="Will a herb definitely work, and how quickly?">العُشبة هتشتغل أكيد؟ وبعد قد إيه؟</summary><p><span data-en="There is no guaranteed effect or fixed time. Evidence for ginger in motion sickness is weak or inconsistent; peppermint is not a proven motion-sickness treatment. Persistent or unusual symptoms need medical assessment, not a stronger herb.">مفيش تأثير مضمون أو وقت ثابت. دليل الزنجبيل لدوار الحركة ضعيف أو متضارب، والنعناع مش علاج مثبت لدوار السفر. الأعراض المستمرة أو الغريبة محتاجة تقييم طبي، مش عُشبة أقوى.</span> <a class="citation" href="https://www.cdc.gov/yellow-book/hcp/travel-air-sea/motion-sickness.html" target="_blank" rel="noopener noreferrer">CDC [1]</a> <a class="citation" href="https://www.nccih.nih.gov/health/peppermint-oil" target="_blank" rel="noopener noreferrer">NCCIH [1]</a></p></details></div>
 <details id="sources" class="sources-panel"><summary><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><strong data-en="Behind the information: references & limits">ورا كل معلومة، مرجع — المراجع وحدود الفاحص</strong><span class="source-meta" data-en="Open the reading list">افتح قائمة القراءة</span></summary><div class="sources-content"><p class="sources-description" data-en="This is a student education tool, not a clinically validated decision aid. Rules cover selected risks only and cannot check every medicine, product, dose or diagnosis. No personalised doses are provided. Scopolamine label references explain the alkaloid class; they do not make the raw plant a medicine.">ده فاحص تعليمي طلابي، مش أداة طبية معتمدة. القواعد بتغطي مخاطر مختارة فقط، ومش بتفحص كل دواء أو مستحضر أو جرعة أو تشخيص. مش بنحدد جرعات شخصية. الاستشهاد بنشرة السكوبولامين لشرح مخاطر فئة القلويدات، مش معناه إن النبات الخام دواء.</p><div class="source-grid" id="source-grid"></div><p class="source-review" data-en="Reading list checked: 20 November 2026 · Faculty review is recommended before public use.">تاريخ مراجعة قائمة المراجع: ٢٠ نوفمبر ٢٠٢٦ · يُنصح بمراجعة المشرفين قبل الاستخدام العام.</p></div></details>
 </div></section>
-<nav class="container page-nav" aria-label="Page navigation"><button type="button" class="btn btn-sm" id="page-prev"><svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span data-en="Previous">السابق</span></button><div class="page-dots"><button type="button" class="page-dot" data-goto="home" aria-label="Home"></button><button type="button" class="page-dot" data-goto="safety" aria-label="Safety checker"></button><button type="button" class="page-dot" data-goto="plants" aria-label="The plants"></button><button type="button" class="page-dot" data-goto="library" aria-label="The library"></button></div><span class="page-label" id="page-label">صفحة 1 / 4</span><button type="button" class="btn btn-sm btn-primary" id="page-next"><span data-en="Next">التالي</span><svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></button></nav>
+<section id="quiz" class="section quiz-section page" data-page="quiz"><div class="container"><div class="section-head"><div><div class="section-number"><span class="latin">04</span><span data-en="QUIZ YOURSELF">اختبر نفسك</span></div><h2 data-en="How ready are you?">جاهز قد إيه؟</h2></div><p data-en="Five quick questions from the guide — instant feedback with references.">٥ أسئلة سريعة من الدليل — إجابة فورية مع المراجع.</p></div><div class="quiz-card" id="quiz-card"></div><section class="case-clinic" id="case-clinic" aria-labelledby="case-heading"><div class="section-head case-head"><div><div class="section-number"><span class="latin">05</span><span data-en="CASE CLINIC">عيادة الحالات</span></div><h2 id="case-heading" data-en="Three conversations from the counter">٣ مواقف من الواقع</h2></div><p data-en="Pick a case, take three decisions, and see the evidence and the red flags behind each step — the same reasoning a pharmacist uses at the counter.">اختار حالة، خُد ٣ قرارات، وشوف الدليل والعلامات الحمراء ورا كل خطوة — نفس طريقة تفكير الصيدلي على الكاونتر.</p></div><div class="case-grid" id="case-grid"></div><div class="case-panel" id="case-panel" hidden></div></section></div></section>
+<nav class="container page-nav" aria-label="Page navigation"><button type="button" class="btn btn-sm" id="page-prev"><svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span data-en="Previous">السابق</span></button><div class="page-dots"><button type="button" class="page-dot" data-goto="home" aria-label="Home"></button><button type="button" class="page-dot" data-goto="safety" aria-label="Safety checker"></button><button type="button" class="page-dot" data-goto="plants" aria-label="The plants"></button><button type="button" class="page-dot" data-goto="library" aria-label="The library"></button><button type="button" class="page-dot" data-goto="quiz" aria-label="Quiz"></button></div><span class="page-label" id="page-label">صفحة 1 / 4</span><button type="button" class="btn btn-sm btn-primary" id="page-next"><span data-en="Next">التالي</span><svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></button></nav>
 </main>
 <footer class="container team-section"><div class="academic-identity"><div><h3 data-en="A little awareness goes a long way.">وعي بسيط، يكمّل معاك الطريق.</h3><p data-en="Phytotherapy activity · Pharmacognosy Department · Faculty of Pharmacy · Mansoura National University">نشاط Phytotherapy · قسم العقاقير · كلية الصيدلة · جامعة المنصورة الأهلية</p></div><div class="logo-trio"><img src="data:image/webp;base64,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" alt="جامعة المنصورة الأهلية / MNU" width="53" height="53"><img src="data:image/webp;base64,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" alt="كلية الصيدلة / Faculty of Pharmacy" width="53" height="53"><img src="data:image/webp;base64,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" alt="قسم العقاقير / Pharmacognosy Department" width="53" height="53"></div></div><div class="supervisors"><div class="credits-label" data-en="Supervision">تحت إشراف</div><div class="supervisor-list"><span>Asst. Prof. Ahmed Elsaid Bedir Elbermawi</span><span>Lec. Dr. Abdullah Mohammed Haikal</span><span>Pharm. Menna Elkenaouy</span></div></div><div class="team"><div class="credits-label" data-en="The team">فريق العمل</div><div class="team-tags" dir="rtl"><span>محمد عادل القللي</span><span>محمد محمد خالد الكومي</span><span>محمد مصطفى المسيري</span><span>محمد اشرف القصبي</span><span>محمد شاهين شاهين</span><span>محمد سامح بليح</span><span>محمد محمود زياده</span><span>نور ايمن محمد محمد</span><span>ندي عبد الوهاب محمود</span><span>نورسين محمود محمد</span></div></div><div class="footer-bottom"><p data-en="Educational student project. Not a substitute for medical advice or emergency care. Your answers stay in this page and disappear when you reload; exported reports contain your selected health information.">مشروع طلابي توعوي، لا يغني عن الطبيب أو الطوارئ. إجاباتك بتفضل في الصفحة وبتختفي بعد إعادة التحميل؛ الملخّص اللي بتنزّله بيحتوي على اختياراتك الصحية.</p><span class="latin">PHYTO MOTION CARE KIT © 2026</span></div></footer>
 <dialog id="info-dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
@@ -558,7 +712,7 @@ function planHTML(){return `<div class="plan"><h4>${t('حاجات بسيطة ت�
 function renderResults(focus=false){
  if(!lastReport)return;
  const r=lastReport;const warning=r.cards.slice(0,2).some(x=>x.status>0);
- let html=`<div class="print-title">PHYTO MOTION CARE KIT · ${t('ملخّص توعوي — ليس وصفة أو تشخيصًا','Educational summary — not a prescription or diagnosis')}</div><div class="result-heading"><div>${example?`<div class="example-tag">${icon('book')}${t('مثال توعوي فقط — مش تقييمًا لشخص بعينه','Educational example — not an individual assessment')}</div>`:''}<h3 id="results-title">${t('النتيجة، مع تفسيرها.','Your result, explained.')}</h3></div><div class="result-controls"><button type="button" class="btn btn-sm" data-action="copy">${icon('copy')}<span>${t('نسخ الملخّص','Copy')}</span></button><button type="button" class="btn btn-sm" data-action="download">${icon('download')}<span>${t('حفظ الملخّص','Save summary')}</span></button><button type="button" class="btn btn-sm" data-action="print">${icon('print')}<span>${t('طباعة','Print')}</span></button><button type="button" class="btn btn-quiet btn-sm edit-result" data-action="edit">${t('عدّل إجاباتك','Edit answers')}</button></div></div>`;
+ let html=`<div class="print-title">PHYTO MOTION CARE KIT · ${t('ملخّص توعوي — ليس وصفة أو تشخيصًا','Educational summary — not a prescription or diagnosis')}</div><div class="result-heading"><div>${example?`<div class="example-tag">${icon('book')}${t('مثال توعوي فقط — مش تقييمًا لشخص بعينه','Educational example — not an individual assessment')}</div>`:''}<h3 id="results-title">${t('النتيجة، مع تفسيرها.','Your result, explained.')}</h3></div><div class="result-controls"><button type="button" class="btn btn-sm" data-action="copy">${icon('copy')}<span>${t('نسخ الملخّص','Copy')}</span></button><button type="button" class="btn btn-sm" data-action="download">${icon('download')}<span>${t('حفظ الملخّص','Save summary')}</span></button><button type="button" class="btn btn-sm" data-action="print">${icon('print')}<span>${t('طباعة','Print')}</span></button><button type="button" class="btn btn-sm" data-action="sbar">${icon('info')}<span>${t('ملاحظة SBAR','SBAR note')}</span></button><button type="button" class="btn btn-sm" data-action="counsel">${icon('user')}<span>${t('بطاقة المريض','Patient card')}</span></button><button type="button" class="btn btn-quiet btn-sm edit-result" data-action="edit">${t('عدّل إجاباتك','Edit answers')}</button></div></div>`;
  if(r.emergency){html+=emergencyHTML();html+=`<div class="profile-tags">${profileTags().map(s=>`<span>${esc(s)}</span>`).join('')}</div>`;}
  else{
   html+=`<div class="result-summary ${warning?'has-warning':''}"><div class="summary-kicker">${icon('shield')}${t('حسب إجاباتك فقط','BASED ONLY ON YOUR ANSWERS')}</div><h4>${warning?t('فيه اختيارات محتاجة مراجعة قبل الاستخدام.','Some choices need professional review first.'):t('احتياطات بسيطة، وتوقّعات واقعية.','Simple precautions. Realistic expectations.')}</h4><p>${t('كل التأثيرات هنا احتمالات، مش حاجة لازم تحصل. غياب تحذير إضافي مش معناه إن العُشبة آمنة للجميع، والسُّكران مش للاستخدام الذاتي في كل الحالات.','These are possibilities, not predictions. No additional warning does not mean a herb is safe for everyone; raw henbane is never a self-care option.')}</p><div class="profile-tags">${profileTags().map(s=>`<span>${esc(s)}</span>`).join('')}</div></div>`;
@@ -649,6 +803,13 @@ document.addEventListener('click',e=>{
 translateStatic();renderForm();renderPlants();renderSources();
 // A pure, non-networking rules interface for faculty review / automated tests.
 window.PhytoReview=Object.freeze({version:'2.0',assess:input=>buildAssessment({...blankState(),...input})});
+// Read-only bridge for the presentation layer (case clinic, SBAR note, patient card).
+window.PhytoBridge=Object.freeze({
+ get state(){return {...state,conditions:[...state.conditions],medicines:[...state.medicines],allergies:[...state.allergies],flags:[...state.flags]};},
+ get report(){return lastReport;},
+ tags:()=>profileTags(), statusLabel, L, t, esc, refs,
+ dialog:openDialog, closeDialog, toast
+});
 })();
 
 </script>
@@ -850,12 +1011,13 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 /* PHYTO MOTION v2 | Multi-page router + 3D interactions. No network, no storage. */
 (function(){
 'use strict';
-var PAGES=['home','safety','plants','library'];
+var PAGES=['home','safety','plants','library','quiz'];
 var TITLES={
  home:['PHYTO MOTION — معرفة تسبق الرحلة','PHYTO MOTION — Knowledge before the journey'],
  safety:['فاحص الأمان — PHYTO MOTION','Safety checker — PHYTO MOTION'],
  plants:['دليل النباتات — PHYTO MOTION','The plants — PHYTO MOTION'],
- library:['المكتبة — PHYTO MOTION','The library — PHYTO MOTION']
+ library:['المكتبة — PHYTO MOTION','The library — PHYTO MOTION'],
+ quiz:['اختبر نفسك — PHYTO MOTION','Quiz yourself — PHYTO MOTION']
 };
 function lang(){return document.documentElement.lang==='en'?'en':'ar';}
 function pageEl(id){return document.querySelector('[data-page="'+id+'"]');}
@@ -934,7 +1096,7 @@ if(fine&&!reduced){
  }
  var tiltCard=null;
  document.addEventListener('mousemove',function(e){
-  var card=e.target.closest('.plant-card,.home-card,.result-card,.checker-card,.checker-aside,.booklet-banner');
+  var card=e.target.closest('.plant-card,.home-card,.result-card,.checker-card,.checker-aside,.booklet-banner,.quiz-card,.case-card');
   if(card!==tiltCard){
    if(tiltCard){tiltCard.style.transition='transform .45s cubic-bezier(.22,.9,.3,1)';tiltCard.style.transform='';}
    tiltCard=card;
@@ -945,7 +1107,7 @@ if(fine&&!reduced){
   var px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;
   tiltCard.style.setProperty('--mx',(px*100).toFixed(1)+'%');
   tiltCard.style.setProperty('--my',(py*100).toFixed(1)+'%');
-  var big=tiltCard.classList.contains('result-card')?0.7:((tiltCard.classList.contains('plant-card')||tiltCard.classList.contains('home-card'))?1.4:0.3);
+  var big=tiltCard.classList.contains('result-card')?0.7:((tiltCard.classList.contains('plant-card')||tiltCard.classList.contains('home-card')||tiltCard.classList.contains('case-card'))?1.2:0.3);
   tiltCard.style.transform='perspective(900px) rotateY('+((px-.5)*10*big).toFixed(2)+'deg) rotateX('+((.5-py)*8*big).toFixed(2)+'deg) translateY(-4px)';
  });
  document.addEventListener('mouseout',function(e){
@@ -1054,6 +1216,654 @@ document.querySelectorAll('.hero-actions .btn,.page-nav .btn').forEach(function(
  });
 });
 })();
+</script>
+
+<script>
+/* PHYTO MOTION v6 | Quiz, evidence meters, counters, table highlight. No network, no storage. */
+(function(){
+'use strict';
+function en(){return document.documentElement.lang==='en';}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+/* --- evidence meters on plant cards --- */
+var METERS={
+ ginger:{w:35,ar:'محدود',en:'Limited'},
+ mint:{w:15,ar:'غير مثبت',en:'Not proven'},
+ peppermint:{w:15,ar:'غير مثبت',en:'Not proven'},
+ henbane:{w:0,ar:'لا ينطبق — سام',en:'N/A — toxic'}
+};
+function addMeters(){
+ document.querySelectorAll('.plant-card').forEach(function(card){
+  if(card.querySelector('.evidence-meter'))return;
+  var btn=card.querySelector('[data-plant]');
+  var body=card.querySelector('.plant-body');
+  if(!btn||!body)return;
+  var d=METERS[btn.getAttribute('data-plant')];
+  if(!d)return;
+  var el=document.createElement('div');
+  el.className='evidence-meter';
+  el.innerHTML='<div class="meter-top"><span>'+(en()?'Evidence for motion sickness':'قوة الدليل لدوار الحركة')+'</span><strong>'+(en()?d.en:d.ar)+'</strong></div><div class="meter-bar"><span style="width:0%"></span></div>';
+  var ev=card.querySelector('.evidence');
+  if(ev&&ev.parentNode===body)body.insertBefore(el,ev.nextSibling);
+  else body.appendChild(el);
+  requestAnimationFrame(function(){requestAnimationFrame(function(){el.querySelector('.meter-bar span').style.width=d.w+'%';});});
+ });
+}
+addMeters();
+/* --- animated counters --- */
+var counters=document.querySelectorAll('.stat-num');
+function countUp(el){
+ var target=+el.getAttribute('data-count')||0;
+ var start=null;
+ function tick(ts){
+  if(!start)start=ts;
+  var p=Math.min(1,(ts-start)/1200);
+  el.textContent=Math.round(target*(1-Math.pow(1-p,3)));
+  if(p<1)requestAnimationFrame(tick);
+ }
+ requestAnimationFrame(tick);
+}
+if('IntersectionObserver' in window){
+ var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e2){
+   if(!e2.isIntersecting)return;
+   io.unobserve(e2.target);
+   countUp(e2.target);
+  });
+ },{threshold:.4});
+ counters.forEach(function(c){io.observe(c);});
+}else{
+ counters.forEach(function(c){c.textContent=c.getAttribute('data-count');});
+}
+/* --- comparison table column highlight --- */
+var table=document.querySelector('.compare');
+if(table){
+ table.addEventListener('mouseover',function(e){
+  var cell=e.target.closest('td,th');
+  if(!cell)return;
+  var idx=cell.cellIndex;
+  table.querySelectorAll('tr').forEach(function(r){
+   var c=r.children[idx];
+   if(c)c.classList.add('col-hi');
+  });
+ });
+ table.addEventListener('mouseleave',function(){
+  table.querySelectorAll('.col-hi').forEach(function(c){c.classList.remove('col-hi');});
+ });
+}
+/* --- quiz --- */
+var QUIZ=[
+ {q:{ar:'ما الفرق الجوهري بين شاي النعناع وزيته العطري؟',en:'What is the key difference between peppermint tea and its essential oil?'},
+  opts:[{ar:'لا فرق بينهما',en:'There is no difference'},{ar:'الزيت العطري شديد التركيز — لا يُبتلع ولا يُستخدم للأطفال الصغار',en:'The oil is highly concentrated — never swallowed or used on young children'},{ar:'الزيت أخف من الشاي',en:'The oil is lighter than tea'}],
+  a:1,
+  why:{ar:'الزيت مركّز جدًا؛ بلعه أو استخدامه على وجه طفل صغير خطر. وحتى الشاي قد يزيد الارتجاع.',en:'The oil is highly concentrated; swallowing it or using it on a young child is dangerous. Even tea may worsen reflux.'},
+  ref:{name:'NCCIH · Peppermint oil',url:'https://www.nccih.nih.gov/health/peppermint-oil'}},
+ {q:{ar:'ما قوة دليل الزنجبيل لدوار الحركة؟',en:'How strong is the evidence for ginger in motion sickness?'},
+  opts:[{ar:'مثبت بقوة',en:'Strongly proven'},{ar:'محدود وغير مثبت بشكل قوي',en:'Limited and not strongly proven'},{ar:'لا توجد أي دراسات',en:'No studies exist'}],
+  a:1,
+  why:{ar:'قد يساعد بعض أنواع الغثيان، لكن فائدته لدوار السفر غير مثبتة بقوة.',en:'It may help some types of nausea, but its benefit for travel motion sickness is not strongly proven.'},
+  ref:{name:'NCCIH · Ginger',url:'https://www.nccih.nih.gov/health/ginger'}},
+ {q:{ar:'السُّكران الأسود (Hyoscyamus niger)…',en:'Henbane (Hyoscyamus niger)…'},
+  opts:[{ar:'شاي سفر آمن',en:'A safe travel tea'},{ar:'نبات سام للتعليم فقط — لا يُذاق ولا يُستخدم',en:'A toxic plant for education only — never tasted or used'},{ar:'بديل طبيعي للسكوبولامين',en:'A natural alternative to scopolamine'}],
+  a:1,
+  why:{ar:'يحتوي قلويدات تروبان سامة؛ وجود قلويد دوائي لا يجعل النبات الخام دواءً آمنًا.',en:'It contains toxic tropane alkaloids; a medicinal alkaloid does not make the raw plant a safe medicine.'},
+  ref:{name:'Henbane · Case report',url:'https://doi.org/10.1177/00494755241289456'}},
+ {q:{ar:'شخص يعاني ارتجاعًا يفكر في النعناع الفلفلي. التصرف الأفضل؟',en:'Someone with reflux is considering peppermint. Best action?'},
+  opts:[{ar:'يستخدمه بحرية',en:'Use it freely'},{ar:'استشارة صيدلي أو طبيب أولًا — قد يزيد الارتجاع',en:'Ask a pharmacist or doctor first — it may worsen reflux'},{ar:'يضاعف الجرعة',en:'Double the dose'}],
+  a:1,
+  why:{ar:'النعناع قد يرخي الصمام المريئي ويزيد الارتجاع؛ الشاي والزيت كلاهما قد يفاقمانه.',en:'Peppermint may relax the oesophageal sphincter and worsen reflux; both tea and oil can aggravate it.'},
+  ref:{name:'EMA · Peppermint leaf',url:'https://www.ema.europa.eu/en/documents/herbal-monograph/european-union-herbal-monograph-mentha-x-piperita-l-folium-revision-1_en.pdf'}},
+ {q:{ar:'مريض على دواء سيولة يفكر في الزنجبيل. الخطوة الصحيحة؟',en:'A patient on a blood thinner is considering ginger. Correct step?'},
+  opts:[{ar:'يبدأ فورًا',en:'Start immediately'},{ar:'مراجعة صيدلي أو طبيب أولًا لاحتمال التفاعل',en:'Review with a pharmacist or doctor first for possible interaction'},{ar:'يوقف دواء السيولة',en:'Stop the blood thinner'}],
+  a:1,
+  why:{ar:'الزنجبيل قد يزيد خطر النزيف مع أدوية السيولة؛ لا توقف علاجك ولا تبدأ عُشبة من غير مراجعة.',en:'Ginger may increase bleeding risk with blood thinners; never stop your medicine or start a herb without review.'},
+  ref:{name:'NCCIH · Travelers',url:'https://www.nccih.nih.gov/health/complementary-health-approaches-for-travelers'}}
+];
+var quizCard=document.getElementById('quiz-card');
+if(quizCard){
+ var qi=0,score=0,answered=false,done=false;
+ function L(p){return en()?p.en:p.ar;}
+ function renderQ(){
+  answered=false;
+  var q=QUIZ[qi];
+  var keys=en()?['A','B','C']:['أ','ب','ج'];
+  var opts=q.opts.map(function(o,i){
+   return '<button type="button" class="quiz-opt" data-i="'+i+'"><span class="quiz-opt-key">'+keys[i]+'</span><span>'+esc(L(o))+'</span></button>';
+  }).join('');
+  quizCard.innerHTML=
+   '<div class="quiz-progress"><span>'+(en()?'Question ':'السؤال ')+(qi+1)+' / '+QUIZ.length+'</span><div class="quiz-bar"><span style="width:'+(qi/QUIZ.length*100)+'%"></span></div></div>'+
+   '<h3 class="quiz-q">'+esc(L(q.q))+'</h3>'+
+   '<div class="quiz-opts">'+opts+'</div>'+
+   '<div class="quiz-feedback" hidden></div>'+
+   '<button type="button" class="btn btn-primary quiz-next" hidden>'+(en()?'Next':'السؤال التالي')+'</button>';
+  quizCard.querySelectorAll('.quiz-opt').forEach(function(b){
+   b.addEventListener('click',function(){answer(+b.getAttribute('data-i'));});
+  });
+  quizCard.querySelector('.quiz-next').addEventListener('click',function(){
+   qi++;
+   if(qi<QUIZ.length)renderQ();else renderResult();
+  });
+ }
+ function answer(i){
+  if(answered)return;
+  answered=true;
+  var q=QUIZ[qi],ok=(i===q.a);
+  if(ok)score++;
+  quizCard.querySelectorAll('.quiz-opt').forEach(function(b,bi){
+   b.disabled=true;
+   if(bi===q.a)b.classList.add('is-correct');
+   else if(bi===i)b.classList.add('is-wrong');
+  });
+  var fb=quizCard.querySelector('.quiz-feedback');
+  fb.hidden=false;
+  fb.className='quiz-feedback '+(ok?'ok':'no');
+  fb.innerHTML='<strong>'+(ok?(en()?'Correct!':'صح!'):(en()?'Not quite.':'مش بالظبط.'))+'</strong><p>'+esc(L(q.why))+'</p><a class="citation" href="'+q.ref.url+'" target="_blank" rel="noopener noreferrer">'+esc(q.ref.name)+'</a>';
+  var nx=quizCard.querySelector('.quiz-next');
+  nx.hidden=false;
+  nx.textContent=(qi===QUIZ.length-1)?(en()?'See your result':'شوف نتيجتك'):(en()?'Next':'السؤال التالي');
+ }
+ function renderResult(){
+  done=true;
+  var msg=score===5?(en()?'Excellent! You got the message — knowledge before the journey.':'ممتاز! فهمت الرسالة — معرفة تسبق الرحلة فعلًا.'):score>=3?(en()?'Very good! Review the missed points in the guide.':'جيد جدًا! راجع النقاط اللي فاتتك في الدليل.'):(en()?'No worries — revisit the plant guide and checker, then try again.':'لا بأس — ارجع لدليل النباتات والفاحص وحاول تاني.');
+  var stars='';
+  for(var s=0;s<5;s++)stars+='<span class="'+(s<score?'on':'')+'">★</span>';
+  quizCard.innerHTML='<div class="quiz-result"><div class="quiz-stars">'+stars+'</div><div class="quiz-score">'+score+' / '+QUIZ.length+'</div><p>'+msg+'</p><button type="button" class="btn btn-primary quiz-retry">'+(en()?'Try again':'حاول تاني')+'</button></div>';
+  quizCard.querySelector('.quiz-retry').addEventListener('click',function(){qi=0;score=0;done=false;renderQ();});
+ }
+ renderQ();
+ document.addEventListener('click',function(e){
+  if(e.target.closest('#lang-button'))setTimeout(function(){if(done)renderResult();else renderQ();},0);
+ });
+}
+/* re-apply meters after language re-render */
+document.addEventListener('click',function(e){
+ if(e.target.closest('#lang-button'))setTimeout(addMeters,0);
+});
+})();
+</script>
+<script>
+/* PHYTO MOTION v7 | Case clinic, SBAR handover note, patient counselling card.
+   Pure presentation layer: no network, no storage, no dosing advice. */
+(function () {
+  'use strict';
+  var B = window.PhytoBridge || null;
+  function en() { return document.documentElement.lang === 'en'; }
+  function tr(o) { return o ? (en() ? o.en : o.ar) : ''; }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function $(s, r) { return (r || document).querySelector(s); }
+  function svg(id) { return '<svg class="icon" aria-hidden="true"><use href="#i-' + id + '"/></svg>'; }
+  function say(ar, enTxt) { return en() ? enTxt : ar; }
+  var REFS = {
+    ginger: { n: 'NCCIH · Ginger', u: 'https://www.nccih.nih.gov/health/ginger' },
+    travel: { n: 'NCCIH · Travelers', u: 'https://www.nccih.nih.gov/health/complementary-health-approaches-for-travelers' },
+    cdc: { n: 'CDC · Motion sickness', u: 'https://www.cdc.gov/yellow-book/hcp/travel-air-sea/motion-sickness.html' },
+    cdcHerbs: { n: 'CDC · Travel wellness', u: 'https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/complementary-and-integrative-health-approaches.html' },
+    mint: { n: 'NCCIH · Peppermint', u: 'https://www.nccih.nih.gov/health/peppermint-oil' },
+    emaOil: { n: 'EMA · Peppermint oil', u: 'https://www.ema.europa.eu/en/documents/herbal-monograph/european-union-herbal-monograph-mentha-x-piperita-l-aetheroleum-revision-1_en.pdf' },
+    emaLeaf: { n: 'EMA · Peppermint leaf', u: 'https://www.ema.europa.eu/en/documents/herbal-monograph/european-union-herbal-monograph-mentha-x-piperita-l-folium-revision-1_en.pdf' },
+    henbane: { n: 'Henbane · Case report', u: 'https://doi.org/10.1177/00494755241289456' },
+    neuro: { n: 'NHS · Neurological red flags', u: 'https://www.nhs.uk/conditions/brain-aneurysm/' },
+    dehydration: { n: 'NHS · Dehydration', u: 'https://www.nhs.uk/conditions/dehydration/' },
+    allergy: { n: 'NHS · Anaphylaxis', u: 'https://www.nhs.uk/conditions/anaphylaxis/' }
+  };
+  function cite(keys) {
+    if (!keys || !keys.length) return '';
+    return keys.map(function (k) {
+      var r = REFS[k]; if (!r) return '';
+      return '<a class="citation" href="' + r.u + '" target="_blank" rel="noopener noreferrer">' + esc(r.n) + '</a>';
+    }).join(' ');
+  }
+
+  /* ============================ CASE CLINIC ============================ */
+  var CASES = [
+    {
+      id: 'child',
+      tag: { ar: 'طفل · ٧ سنين', en: 'Child · 7 years' },
+      title: { ar: 'كبسولة البالغين لطفل في رحلة بالباص', en: 'Adult capsules for a child on a bus trip' },
+      lead: { ar: 'أم بتسأل عن كبسولة الزنجبيل بتاعتها لابنها قبل سفر ٦ ساعات.', en: 'A mother asks about her own ginger capsule for her son before a 6-hour trip.' },
+      scenario: { ar: 'أم في الصيدلية: «ابني ٧ سنين، عندنا رحلة بالباص ٦ ساعات ونفسه يفضل يلعب. ينفع أديله كبسولة زنجبيل من اللي باخدها؟»', en: 'A mother at the counter: “My son is 7; we have a 6-hour bus trip and he wants to enjoy it. Can he take one of my ginger capsules?”' },
+      steps: [
+        {
+          q: { ar: 'أول ردّ مهني إيه؟', en: 'What is the right first response?' },
+          opts: [
+            { t: { ar: 'أديله نصف كبسولة بالغين لأن وزنه أصغر', en: 'Give half an adult capsule because he is smaller' }, ok: false, why: { ar: 'نصف كبسولة مش جرعة أطفال محسوبة. اختيار المستحضر والجرعة للأطفال محتاج تقييم يناسب السن والوزن، ومش كل مستحضر للبالغين ينفع للطفل.', en: 'Half a capsule is not a calculated paediatric dose. Product choice and dosing in children need age- and weight-appropriate assessment.' } },
+            { t: { ar: 'أرفض كبسولة البالغين وأبدأ بإجراءات السفر غير الدوائية', en: 'Decline the adult capsule and start non-drug travel measures' }, ok: true, why: { ar: 'ده القرار الصح: إجراءات غير دوائية أولًا (نقطة ثابتة، هواء، وجبات خفيفة)، وأي مستحضر للطفل يتحدد بجرعة مناسبة للسن من الصيدلي أو الطبيب.', en: 'Correct: non-drug measures first (stable gaze point, fresh air, light meals); any product for the child is chosen with age-appropriate dosing by a pharmacist or doctor.' } },
+            { t: { ar: 'أديله نقط زيت نعناع فموي مركّز', en: 'Give concentrated oral peppermint oil drops' }, ok: false, why: { ar: 'الزيوت العطرية المركزة ممنوعة للأطفال الصغار، وبالفم الخطر أكبر (حرقان، تهيّج، وبلع غير مقصود).', en: 'Concentrated essential oils are unsafe for young children; oral use carries extra risk (burning, irritation, accidental swallowing).' } }
+          ],
+          ref: ['mint', 'emaOil']
+        },
+        {
+          q: { ar: 'لو الأم مصممة على «حاجة طبيعية»، أنسب صياغة؟', en: 'If the mother insists on “something natural”, what is the best wording?' },
+          opts: [
+            { t: { ar: 'مفيش أي حاجة طبيعية تنفع خالص ومش محتاجة تراجع حد', en: 'Nothing natural can ever help, and she needs no review' }, ok: false, why: { ar: 'النفي المطلق مش دقيق ولا بيبني ثقة. الرسالة الصح: توقّعات واقعية + إجراءات فعّالة + مراجعة مختص قبل أي مستحضر.', en: 'A blanket denial is neither accurate nor trust-building. The right message: realistic expectations, effective measures, and professional review before any product.' } },
+            { t: { ar: 'الشاي أو مستحضر خفيف ممكن يُناقش مع الصيدلي بجرعة مناسبة للسن، والأهم إجراءات السفر', en: 'Tea or a mild product can be discussed with the pharmacist at an age-appropriate dose; measures matter most' }, ok: true, why: { ar: 'كده بتدي بديل آمن مع حدود واضحة، وبتسيب قرار المستحضر والجرعة لمختص يعرف السن والوزن والأدوية.', en: 'This offers a safe alternative with clear limits, leaving product and dose to a professional who knows the age, weight and medicines.' } },
+            { t: { ar: 'الزيوت العطرية أفضل للأطفال لأنها «طبيعية»', en: 'Essential oils are better for children because they are “natural”' }, ok: false, why: { ar: '«طبيعي» ≠ آمن. الزيوت المركزة من أخطر الحاجات على الأطفال، خصوصًا حول الوجه والأنف وبالفم.', en: '“Natural” is not “safe”. Concentrated oils are among the riskiest products for children, especially near the face, nose and mouth.' } }
+          ],
+          ref: ['ginger', 'emaLeaf']
+        },
+        {
+          q: { ar: 'أي علامة تخلّيك توقف النقاش وتوجّه الطفل للطبيب فورًا؟', en: 'Which finding makes you stop and refer the child immediately?' },
+          opts: [
+            { t: { ar: 'نعاس خفيف بعد الرحلة', en: 'Mild sleepiness after the trip' }, ok: false, why: { ar: 'ده عَرَض شائع بعد السفر ومش علامة خطر بحد ذاته؛ بيتابع لو متكرر أو مصحوب بحرارة أو تغيّر وعي.', en: 'Common after travel and not a red flag on its own; review if recurrent, with fever, or altered consciousness.' } },
+            { t: { ar: 'صداع شديد مفاجئ، زغللة أو رؤية مزدوجة، أو ضعف في ناحية', en: 'Sudden severe headache, blurred or double vision, or one-sided weakness' }, ok: true, why: { ar: 'دي علامات عصبية حمراء: لازم تقييم طبي فوري، ومفيش مكان هنا لتجربة عُشبة أو انتظار.', en: 'These are neurological red flags: immediate medical assessment, with no place for trying a herb or waiting.' } },
+            { t: { ar: 'فقدان شهية بسيط', en: 'Slightly reduced appetite' }, ok: false, why: { ar: 'مش علامة خطر لوحده؛ بيتابع لو مستمر أو مصحوب بفقدان وزن أو قيء متكرر.', en: 'Not a red flag alone; review if persistent or accompanied by weight loss or repeated vomiting.' } }
+          ],
+          ref: ['neuro']
+        }
+      ],
+      verdict: {
+        grade: { ar: 'توصية قوية', en: 'Strong recommendation' },
+        soft: false,
+        rec: { ar: 'مفيش كبسولة بالغين للطفل. القرار: إجراءات سفر غير دوائية + مراجعة الصيدلي لأي مستحضر بجرعة مناسبة للسن، وأي علامة عصبية = تقييم فوري.', en: 'No adult capsule for the child. Decision: non-drug travel measures plus pharmacist review for any age-appropriate product; any neurological sign means immediate assessment.' },
+        points: [
+          { ar: 'اشرح للأم إن نصف الكبسولة مش «نص جرعة آمنة» — دي جرعة غير محسوبة أصلًا.', en: 'Explain that half a capsule is not a “safe half dose” — it is an uncalculated dose.' },
+          { ar: 'اتفق على خطة مكتوبة: إجراءات قبل وأثناء الرحلة، ومتى ترجع.', en: 'Agree a written plan: measures before and during the trip, and when to return.' },
+          { ar: 'أي مستحضر للطفل: صيدلي/طبيب، سن ووزن وأدوية، مفيش زيوت مركزة.', en: 'Any paediatric product: pharmacist or doctor, age, weight and medicines — no concentrated oils.' }
+        ],
+        refs: ['mint', 'neuro']
+      }
+    },
+    {
+      id: 'pregnancy',
+      tag: { ar: 'حمل · ١٢ أسبوع', en: 'Pregnancy · 12 weeks' },
+      title: { ar: 'زنجبيل «بجرعة عالية» في الحمل', en: '“High-dose” ginger in pregnancy' },
+      lead: { ar: 'مريضة حامل عندها غثيان بسيط مع السفر وبتطلب جرعة كبيرة «عشان تشتغل أسرع».', en: 'A pregnant patient with mild travel nausea wants a big dose “so it works faster”.' },
+      scenario: { ar: 'مريضة ٣٢ سنة، حامل ١٢ أسبوع، عندها غثيان بسيط مع السفر. بتسأل: «أخد زنجبيل بجرعة عالية عشان يشتغل أسرع؟»', en: 'A 32-year-old patient, 12 weeks pregnant, with mild travel-related nausea: “Should I take a high dose of ginger so it works faster?”' },
+      steps: [
+        {
+          q: { ar: 'أنسب خطوة أولى؟', en: 'Best first step?' },
+          opts: [
+            { t: { ar: 'أوافق على جرعة عالية لأن الزنجبيل «طبيعي»', en: 'Agree to a high dose because ginger is “natural”' }, ok: false, why: { ar: 'الجرعات العالية مش مبرَّرة بكونها طبيعية. الحمل بيغيّر حساب الفايدة/الخطر، والقرار محتاج مراجعة الطبيب.', en: 'High doses are not justified by being natural. Pregnancy changes the benefit/risk balance; the decision needs medical review.' } },
+            { t: { ar: 'أبدأ بإجراءات غير دوائية وأراجع الطبيب قبل أي مستحضر أو جرعة', en: 'Start non-drug measures and refer to her doctor before any product or dose' }, ok: true, why: { ar: 'ده الترتيب الصح في الحمل: تدابير آمنة أولًا، وأي مستحضر أو جرعة بقرار الطبيب المتابع للحمل.', en: 'The correct order in pregnancy: safe measures first, with any product or dose decided by the doctor following the pregnancy.' } },
+            { t: { ar: 'أمنعها من السفر خالص', en: 'Tell her not to travel at all' }, ok: false, why: { ar: 'المنع المطلق مش قرار الصيدلي، وممكن يزوّد القلق. المطلوب تقييم وتخطيط، مش منع.', en: 'A blanket ban is not the pharmacist’s decision and can increase anxiety. Assessment and planning are what is needed.' } }
+          ],
+          ref: ['ginger']
+        },
+        {
+          q: { ar: 'لو سألت عن الزنجبيل تحديدًا، الأدق إيه؟', en: 'If she asks specifically about ginger, what is most accurate?' },
+          opts: [
+            { t: { ar: 'آمن تمامًا في أي جرعة', en: 'Completely safe at any dose' }, ok: false, why: { ar: 'مفيش حاجة «آمنة تمامًا» في الحمل بأي جرعة. لازم مصدر موثوق وتقييم فردي.', en: 'Nothing is “completely safe” in pregnancy at any dose. A reliable source and individual assessment are needed.' } },
+            { t: { ar: 'الدراسات محدودة، والجرعات العالية غير منصوح بها — القرار للطبيب', en: 'Evidence is limited; high doses are not advised — her doctor decides' }, ok: true, why: { ar: 'ده كلام متوازن: فايدة محتملة لبعض أنواع الغثيان، مع دليل محدود وتحفّظ على الجرعات العالية.', en: 'Balanced: possible benefit for some types of nausea, with limited evidence and caution about high doses.' } },
+            { t: { ar: 'ممنوع تمامًا لكل الحوامل', en: 'Absolutely forbidden for all pregnant women' }, ok: false, why: { ar: 'التعميم غير دقيق. القرار بيعتمد على الحالة والجرعة والمتابعة، مش على قاعدة واحدة.', en: 'Overgeneralisation is inaccurate. The decision depends on the case, dose and follow-up, not one blanket rule.' } }
+          ],
+          ref: ['ginger', 'cdcHerbs']
+        },
+        {
+          q: { ar: 'أي عرض يستدعي تقييم عاجل في الحمل؟', en: 'Which symptom needs urgent assessment in pregnancy?' },
+          opts: [
+            { t: { ar: 'قيء مستمر مع عدم القدرة على شرب سوائل، دوخة شديدة، أو نزول دم', en: 'Persistent vomiting with inability to keep fluids, severe dizziness, or bleeding' }, ok: true, why: { ar: 'دي علامات جفاف أو خطر حمل: تقييم طبي عاجل اليوم، ومفيش مجال لتجربة أعشاب.', en: 'These suggest dehydration or pregnancy risk: urgent assessment today; no place for herbal trials.' } },
+            { t: { ar: 'غثيان خفيف الصبح', en: 'Mild morning nausea' }, ok: false, why: { ar: 'شائع في الحمل، بيتابع مع الطبيب المتابع، ومش طوارئ بحد ذاته.', en: 'Common in pregnancy; followed up with her doctor and not an emergency by itself.' } },
+            { t: { ar: 'تغيّر الشهية', en: 'Changed appetite' }, ok: false, why: { ar: 'بيتابع لو مستمر أو مصحوب بفقدان وزن، لكنه مش علامة طوارئ لوحده.', en: 'Review if persistent or with weight loss, but not an emergency sign alone.' } }
+          ],
+          ref: ['dehydration']
+        }
+      ],
+      verdict: {
+        grade: { ar: 'توصية احتياطية · مرجع للطبيب', en: 'Cautious recommendation · refer' },
+        soft: true,
+        rec: { ar: 'القرار النهائي للطبيب المتابع للحمل. دورك: تدابير غير دوائية، توقّعات واقعية، وتوضيح إن الجرعات العالية مش مدعومة بدليل قوي — وأي علامة جفاف أو نزف = طوارئ.', en: 'The final decision belongs to her pregnancy doctor. Your role: non-drug measures, realistic expectations, and clarifying that high doses lack strong evidence — any dehydration or bleeding sign means emergency care.' },
+        points: [
+          { ar: 'اسأل عن الأدوية والفيتامينات والمكملات الحالية قبل أي كلام عن أعشاب.', en: 'Ask about current medicines, vitamins and supplements before discussing herbs.' },
+          { ar: 'اكتب متى ترجع: قيء مستمر، عدم تبول، نزول دم، أو دوخة شديدة.', en: 'Write down when to return: persistent vomiting, no urine output, bleeding, or severe dizziness.' },
+          { ar: 'ما تعتمدش على الأعشاب كبديل عن تقييم الطبيب.', en: 'Never use herbs as a substitute for medical assessment.' }
+        ],
+        refs: ['ginger', 'dehydration']
+      }
+    },
+    {
+      id: 'anticoagulant',
+      tag: { ar: 'سيولة · ٥٨ سنة', en: 'Anticoagulation · 58 years' },
+      title: { ar: 'زنجبيل مع وارفارين وأسبرين قبل رحلة', en: 'Ginger with warfarin and aspirin before a flight' },
+      lead: { ar: 'مريض على مضادات تخثر بيسأل عن زنجبيل «للنفس» قبل طيران طويل.', en: 'A patient on anticoagulants asks about ginger “for mood” before a long flight.' },
+      scenario: { ar: 'راجل ٥٨ سنة، على وارفارين وأسبرين بعد جلطة. بيسأل: «ينفع آخد زنجبيل قبل السفر عشان الدوخة والنفس؟»', en: 'A 58-year-old man on warfarin and aspirin after a stroke: “Can I take ginger before the trip for dizziness and mood?”' },
+      steps: [
+        {
+          q: { ar: 'أهم نقطة تقولها في أول ٣٠ ثانية؟', en: 'What is the key point in the first 30 seconds?' },
+          opts: [
+            { t: { ar: 'الزنجبيل بيعمل سيولة قوية وممنوع تمامًا', en: 'Ginger strongly thins the blood and is totally forbidden' }, ok: false, why: { ar: 'مبالغة غير دقيقة. اللي موجود تقارير تداخل محتمل، ومحتاجة مراجعة وتقدير مش منع مطلق.', en: 'An inaccurate exaggeration. There are reports of possible interaction, which need review and judgement, not a blanket ban.' } },
+            { t: { ar: 'في تداخل محتمل مع مضادات التخثر — ما يبدأش إلا بمراجعة الطبيب مع متابعة INR', en: 'There is a possible interaction with anticoagulants — do not start without medical review and INR monitoring' }, ok: true, why: { ar: 'ده الكلام المدعوم: التداخل المحتمل + الحاجة لمتابعة INR وعلامات النزف قبل أي قرار.', en: 'Supported: possible interaction, plus the need for INR monitoring and bleeding-sign review before any decision.' } },
+            { t: { ar: 'مفيش أي تداخل موثّق، ممكن يبدأ عادي', en: 'No documented interaction; he can just start' }, ok: false, why: { ar: 'غياب التوثيق القوي مش دليل أمان، خصوصًا مع مريض عنده تاريخ جلطة وعلى دوائين مؤثرين في التخثر.', en: 'Absence of strong documentation is not proof of safety, especially after a stroke and on two anticoagulant-affecting drugs.' } }
+          ],
+          ref: ['cdcHerbs']
+        },
+        {
+          q: { ar: 'لو وافق الطبيب، إيه المطلوب أثناء الاستخدام؟', en: 'If his doctor agrees, what is required while using it?' },
+          opts: [
+            { t: { ar: 'متابعة علامات النزف وINR حسب تعليمات الطبيب', en: 'Monitor bleeding signs and INR as instructed by his doctor' }, ok: true, why: { ar: 'المتابعة هي اللي بتحوّل «التداخل المحتمل» لحاجة قابلة للإدارة، بدل ما تبقى مفاجأة.', en: 'Monitoring turns a “possible interaction” into something manageable instead of a surprise.' } },
+            { t: { ar: 'زيادة الجرعة لو مفيش تحسّن', en: 'Increase the dose if there is no improvement' }, ok: false, why: { ar: 'زيادة الجرعة من غير تقييم بتزوّد الخطر، وأي تعديل جرعة قرار طبيب.', en: 'Dose escalation without assessment raises risk; any dose change is a medical decision.' } },
+            { t: { ar: 'مش محتاج متابعة لأنه نبات', en: 'No monitoring needed because it is a plant' }, ok: false, why: { ar: 'كونه نبات مش معناه إنه محايد. المواد الفعّالة بتدخل في نفس مسارات الدوا.', en: 'Being a plant does not make it neutral; active constituents enter the same pathways as drugs.' } }
+          ],
+          ref: ['travel']
+        },
+        {
+          q: { ar: 'أي علامة نزف تستدعي طوارئ؟', en: 'Which bleeding sign needs emergency care?' },
+          opts: [
+            { t: { ar: 'براز أسود أو دموي، قيء دم، أو كدمات واسعة غير مبررة', en: 'Black or bloody stool, vomiting blood, or extensive unexplained bruising' }, ok: true, why: { ar: 'دي علامات نزف مهمة على مضادات التخثر: طوارئ فورًا، مش «نستنى ونشوف».', en: 'These are significant bleeding signs on anticoagulants: emergency now, not “wait and see”.' } },
+            { t: { ar: 'عطش بسيط', en: 'Mild thirst' }, ok: false, why: { ar: 'مش علامة نزف. بيتابع لو مصحوب بقيء أو عدم تبول.', en: 'Not a bleeding sign; review if accompanied by vomiting or low urine output.' } },
+            { t: { ar: 'طعم غريب في الفم', en: 'An odd taste in the mouth' }, ok: false, why: { ar: 'عَرَض بسيط ومش من علامات النزف، لكنه بيتسجّل لو جديد ومستمر.', en: 'A minor symptom, not a bleeding sign, but record it if new and persistent.' } }
+          ],
+          ref: null
+        }
+      ],
+      verdict: {
+        grade: { ar: 'توصية قوية · تواصل مع الطبيب', en: 'Strong recommendation · contact prescriber' },
+        soft: false,
+        rec: { ar: 'مفيش بدء ذاتي للزنجبيل. القرار: مراجعة الطبيب أولًا، متابعة INR وعلامات النزف، وأي علامة نزف = طوارئ. والإجراءات غير الدوائية للدوار تبدأ فورًا.', en: 'No self-started ginger. Decision: prescriber review first, INR and bleeding-sign monitoring, and any bleeding sign means emergency care. Non-drug measures for dizziness start now.' },
+        points: [
+          { ar: 'وثّق كل الأدوية والمكملات، واطلب صورة من خطة الطبيب.', en: 'Document all medicines and supplements, and ask for his prescriber’s plan.' },
+          { ar: 'اشرح علامات النزف بلغة بسيطة قبل ما يسافر.', en: 'Explain bleeding signs in plain language before he travels.' },
+          { ar: 'الدوار له أسباب كتير — مش لازم يكون دوار حركة؛ التقييم بيحدد.', en: 'Dizziness has many causes and is not necessarily motion sickness; assessment decides.' }
+        ],
+        refs: ['cdcHerbs', 'travel']
+      }
+    }
+  ];
+
+  var run = { i: -1, answers: [], done: false };
+
+  function gridHTML() {
+    return CASES.map(function (c, i) {
+      return '<button type="button" class="case-card" data-case="' + i + '" aria-label="' + esc(tr(c.title)) + '">' +
+        '<span class="case-num">0' + (i + 1) + '</span>' +
+        '<span class="case-tag">' + svg('user') + esc(tr(c.tag)) + '</span>' +
+        '<h3>' + esc(tr(c.title)) + '</h3>' +
+        '<p>' + esc(tr(c.lead)) + '</p>' +
+        '<span class="case-go">' + say('ابدأ الحالة', 'Start the case') + svg('arrow') + '</span>' +
+        '</button>';
+    }).join('');
+  }
+
+  function optionHTML(stepIdx, o, k, answered, chosen) {
+    var cls = 'case-opt';
+    if (answered) {
+      if (o.ok) cls += ' is-ok';
+      else if (k === chosen) cls += ' is-bad';
+    }
+    return '<button type="button" class="' + cls + '" data-case-opt="' + stepIdx + '" data-opt="' + k + '"' + (answered ? ' disabled' : '') + '>' +
+      '<span class="key">' + String.fromCharCode(65 + k) + '</span><span>' + esc(tr(o.t)) + '</span></button>';
+  }
+
+  function stepHTML(c, j) {
+    var s = c.steps[j];
+    var chosen = run.answers[j];
+    var answered = chosen !== undefined && chosen !== null;
+    var html = '<div class="case-step"><p class="case-step-q"><b>' + (j + 1) + '</b><span>' + esc(tr(s.q)) + '</span></p><div class="case-opts">' +
+      s.opts.map(function (o, k) { return optionHTML(j, o, k, answered, chosen); }).join('') + '</div>';
+    if (answered) {
+      var ok = s.opts[chosen].ok;
+      var good = s.opts.filter(function (o) { return o.ok; })[0];
+      html += '<div class="case-feedback ' + (ok ? 'ok' : 'bad') + '" role="status"><strong>' +
+        (ok ? say('إجابة دقيقة', 'Accurate answer') : say('مش الأدق — وده التصحيح', 'Not the most accurate — here is the correction')) + '</strong>' +
+        (!ok ? esc(tr(s.opts[chosen].why)) + '<br><br>' : '') +
+        '<span>' + esc(tr(good.why)) + '</span>' + cite(s.ref) + '</div>';
+    }
+    html += '</div>';
+    return html;
+  }
+
+  function verdictHTML(c) {
+    var v = c.verdict;
+    return '<div class="case-verdict"><span class="grade-chip' + (v.soft ? ' soft' : '') + '">' + svg('shield') + esc(tr(v.grade)) + '</span>' +
+      '<h3>' + svg('check') + say('القرار السريري', 'Clinical decision') + '</h3>' +
+      '<p>' + esc(tr(v.rec)) + '</p>' +
+      '<ul>' + v.points.map(function (p) { return '<li>' + esc(tr(p)) + '</li>'; }).join('') + '</ul>' +
+      cite(v.refs) +
+      '<div class="case-actions"><button type="button" class="btn btn-primary btn-sm" data-case-action="safety"><span>' + say('طبّقها في أداة الأمان', 'Apply it in the checker') + '</span>' + svg('arrow') + '</button>' +
+      '<button type="button" class="btn btn-sm" data-case-action="grid"><span>' + say('حالة تانية', 'Another case') + '</span></button>' +
+      '<button type="button" class="btn btn-sm" data-case-action="restart"><span>' + say('من الأول', 'Restart case') + '</span></button></div></div>';
+  }
+
+  function renderCase() {
+    var panel = $('#case-panel');
+    if (!panel) return;
+    if (run.i < 0) { panel.hidden = true; panel.innerHTML = ''; return; }
+    var c = CASES[run.i];
+    var total = c.steps.length;
+    var answeredAll = run.answers.filter(function (a) { return a !== undefined && a !== null; }).length === total;
+    run.done = answeredAll;
+    var answeredCount = run.answers.filter(function (a) { return a !== undefined && a !== null; }).length;
+    var dots = c.steps.map(function (_, j) {
+      return '<i class="' + ((j < answeredCount || j === answeredCount) ? 'on' : '') + '"></i>';
+    }).join('');
+    var label = answeredAll ? say('النتيجة', 'Result') : say('خطوة ', 'Step ') + (answeredCount + 1) + ' / ' + total;
+    var html = '<div class="case-top"><button type="button" class="case-back" data-case-action="grid">' + svg('arrow') + '<span>' + say('كل الحالات', 'All cases') + '</span></button>' +
+      '<div class="case-progress">' + dots + '<span>' + label + '</span></div></div>' +
+      '<div class="case-tag" style="margin-bottom:9px">' + svg('user') + esc(tr(c.tag)) + '</div>' +
+      '<h3 id="case-title" style="font-size:18px;margin:0 0 10px">' + esc(tr(c.title)) + '</h3>' +
+      '<div class="case-scenario">' + esc(tr(c.scenario)) + '</div>';
+    for (var j = 0; j < total; j++) {
+      if (j > answeredCount) break;
+      html += stepHTML(c, j);
+    }
+    if (answeredAll) html += verdictHTML(c);
+    panel.innerHTML = html;
+    panel.hidden = false;
+    var grid = $('#case-grid');
+    if (grid) grid.hidden = true;
+  }
+
+  function openCase(i) {
+    run = { i: i, answers: [], done: false };
+    renderCase();
+    var panel = $('#case-panel');
+    if (panel && panel.scrollIntoView) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function resetGrid() {
+    run = { i: -1, answers: [], done: false };
+    var grid = $('#case-grid'); if (grid) grid.hidden = false;
+    var panel = $('#case-panel'); if (panel) { panel.hidden = true; panel.innerHTML = ''; }
+  }
+
+  function answer(step, pick) {
+    if (run.i < 0) return;
+    if (run.answers[step] !== undefined && run.answers[step] !== null) return;
+    run.answers[step] = pick;
+    renderCase();
+  }
+
+  /* ============================ SBAR NOTE ============================ */
+  function sbarData() {
+    if (!B || !B.report) return null;
+    var r = B.report;
+    var tags = B.tags ? B.tags() : [];
+    var S = [], Bk = [], A = [], R = [];
+    S.push(say('طلب مشورة حول استخدام أعشاب أو مكمّلات لدوار الحركة.', 'Requested advice on herbs or supplements for motion sickness.'));
+    if (r.emergency) S.push(say('مذكور علامة خطر (إنذار أحمر) — الأولوية للطوارئ.', 'A red-flag warning sign was reported — emergency care takes priority.'));
+    if (r.urgent) S.push(say('قيء متكرر / عدم الاحتفاظ بالسوائل — يحتاج تقييمًا عاجلًا اليوم.', 'Repeated vomiting / inability to keep fluids — urgent assessment today.'));
+    if (tags.length) Bk.push(tags.join(' · '));
+    r.cards.forEach(function (c) {
+      var line = B.L(c.name) + ' (' + c.latin + ') — ' + B.statusLabel(c.status);
+      A.push(line);
+      if (c.risks && c.risks.length) {
+        A.push(say('تحذيرات: ', 'Precautions: ') + c.risks.map(function (x) { return B.L(x.title); }).join(' · '));
+      }
+    });
+    var seen = {};
+    r.cards.forEach(function (c) {
+      (c.risks || []).forEach(function (x) {
+        var k = B.L(x.action);
+        if (!seen[k]) { seen[k] = 1; R.push(k); }
+      });
+    });
+    if (!r.emergency) R.push(say('ابدأ بتدابير غير دوائية لدوار الحركة (نقطة ثابتة، هواء، وجبات خفيفة).', 'Start with non-drug motion-sickness measures (stable gaze point, air, light meals).'));
+    R.push(say('أي مستحضر أو جرعة: مراجعة الصيدلي/الطبيب قبل الاستخدام، ومفيش جرعات شخصية هنا.', 'Any product or dose: pharmacist/doctor review first; no personal doses are given here.'));
+    if (r.emergency) R.push(say('طوارئ فورًا: ١٢٣ داخل مصر أو رقم الطوارئ المحلي. عند بلع مادة سامة: لا تُحدث قيئًا.', 'Emergency now: 123 in Egypt or your local number. After swallowing a toxic substance: do not induce vomiting.'));
+    else R.push(say('علامات خطر (قيء مستمر، تشوش، ضعف مفاجئ، ضيق نفس): طوارئ فورًا.', 'Red flags (persistent vomiting, confusion, sudden weakness, breathlessness): emergency care.'));
+    return {
+      S: S, B: Bk.length ? Bk : [say('لا توجد تفاصيل إضافية.', 'No further details.')],
+      A: A, R: R
+    };
+  }
+
+  function sheetHTML(d) {
+    var rows = [['S', say('الموقف', 'Situation'), d.S], ['B', say('الخلفية', 'Background'), d.B], ['A', say('التقييم', 'Assessment'), d.A], ['R', say('التوصية', 'Recommendation'), d.R]];
+    return '<div class="sbar-sheet"><div class="sbar-meta"><span>PHYTO MOTION · SBAR</span><span>' + new Date().toLocaleDateString(en() ? 'en-GB' : 'ar-EG') + '</span></div>' +
+      rows.map(function (r) {
+        return '<div class="sbar-block"><div class="sbar-letter">' + r[0] + '</div><div><h4>' + esc(r[1]) + '</h4>' +
+          (r[2].length > 1 ? '<ul>' + r[2].map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : '<p>' + esc(r[2][0] || '—') + '</p>') +
+          '</div></div>';
+      }).join('') + '</div>';
+  }
+
+  function sheetText(d) {
+    var rows = [['S', say('Situation', 'Situation'), d.S], ['B', say('Background', 'Background'), d.B], ['A', say('Assessment', 'Assessment'), d.A], ['R', say('Recommendation', 'Recommendation'), d.R]];
+    return ['PHYTO MOTION · SBAR', new Date().toLocaleString(en() ? 'en-GB' : 'ar-EG'), ''].concat(rows.map(function (r) {
+      return r[0] + ' — ' + r[1] + '\n' + r[2].map(function (x) { return '- ' + x; }).join('\n') + '\n';
+    })).concat([say('ملاحظة: أداة تعليمية طلابية، مش تشخيص أو وصفة ولا بديل عن التقييم الطبي.', 'Note: a student education tool — not a diagnosis, prescription, or substitute for medical assessment.')]).join('\n');
+  }
+
+  /* ====================== PATIENT COUNSELLING CARD ====================== */
+  function counselData() {
+    if (!B || !B.report) return null;
+    var r = B.report, s = B.state;
+    var rows = [];
+    rows.push({
+      icon: 'check',
+      h: say('ابدأ بكده', 'Start here'),
+      p: say('اختار مكان هادي، بصّ لنقطة ثابتة أو الأفق، خُد هواء نضيف، وكل وجبات خفيفة قبل السفر. ده بيفرق لوحده.', 'Choose a calm seat, look at a fixed point or the horizon, get fresh air, and eat light before travelling. That alone helps.')
+    });
+    var avoid = [];
+    avoid.push(say('ما تبلعش زيوت عطرية مركزة، وما تحطهاش في الأنف أو على وش طفل صغير.', 'Do not swallow concentrated essential oils or put them in the nose or on a young child’s face.'));
+    avoid.push(say('السُّكران (Hyoscyamus niger) ممنوع تمامًا — نبات سام للتعليم فقط.', 'Henbane (Hyoscyamus niger) is never an option — a toxic plant for education only.'));
+    if (s && s.age === 'young') avoid.push(say('ممنوع كبسولة البالغين للطفل؛ أي مستحضر بجرعة يحددها الصيدلي/الطبيب.', 'No adult capsules for a child; any product and dose is set by a pharmacist or doctor.'));
+    if (s && s.preg === 'pregnant') avoid.push(say('الحمل: مفيش مستحضر أو جرعة من غير موافقة الطبيب المتابع.', 'Pregnancy: no product or dose without your doctor’s agreement.'));
+    if (s && (s.medicines || []).indexOf('blood') > -1) avoid.push(say('أدوية السيولة: ما تبدأش زنجبيل أو أي مستحضر من غير مراجعة، وبلّغ عن أي نزف.', 'Blood thinners: do not start ginger or any product without review, and report any bleeding.'));
+    if (s && (s.conditions || []).indexOf('reflux') > -1) avoid.push(say('الحموضة/الارتجاع: النعناع والزنجبيل ممكن يزوّدوها.', 'Reflux: peppermint and ginger may worsen it.'));
+    if (s && (s.conditions || []).indexOf('gallstones') > -1) avoid.push(say('حصوات المرارة: النعناع والزنجبيل محتاجين مراجعة قبل الاستخدام.', 'Gallstones: peppermint and ginger need review before use.'));
+    if (s && (s.conditions || []).indexOf('glaucoma') > -1) avoid.push(say('المياه الزرقاء: أي مستحضر بمضادات الكولين خطر — راجع طبيبك.', 'Glaucoma: anticholinergic products are risky — check with your doctor.'));
+    rows.push({ icon: 'alert', h: say('تجنّب تمامًا', 'Avoid completely'), p: avoid.join(' ') });
+    rows.push({
+      icon: 'phone', h: say('علامات خطر — طوارئ فورًا', 'Red flags — emergency now'),
+      p: say('صداع شديد مفاجئ، ضعف أو تنميل في ناحية، صعوبة كلام، تشوش أو هلاوس، ضيق نفس أو تورم في الوش، قيء متكرر أو عدم تبول، نزول دم أو براز أسود.', 'Sudden severe headache, one-sided weakness or numbness, speech difficulty, confusion or hallucinations, breathlessness or facial swelling, repeated vomiting or no urine, bleeding or black stool.')
+    });
+    rows.push({
+      icon: 'clock', h: say('ارجع للمختص لو', 'Come back if'),
+      p: say('مفيش أي تحسّن بعد الرحلة، الأعراض بتزيد، أو محتاج تاخد مسكّن/دواء مع الأعشاب. هات معاك علبة أي مستحضر بتستخدمه.', 'There is no improvement after the trip, symptoms worsen, or you need pain relief/medicine alongside herbs. Bring the pack of anything you use.')
+    });
+    return { rows: rows, points: avoid };
+  }
+
+  function counselHTML(d) {
+    return '<div class="counsel-card"><div class="sbar-meta"><span>PHYTO MOTION · ' + say('بطاقة المريض', 'PATIENT CARD') + '</span><span>' + new Date().toLocaleDateString(en() ? 'en-GB' : 'ar-EG') + '</span></div>' +
+      '<div class="counsel-grid">' + d.rows.map(function (r) {
+        return '<div class="counsel-row"><div class="cdot">' + svg(r.icon) + '</div><div><h4>' + esc(r.h) + '</h4><p>' + esc(r.p) + '</p></div></div>';
+      }).join('') + '</div>' +
+      '<div class="counsel-foot"><span>' + say('اسم الصيدلي: ____', 'Pharmacist: ____') + '</span><span>' + say('التاريخ: ____', 'Date: ____') + '</span><span>PHYTO MOTION</span></div></div>';
+  }
+
+  function counselText(d) {
+    return ['PHYTO MOTION · ' + say('بطاقة المريض', 'PATIENT CARD'), new Date().toLocaleString(en() ? 'en-GB' : 'ar-EG'), '']
+      .concat(d.rows.map(function (r) { return r.h + '\n- ' + r.p; }))
+      .concat([say('ملاحظة: إرشاد توعوي، مش وصفة ولا تشخيص.', 'Note: educational guidance, not a prescription or diagnosis.')]).join('\n');
+  }
+
+  /* ============================ SHARED UI ============================ */
+  var lastCopy = '';
+  function copyText(txt) {
+    if (!txt) return;
+    function ok() { B.toast(say('اتنسخ. جاهز للمشاركة.', 'Copied. Ready to share.')); }
+    function fallback() {
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = txt; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        var done = document.execCommand('copy'); ta.remove();
+        if (done) ok(); else B.toast(say('النسخ التلقائي غير متاح هنا.', 'Automatic copying is unavailable here.'));
+      } catch (e) { B.toast(say('النسخ التلقائي غير متاح هنا.', 'Automatic copying is unavailable here.')); }
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(ok, fallback);
+    else fallback();
+  }
+
+  function printSheet(title, bodyHTML) {
+    var host = $('#v7-print');
+    if (!host) {
+      host = document.createElement('div');
+      host.id = 'v7-print';
+      document.body.appendChild(host);
+    }
+    host.innerHTML = '<div class="v7-print-sheet"><h2>' + esc(title) + '</h2>' + bodyHTML +
+      '<div class="pfoot">PHYTO MOTION · Mansoura National University · Faculty of Pharmacy · ' + say('مادة تعليمية، ليست أداة قرار طبية معتمدة.', 'Educational material, not a validated clinical decision aid.') + '</div></div>';
+    document.body.classList.add('v7-printing');
+    window.print();
+  }
+
+  window.addEventListener('afterprint', function () { document.body.classList.remove('v7-printing'); });
+
+  function openSBAR() {
+    var d = sbarData();
+    if (!d) { B && B.toast(say('اكمل الفاحص الأول عشان نجهّز الملاحظة.', 'Complete the checker first to build the note.')); return; }
+    lastCopy = sheetText(d);
+    B.dialog('<div class="dialog-header">' + '<div><h2 id="dialog-title">' + say('ملاحظة تسليم SBAR', 'SBAR handover note') + '</h2><p>' + say('من إجاباتك فقط — جاهزة للنقاش مع الطبيب أو الصيدلي.', 'Built from your answers only — ready to discuss with a clinician.') + '</p></div>' +
+      '<button type="button" class="dialog-close" data-action="close-dialog" aria-label="' + say('إغلاق', 'Close') + '">' + svg('close') + '</button></div>' +
+      '<div class="dialog-body">' + sheetHTML(d) + '<div class="dialog-actions"><button type="button" class="btn btn-primary btn-sm" data-v7="copy"><span>' + say('نسخ', 'Copy') + '</span></button>' +
+      '<button type="button" class="btn btn-sm" data-v7="print"><span>' + say('طباعة', 'Print') + '</span></button></div></div>');
+  }
+
+  function openCounsel() {
+    var d = counselData();
+    if (!d) { B && B.toast(say('اكمل الفاحص الأول عشان نجهّز البطاقة.', 'Complete the checker first to build the card.')); return; }
+    lastCopy = counselText(d);
+    B.dialog('<div class="dialog-header">' + '<div><h2 id="dialog-title">' + say('بطاقة إرشاد للمريض', 'Patient counselling card') + '</h2><p>' + say('اطبعها أو انسخها — بلغة بسيطة ومن غير جرعات.', 'Print or copy it — plain language, no doses.') + '</p></div>' +
+      '<button type="button" class="dialog-close" data-action="close-dialog" aria-label="' + say('إغلاق', 'Close') + '">' + svg('close') + '</button></div>' +
+      '<div class="dialog-body">' + counselHTML(d) + '<div class="dialog-actions"><button type="button" class="btn btn-primary btn-sm" data-v7="copy"><span>' + say('نسخ', 'Copy') + '</span></button>' +
+      '<button type="button" class="btn btn-sm" data-v7="print"><span>' + say('طباعة', 'Print') + '</span></button></div></div>');
+  }
+
+  /* ============================== WIRING ============================== */
+  function boot() {
+    var grid = $('#case-grid');
+    if (grid) grid.innerHTML = gridHTML();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+  else boot();
+
+  document.addEventListener('click', function (e) {
+    var card = e.target.closest('[data-case]');
+    if (card) { openCase(+card.getAttribute('data-case')); return; }
+    var opt = e.target.closest('[data-case-opt]');
+    if (opt) { answer(+opt.getAttribute('data-case-opt'), +opt.getAttribute('data-opt')); return; }
+    var act = e.target.closest('[data-case-action]');
+    if (act) {
+      var a = act.getAttribute('data-case-action');
+      if (a === 'grid') resetGrid();
+      else if (a === 'restart') { run.answers = []; renderCase(); }
+      else if (a === 'safety') {
+        resetGrid();
+        var link = document.querySelector('[data-page-link="safety"]');
+        if (link) link.click();
+        setTimeout(function () { var f = document.querySelector('#checker-form'); if (f) f.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 260);
+      }
+      return;
+    }
+    var v7 = e.target.closest('[data-v7]');
+    if (v7) {
+      var k = v7.getAttribute('data-v7');
+      if (k === 'copy') copyText(lastCopy);
+      if (k === 'print') {
+        var titleEl = document.getElementById('dialog-title');
+        var sheet = $('#dialog-content .sbar-sheet') || $('#dialog-content .counsel-card');
+        printSheet(titleEl ? titleEl.textContent : 'PHYTO MOTION', sheet ? sheet.outerHTML : '');
+      }
+      return;
+    }
+    if (e.target.closest('[data-action="sbar"]')) { openSBAR(); return; }
+    if (e.target.closest('[data-action="counsel"]')) { openCounsel(); return; }
+  }, true);
+
+  var langBtn = document.getElementById('lang-button');
+  if (langBtn) langBtn.addEventListener('click', function () {
+    setTimeout(function () {
+      var grid = $('#case-grid');
+      if (grid) grid.innerHTML = gridHTML();
+      if (run.i >= 0) renderCase();
+    }, 20);
+  });
+
+  // expose a tiny handle for the automated checks
+  window.PhytoClinic = Object.freeze({ cases: CASES.length, open: openCase, sbar: sbarData });
+})();
+
 </script>
 </body>
 </html>
