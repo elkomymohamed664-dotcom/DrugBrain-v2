@@ -490,6 +490,95 @@ table.compare td.col-hi,table.compare th.col-hi{background:rgba(216,187,130,.08)
  .cast-portrait{transform:none!important}
 }
 
+
+/* ===== v9 · ALIVE: brighter portraits, cream plates, fireflies, reveal, ripple, ECG ===== */
+/* ---- 1. cast plates: cream mat so the illustration pops out of the dark ---- */
+.cast-card{background:linear-gradient(168deg,#f7f2e6 0%,#efe8d7 55%,#e6ddc8 100%)!important;border:1px solid rgba(215,194,148,.9)!important;box-shadow:0 22px 44px rgba(0,0,0,.42),inset 0 0 0 1px rgba(255,255,255,.65)!important}
+.cast-card:after{background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,.95) 47%,transparent 55%);opacity:.55!important;mix-blend-mode:soft-light}
+.cast-portrait{margin:11px 11px 0;border-radius:13px;overflow:hidden;border:1px solid rgba(18,48,42,.35);box-shadow:inset 0 0 0 3px rgba(247,242,230,.9),inset 0 0 0 4px rgba(215,194,148,.55),0 10px 22px rgba(0,0,0,.22);background:#102a26}
+.cast-portrait img{filter:brightness(1.16) saturate(1.14) contrast(1.03)}
+.cast-portrait:before{content:"";position:absolute;inset:0;border-radius:12px;pointer-events:none;box-shadow:inset 0 0 44px rgba(0,0,0,.35);z-index:2}
+.cast-portrait:after{content:"";position:absolute;inset:-40%;background:conic-gradient(from 0deg,transparent 0 62%,rgba(245,231,197,.55) 74%,transparent 84%);animation:ringSpin 7s linear infinite;pointer-events:none;mix-blend-mode:screen;z-index:1}
+.cast-card:nth-child(2) .cast-portrait:after{animation-delay:-2.3s}
+.cast-card:nth-child(3) .cast-portrait:after{animation-delay:-4.6s}
+@keyframes ringSpin{to{transform:rotate(360deg)}}
+.cast-card figcaption{border-top:1px solid rgba(18,48,42,.14)!important;background:transparent}
+.cast-card figcaption strong{color:#0e2f28!important;letter-spacing:.2px}
+.cast-card figcaption span{color:#4c6357!important}
+.cast-card figcaption em{color:#6d7a5c!important;border-color:rgba(18,48,42,.16)!important;background:rgba(255,255,255,.4)}
+.cast-card figcaption em .icon{color:#8a7a4f}
+.cast-bubble{box-shadow:0 10px 26px rgba(0,0,0,.45)!important}
+.cast-card:hover{transform:translateY(-8px)}
+/* case portraits a bit brighter + framed */
+.case-card .case-face{border:1px solid rgba(215,194,148,.55);box-shadow:inset 0 0 0 2px rgba(9,26,23,.5),0 10px 20px rgba(0,0,0,.28)}
+.case-card .case-face img{filter:brightness(1.14) saturate(1.1)}
+.case-card .case-face:before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.16) 48%,transparent 56%);transform:translateX(-120%);animation:faceSheen 7s ease-in-out infinite}
+@keyframes faceSheen{0%,70%{transform:translateX(-120%)}88%,100%{transform:translateX(120%)}}
+/* ---- 2. living background: fireflies + cursor aurora ---- */
+.life-layer{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.life-layer i{position:absolute;width:6px;height:6px;border-radius:50%;background:radial-gradient(circle,#f6e6bd 0%,rgba(215,194,148,.65) 40%,rgba(215,194,148,0) 70%);animation:fly 20s ease-in-out infinite;opacity:.55;will-change:transform,opacity}
+.life-layer i:nth-child(1){top:12%;left:6%;--dx:26px;--dy:-38px;animation-duration:19s}
+.life-layer i:nth-child(2){top:34%;left:18%;--dx:-22px;--dy:-46px;animation-duration:24s;animation-delay:-4s;width:4px;height:4px}
+.life-layer i:nth-child(3){top:62%;left:9%;--dx:32px;--dy:-30px;animation-duration:22s;animation-delay:-9s}
+.life-layer i:nth-child(4){top:78%;left:26%;--dx:-28px;--dy:-40px;animation-duration:26s;animation-delay:-2s;width:5px;height:5px}
+.life-layer i:nth-child(5){top:18%;left:44%;--dx:20px;--dy:-34px;animation-duration:21s;animation-delay:-12s;width:3px;height:3px}
+.life-layer i:nth-child(6){top:52%;left:52%;--dx:-26px;--dy:-44px;animation-duration:25s;animation-delay:-6s;width:4px;height:4px}
+.life-layer i:nth-child(7){top:86%;left:61%;--dx:24px;--dy:-28px;animation-duration:23s;animation-delay:-15s}
+.life-layer i:nth-child(8){top:26%;left:72%;--dx:-30px;--dy:-36px;animation-duration:20s;animation-delay:-3s;width:5px;height:5px}
+.life-layer i:nth-child(9){top:46%;left:86%;--dx:22px;--dy:-42px;animation-duration:27s;animation-delay:-10s;width:3px;height:3px}
+.life-layer i:nth-child(10){top:70%;left:92%;--dx:-24px;--dy:-34px;animation-duration:22s;animation-delay:-7s}
+.life-layer i:nth-child(11){top:8%;left:34%;--dx:18px;--dy:-24px;animation-duration:18s;animation-delay:-13s;width:4px;height:4px}
+.life-layer i:nth-child(12){top:92%;left:40%;--dx:-20px;--dy:-30px;animation-duration:24s;animation-delay:-5s;width:5px;height:5px}
+@keyframes fly{0%,100%{transform:translate3d(0,0,0) scale(1);opacity:.12}30%{opacity:.75;transform:translate3d(var(--dx,20px),var(--dy,-30px),0) scale(1.25)}60%{opacity:.35;transform:translate3d(calc(var(--dx,20px) * -.6),calc(var(--dy,-30px) * .55),0) scale(.9)}}
+main{position:relative;z-index:1}
+.cursor-glow{position:fixed;top:0;left:0;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;pointer-events:none;z-index:0;opacity:0;transition:opacity .6s;background:radial-gradient(circle,rgba(215,194,148,.12),rgba(109,155,124,.07) 42%,transparent 68%);will-change:transform}
+.cursor-glow.on{opacity:1}
+/* ---- 3. scroll reveal ---- */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.22,.9,.3,1),transform .8s cubic-bezier(.22,.9,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal-2{transition-delay:.09s}
+.reveal-3{transition-delay:.18s}
+.cast-card.reveal.in:hover{transform:translateY(-8px)}
+/* ---- 4. ticker ---- */
+.ticker{position:relative;margin:16px 0 6px;border-block:1px solid var(--line);background:linear-gradient(90deg,rgba(215,194,148,.06),rgba(109,155,124,.05),rgba(215,194,148,.06));overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.ticker-track{display:flex;gap:38px;width:max-content;padding:11px 0;animation:tickerMove 34s linear infinite;will-change:transform}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker-track span{display:inline-flex;align-items:center;gap:9px;font-size:11.5px;letter-spacing:.2px;color:#cfd8c9;white-space:nowrap}
+.ticker-track span:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px rgba(215,194,148,.8);flex:none}
+.ticker-track b{color:var(--gold2);font-weight:600}
+@keyframes tickerMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* ---- 5. ECG pulse ---- */
+.ecg{margin:10px 0 4px;height:34px;border-radius:8px;background-color:#0a1f1c;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='118' height='34' viewBox='0 0 118 34'><path d='M0 23 H24 l5 -9 l5 17 l6 -23 l6 27 l5 -12 H62 l4 -6 l4 8 l5 -4 H118' fill='none' stroke='%23d7c294' stroke-width='1.5' stroke-linejoin='round' stroke-linecap='round'/></svg>");background-repeat:repeat-x;background-size:118px 34px;opacity:.85;animation:ecgScroll 1.8s linear infinite;border:1px solid rgba(215,194,148,.16)}
+@keyframes ecgScroll{to{background-position:-118px 0}}
+.result-summary .ecg,.emergency-panel .ecg{max-width:320px}
+/* ---- 6. ripple + CTA glow + icon life ---- */
+.btn{position:relative;overflow:hidden}
+.ripple{position:absolute;border-radius:50%;transform:scale(0);background:rgba(246,230,189,.45);pointer-events:none;animation:rippleOut .62s ease-out forwards}
+@keyframes rippleOut{to{transform:scale(2.8);opacity:0}}
+.btn-primary{animation:ctaGlow 4.2s ease-in-out infinite}
+@keyframes ctaGlow{0%,100%{box-shadow:0 10px 26px rgba(215,194,148,.16)}50%{box-shadow:0 14px 34px rgba(215,194,148,.3)}}
+.hero .scene-spark{animation:sparkTwinkle 3.4s ease-in-out infinite}
+@keyframes sparkTwinkle{0%,100%{opacity:.55;transform:scale(.9) rotate(0)}50%{opacity:1;transform:scale(1.18) rotate(12deg)}}
+.trust-item .trust-num{animation:numGlow 3.6s ease-in-out infinite}
+@keyframes numGlow{0%,100%{text-shadow:none}50%{text-shadow:0 0 16px rgba(215,194,148,.55)}}
+/* ---- 7. typing caret for the coach ---- */
+.mini-line:after{content:"";display:inline-block;width:1px;height:1em;margin-inline-start:2px;background:var(--gold);vertical-align:-2px;animation:caretBlink 1.05s steps(1) infinite}
+@keyframes caretBlink{0%,49%{opacity:1}50%,100%{opacity:0}}
+/* ---- 8. plant cards: stronger presence ---- */
+.plant-card .plant-picture img{filter:saturate(1.08) contrast(1.03)}
+.plant-card:hover .plant-picture img{filter:saturate(1.2) contrast(1.06) brightness(1.04)}
+@media(max-width:640px){
+ .life-layer i{width:4px;height:4px}
+ .cast-portrait{margin:9px 9px 0}
+ .ticker-track{gap:26px}
+ .ticker-track span{font-size:10.5px}
+}
+@media(prefers-reduced-motion:reduce){
+ .life-layer i,.cursor-glow,.ticker-track,.ecg,.cast-portrait:after,.case-card .case-face:before,
+ .btn-primary,.hero .scene-spark,.trust-item .trust-num,.mini-line:after{animation:none!important}
+ .reveal{opacity:1!important;transform:none!important}
+}
+
 </style>
 </head>
 <body>
@@ -556,6 +645,20 @@ table.compare td.col-hi,table.compare th.col-hi{background:rgba(216,187,130,.08)
 <p class="cast-note"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span data-en="Illustrations only — no real patient, no stored data.">رسومات توضيحية فقط — مفيش مريض حقيقي ولا بيانات محفوظة.</span></p>
 </section>
 <div class="container hero-trust"><div class="trust-item"><span class="trust-num">03</span><span data-en="plants, compared">نباتات نكتشفها معًا</span></div><div class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg><span data-en="Three simple steps">٣ خطوات بسيطة</span></div><div class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span data-en="No sign-up. No saved answers.">بدون تسجيل أو حفظ بياناتك</span></div><div class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span data-en="References you can explore">مراجع علمية تقدر ترجع لها</span></div></div>
+<div class="ticker" aria-hidden="true"><div class="ticker-track">
+<span><b>طبيعي ≠ آمن</b> — كونها عُشبة مش معناه إنها مناسبة لك</span>
+<span>الزيوت العطرية المركزة <b>ممنوعة</b> للأطفال الصغار وبالفم</span>
+<span>السُّكران الأسود <b>نبات سام</b> — للتعليم فقط</span>
+<span>التداخل المحتمل مع <b>مضادات التخثر</b> يحتاج مراجعة، مش تجربة</span>
+<span>علامات الخطر <b>مش بتستنى</b> نتيجة أي فاحص</span>
+<span>السن والحمل والأدوية <b>بيغيّروا الإجابة</b> كلها</span>
+<span><b>طبيعي ≠ آمن</b> — كونها عُشبة مش معناه إنها مناسبة لك</span>
+<span>الزيوت العطرية المركزة <b>ممنوعة</b> للأطفال الصغار وبالفم</span>
+<span>السُّكران الأسود <b>نبات سام</b> — للتعليم فقط</span>
+<span>التداخل المحتمل مع <b>مضادات التخثر</b> يحتاج مراجعة، مش تجربة</span>
+<span>علامات الخطر <b>مش بتستنى</b> نتيجة أي فاحص</span>
+<span>السن والحمل والأدوية <b>بتبدّل الإجابة</b> كلها</span>
+</div></div>
 <div class="bus-scene" aria-hidden="true">
 <svg viewBox="0 0 1000 170" role="presentation">
 <defs><linearGradient id="busSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a1d1a"/><stop offset="1" stop-color="#123430"/></linearGradient></defs>
@@ -2112,8 +2215,15 @@ document.addEventListener('click',function(e){
     if (text === lastText) return;
     lastText = text;
     if (reduced) { lineEl.textContent = text; return; }
-    lineEl.classList.add('out');
-    setTimeout(function () { lineEl.textContent = text; lineEl.classList.remove('out'); }, 200);
+    var token = (window.__coachToken = (window.__coachToken || 0) + 1);
+    var i = 0;
+    lineEl.classList.remove('out');
+    lineEl.textContent = '';
+    (function type() {
+      if (token !== window.__coachToken) return;
+      lineEl.textContent = text.slice(0, ++i);
+      if (i < text.length) setTimeout(type, 24);
+    })();
   }
   syncCoach();
 
@@ -2140,6 +2250,136 @@ document.addEventListener('click',function(e){
   window.PhytoCast = Object.freeze({
     images: Object.keys(CAST).length,
     coach: function () { return lineEl ? lineEl.textContent : ''; }
+  });
+})();
+
+</script>
+<script>
+/* PHYTO MOTION v9 | ALIVE: fireflies, cursor glow, scroll reveal, ripple, ECG.
+   Presentation only, no network, no storage, fully reduced-motion aware. */
+(function () {
+  'use strict';
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia && window.matchMedia('(pointer:fine)').matches;
+
+  /* ---------- fireflies + cursor glow ---------- */
+  if (!document.querySelector('.life-layer')) {
+    var layer = document.createElement('div');
+    layer.className = 'life-layer';
+    layer.setAttribute('aria-hidden', 'true');
+    var dots = '';
+    for (var i = 0; i < 12; i++) dots += '<i></i>';
+    layer.innerHTML = dots;
+    document.body.appendChild(layer);
+  }
+
+  if (fine && !reduced) {
+    var glow = document.createElement('div');
+    glow.className = 'cursor-glow';
+    glow.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(glow);
+    var tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
+    function loop() {
+      cx += (tx - cx) * 0.12;
+      cy += (ty - cy) * 0.12;
+      glow.style.transform = 'translate3d(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px,0)';
+      if (Math.abs(tx - cx) > 0.6 || Math.abs(ty - cy) > 0.6) raf = requestAnimationFrame(loop);
+      else raf = null;
+    }
+    document.addEventListener('mousemove', function (e) {
+      tx = e.clientX; ty = e.clientY;
+      if (!glow.classList.contains('on')) glow.classList.add('on');
+      if (!raf) raf = requestAnimationFrame(loop);
+    }, { passive: true });
+    document.addEventListener('mouseleave', function () { glow.classList.remove('on'); });
+  }
+
+  /* ---------- scroll reveal ---------- */
+  var targets = document.querySelectorAll('.section-head, .journey-wrap, .booklet-banner, .bus-scene, .cast-card, .quiz-card, .team-section, .compare-wrap, .case-clinic .case-head, .hero-copy');
+  Array.prototype.forEach.call(targets, function (el, i) {
+    el.classList.add('reveal');
+    if (el.classList.contains('cast-card')) el.classList.add('reveal-' + Math.min(3, (i % 3) + 1));
+  });
+  function showAll() {
+    Array.prototype.forEach.call(document.querySelectorAll('.reveal'), function (el) { el.classList.add('in'); });
+  }
+  if (reduced || !('IntersectionObserver' in window)) {
+    showAll();
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    Array.prototype.forEach.call(document.querySelectorAll('.reveal'), function (el) { io.observe(el); });
+    // safety net: anything near the first screen can never stay hidden
+    setTimeout(function () {
+      Array.prototype.forEach.call(document.querySelectorAll('.reveal:not(.in)'), function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 1.25) el.classList.add('in');
+      });
+    }, 1800);
+  }
+
+  /* ---------- click ripple ---------- */
+  if (!reduced) {
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.btn, .choice, .case-opt, .quiz-opt, .plant-more');
+      if (!btn) return;
+      var r = btn.getBoundingClientRect();
+      var size = Math.max(r.width, r.height);
+      var s = document.createElement('span');
+      s.className = 'ripple';
+      s.style.width = s.style.height = size + 'px';
+      s.style.left = (e.clientX - r.left - size / 2) + 'px';
+      s.style.top = (e.clientY - r.top - size / 2) + 'px';
+      btn.appendChild(s);
+      setTimeout(function () { s.remove(); }, 640);
+    }, true);
+  }
+
+  /* ---------- ECG strip inside results / emergency ---------- */
+  function addECG() {
+    ['#results .result-summary', '#results .emergency-panel'].forEach(function (sel) {
+      Array.prototype.forEach.call(document.querySelectorAll(sel), function (box) {
+        if (box.querySelector('.ecg')) return;
+        var el = document.createElement('div');
+        el.className = 'ecg';
+        el.setAttribute('aria-hidden', 'true');
+        box.appendChild(el);
+      });
+    });
+  }
+  addECG();
+  var results = document.getElementById('results');
+  if (results && 'MutationObserver' in window) {
+    new MutationObserver(function () { addECG(); }).observe(results, { childList: true, subtree: true });
+  }
+
+  /* ---------- keep the cast portraits breathing after re-renders ---------- */
+  if ('MutationObserver' in window) {
+    var grid = document.getElementById('case-grid');
+    if (grid) new MutationObserver(function () {}).observe(grid, { childList: true });
+  }
+
+  /* ---------- decorative floating leaves on the inner pages ---------- */
+  [['#plants .container', 3], ['#library .container', 3]].forEach(function (pair) {
+    var host = document.querySelector(pair[0]);
+    if (!host || host.querySelector('.v9-leaf')) return;
+    host.style.position = host.style.position || 'relative';
+    for (var i = 0; i < pair[1]; i++) {
+      var sp = document.createElement('span');
+      sp.className = 'float-leaf v9-leaf';
+      sp.setAttribute('aria-hidden', 'true');
+      sp.style.cssText = '--depth:0px;top:' + (12 + i * 27) + '%;' + (i % 2 ? 'left' : 'right') + ':' + (2 + i) + '%;opacity:.6';
+      sp.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>';
+      host.appendChild(sp);
+    }
+  });
+
+  window.PhytoLife = Object.freeze({
+    ready: true,
+    revealed: function () { return document.querySelectorAll('.reveal.in').length; }
   });
 })();
 
