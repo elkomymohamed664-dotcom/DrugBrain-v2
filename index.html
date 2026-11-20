@@ -170,6 +170,46 @@ html[dir=rtl] #scroll-progress{transform-origin:100% 50%}
  .carousel-panel:nth-child(2){transform:rotateY(120deg) translateZ(190px)}
  .carousel-panel:nth-child(3){transform:rotateY(240deg) translateZ(190px)}
 }
+/* ===== 3D on every page (v4) ===== */
+@keyframes pageIn{from{opacity:0;transform:translateY(22px) rotateX(5deg) scale(.985)}to{opacity:1;transform:none}}
+@keyframes riseIn{from{opacity:0;transform:translateY(18px) rotateX(4deg)}to{opacity:1;transform:none}}
+@keyframes cardIn{from{opacity:0;transform:translateY(22px) rotateX(7deg)}to{opacity:1;transform:none}}
+@keyframes stepIn{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:none}}
+@keyframes stepInLtr{from{opacity:0;transform:translateX(-16px)}to{opacity:1;transform:none}}
+.plant-card{animation:cardIn .55s cubic-bezier(.22,.9,.3,1) backwards}
+.plant-grid>*:nth-child(2){animation-delay:.08s}
+.plant-grid>*:nth-child(3){animation-delay:.16s}
+.result-card{animation:cardIn .5s cubic-bezier(.22,.9,.3,1) backwards}
+.result-grid>*:nth-child(2){animation-delay:.07s}
+.result-grid>*:nth-child(3){animation-delay:.14s}
+.result-grid>*:nth-child(4){animation-delay:.21s}
+.form-body>*{animation:stepIn .35s ease backwards}
+html[dir=ltr] .form-body>*{animation-name:stepInLtr}
+.faq details{animation:cardIn .5s cubic-bezier(.22,.9,.3,1) backwards}
+.faq>*:nth-child(2){animation-delay:.08s}
+.sources-panel{animation:cardIn .5s cubic-bezier(.22,.9,.3,1) backwards}
+.checker-card,.checker-aside,.booklet-banner{transform-style:preserve-3d}
+.checker-card:hover{box-shadow:0 24px 48px rgba(0,0,0,.35)}
+.checker-aside:hover{border-color:rgba(216,187,130,.45)}
+.choice{transition:background .18s,border-color .18s,transform .18s,box-shadow .18s}
+.choice:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.25)}
+.scenario-button{transition:transform .18s,border-color .18s,background .18s,box-shadow .18s}
+.scenario-button:hover{transform:translateY(-3px) rotateX(4deg);box-shadow:0 10px 20px rgba(0,0,0,.28)}
+.scenario-button:active{transform:translateY(0)}
+.step-button .step-num{box-shadow:0 3px 0 rgba(0,0,0,.25)}
+.step-button.is-current .step-num{box-shadow:0 3px 0 rgba(0,0,0,.25),0 0 0 5px #d8bb820c}
+.faq details,.sources-panel{transition:transform .25s,border-color .25s,box-shadow .25s}
+.faq details:hover,.sources-panel:hover{transform:translateY(-3px);border-color:rgba(216,187,130,.5);box-shadow:0 14px 28px rgba(0,0,0,.28)}
+.plant-picture img{transition:transform .5s ease}
+.plant-card:hover .plant-picture img{transform:scale(1.07)}
+.team-tags span,.supervisor-list span{transition:transform .2s,border-color .2s}
+.team-tags span:hover,.supervisor-list span:hover{transform:translateY(-2px) rotateX(5deg);border-color:rgba(216,187,130,.55)}
+.emergency-trigger{animation:pulseGlow 2.6s ease-in-out infinite}
+@keyframes pulseGlow{0%,100%{box-shadow:0 0 0 0 rgba(242,160,147,0)}50%{box-shadow:0 0 0 6px rgba(242,160,147,.14)}}
+.btn-primary{position:relative;overflow:hidden}
+.btn-primary:after{content:"";position:absolute;top:0;bottom:0;width:45%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-18deg);transition:left .55s ease;pointer-events:none}
+.btn-primary:hover:after{left:120%}
+@media print{.plant-card,.result-card,.form-body>*,.faq details,.sources-panel,.page,.page>*{animation:none!important}}
 </style>
 </head>
 <body>
@@ -867,7 +907,7 @@ if(fine&&!reduced){
  }
  var tiltCard=null;
  document.addEventListener('mousemove',function(e){
-  var card=e.target.closest('.plant-card,.home-card,.result-card');
+  var card=e.target.closest('.plant-card,.home-card,.result-card,.checker-card,.checker-aside,.booklet-banner');
   if(card!==tiltCard){
    if(tiltCard){tiltCard.style.transition='transform .45s cubic-bezier(.22,.9,.3,1)';tiltCard.style.transform='';}
    tiltCard=card;
@@ -878,7 +918,7 @@ if(fine&&!reduced){
   var px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;
   tiltCard.style.setProperty('--mx',(px*100).toFixed(1)+'%');
   tiltCard.style.setProperty('--my',(py*100).toFixed(1)+'%');
-  var big=tiltCard.classList.contains('result-card')?0.7:1.4;
+  var big=tiltCard.classList.contains('result-card')?0.7:((tiltCard.classList.contains('plant-card')||tiltCard.classList.contains('home-card'))?1.4:0.3);
   tiltCard.style.transform='perspective(900px) rotateY('+((px-.5)*10*big).toFixed(2)+'deg) rotateX('+((.5-py)*8*big).toFixed(2)+'deg) translateY(-4px)';
  });
  document.addEventListener('mouseout',function(e){
