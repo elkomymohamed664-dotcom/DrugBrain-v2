@@ -2,17 +2,17 @@
 
 > **OTC or No** — دليلك التفاعلي لأمان الأعشاب في السفر
 
-🌐 **الموقع المباشر / Live site:** https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/
+🌐 **الموقع المباشر / Live site:** https://elkomymohamed664-dotcom.github.io/Elkomy-v2/
 
 ### روابط سريعة (بتتخطى الكاش)
 | الصفحة | الرابط |
 |--------|--------|
-| الرئيسية | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=21#/home |
-| فاحص الأمان | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=21#/safety |
-| دليل النباتات | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=21#/plants |
-| المكتبة | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=21#/library |
-| اختبر نفسك + عيادة الحالات | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=21#/quiz |
-| جولة في الموقع | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=21#/guide |
+| الرئيسية | https://elkomymohamed664-dotcom.github.io/Elkomy-v2/?v=21#/home |
+| فاحص الأمان | https://elkomymohamed664-dotcom.github.io/Elkomy-v2/?v=21#/safety |
+| دليل النباتات | https://elkomymohamed664-dotcom.github.io/Elkomy-v2/?v=21#/plants |
+| المكتبة | https://elkomymohamed664-dotcom.github.io/Elkomy-v2/?v=21#/library |
+| اختبر نفسك + عيادة الحالات | https://elkomymohamed664-dotcom.github.io/Elkomy-v2/?v=21#/quiz |
+| جولة في الموقع | https://elkomymohamed664-dotcom.github.io/Elkomy-v2/?v=21#/guide |
 
 > الرابط الأساسي فوق بيفضل شغال دايمًا — لاحقة `?v=21` مجرد كسر للكاش بعد التحديث.
 
