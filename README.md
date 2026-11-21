@@ -7,14 +7,14 @@
 ### روابط سريعة (بتتخطى الكاش)
 | الصفحة | الرابط |
 |--------|--------|
-| الرئيسية | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=18#/home |
-| فاحص الأمان | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=18#/safety |
-| دليل النباتات | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=18#/plants |
-| المكتبة | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=18#/library |
-| اختبر نفسك + عيادة الحالات | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=18#/quiz |
-| جولة في الموقع | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=18#/guide |
+| الرئيسية | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=19#/home |
+| فاحص الأمان | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=19#/safety |
+| دليل النباتات | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=19#/plants |
+| المكتبة | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=19#/library |
+| اختبر نفسك + عيادة الحالات | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=19#/quiz |
+| جولة في الموقع | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=19#/guide |
 
-> الرابط الأساسي فوق بيفضل شغال دايمًا — لاحقة `?v=18` مجرد كسر للكاش بعد التحديث.
+> الرابط الأساسي فوق بيفضل شغال دايمًا — لاحقة `?v=19` مجرد كسر للكاش بعد التحديث.
 
 ## عن المشروع
 
@@ -30,7 +30,7 @@
 
 ### إيه اللي في الموقع؟
 
-- **شعار الواجهة (v18):** «وعي بسيط، يكمّل معاك الطريق» بقى ظاهر فوق العنوان الرئيسي، مع ترجمة مناسبة عند التحويل للإنجليزي.
+- **شعار الواجهة (v19):** «وعي بسيط، يكمّل معاك الطريق» بقى شارة بارزة فوق العنوان الرئيسي — بخط أوضح، إطار وتوهج ذهبي هادئ، ونسخة مضغوطة للموبايل؛ وله ترجمة عند التحويل للإنجليزي.
 - **فاحص الأمان (٣ خطوات):** سنّك وحالتك الصحية وأدويتك → تحذيرات + تأثير محتمل + الخطوة التالية المناسبة
 - **دليل النباتات:** قصة كل نبات لوحده، من غير خلط بين الاسم المألوف والعلاج المثبت
 - **المكتبة:** كتيّب الأمان العربي والمونوغراف العلمي (روابط Google Drive)
