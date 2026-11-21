@@ -18,6 +18,18 @@
 @media(max-width:390px){.goal-grid{grid-template-columns:1fr}.role-card{padding:17px}.reader-title h2{font-size:19px}.reader-actions{flex-wrap:wrap}.reader-actions .btn{font-size:11px;padding:7px 9px}.visual-label{font-size:8px}.covers{gap:6px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 @media print{body{background:#fff;color:#111}.topbar,.hero,.portal-head,.role-grid,.privacy-line,.reader-actions,.goal-grid,.check-section,.footer,.source-box{display:none!important}.wrap{width:100%}.portal{margin:0;padding:0;border:0;background:#fff;box-shadow:none}.reader{border:0;padding:0}.notice,.clinical-card,.result-box,.plant-card{background:#fff!important;color:#111!important}.clinical-panel[hidden]{display:none!important}.clinical-panel p,.clinical-panel li,.data-table td{color:#222}.clinical-tab{color:#111}.clinical-tab[aria-selected=true]{background:#ddd;color:#111}.plant-grid{grid-template-columns:repeat(3,1fr)}}
+
+
+/* Reader mode: a paper book that can be flipped with touch, keys, or buttons. */
+.book-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:18px 0 11px}.book-hint{display:flex;align-items:center;gap:8px;margin:0;color:var(--muted);font-size:11px}.book-hint svg{width:17px;height:17px;flex:0 0 17px;stroke:var(--gold);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.book-sound{white-space:nowrap}.book-sound[aria-pressed="false"]{color:var(--muted)}
+.book-shell{position:relative;isolation:isolate;perspective:1600px;overflow:hidden;margin:0 0 12px;padding:clamp(9px,1.8vw,17px);border:1px solid rgba(216,187,130,.38);border-radius:23px;background:linear-gradient(135deg,#17382e,#0e2824 55%,#19392e);box-shadow:0 19px 40px rgba(0,0,0,.28),inset 0 0 0 4px rgba(255,255,255,.025)}.book-shell:before{content:"";position:absolute;z-index:3;top:12px;right:8px;bottom:12px;width:15px;border-radius:3px 9px 9px 3px;background:linear-gradient(90deg,rgba(4,19,17,.12),rgba(3,17,16,.72) 45%,rgba(216,187,130,.2));box-shadow:2px 0 8px rgba(0,0,0,.3);pointer-events:none}.book-shell:after{content:"";position:absolute;z-index:0;right:24px;bottom:6px;left:24px;height:7px;border-radius:0 0 7px 7px;background:repeating-linear-gradient(180deg,#e4dcc7 0 1px,#d4cbb2 1px 2px);opacity:.78;pointer-events:none}.book-shell:focus-visible{outline:3px solid var(--gold-bright);outline-offset:4px}.book-deck{position:relative;z-index:1}.book-page{--muted:#5e6d62;--line:rgba(92,83,58,.2);position:relative;isolation:isolate;min-height:430px;padding:clamp(23px,4vw,46px) clamp(22px,4vw,44px) 58px clamp(20px,3.5vw,38px);border:1px solid #d8cfb6;border-right:4px solid #c8bd9f;border-radius:5px 13px 13px 5px;color:#26372e;background:linear-gradient(90deg,rgba(125,100,54,.1),transparent 7%,rgba(255,255,255,.52) 17%,rgba(255,255,255,.22) 66%,rgba(135,111,64,.045)),repeating-linear-gradient(0deg,rgba(99,77,43,.012) 0 1px,transparent 1px 5px),#f3eedf;box-shadow:inset -15px 0 25px rgba(104,82,45,.09),0 2px 3px rgba(0,0,0,.1);transform-style:preserve-3d;backface-visibility:hidden;-webkit-backface-visibility:hidden;touch-action:pan-y}.book-page:after{content:attr(data-page-title);position:absolute;right:clamp(22px,4vw,44px);bottom:18px;left:clamp(20px,3.5vw,38px);padding-top:7px;border-top:1px solid rgba(124,102,63,.22);color:#8b7954;font-size:10px;letter-spacing:.02em;pointer-events:none}.clinician-book-intro{padding:3px 8px 13px}.clinician-book-intro .section-kicker{margin-bottom:7px}.clinician-book-intro .section-title{color:var(--text)}.clinician-book-intro .section-intro{color:var(--muted)}.book-page .section-kicker{color:#846938}.book-page .section-title{color:#26372e}.book-page .section-intro{color:#5c6b61}.book-page .goal-icon{color:#92713b;background:rgba(181,145,77,.13)}.book-page .goal-btn{background:#18332e;color:#f1eee4}.book-page .goal-btn[aria-pressed="true"]{background:#25453a;color:#f0d7a7;border-color:#a78649}.book-page .result-box{color:#f0f1e8}.book-page .result-box h3{color:#f0f1e8}.book-page .result-box.empty{color:#c4d0c5}.book-page .result-box .recommend{color:#f0d7a7}.book-page .plant-overview{margin-top:3px}.book-page .plant-card{border-color:#d8cfb9;background:#fffdf5}.book-page .plant-copy h3{color:#28392f}.book-page .plant-copy .latin{color:#637267}.book-page .plant-copy p,.book-page .plant-extra{color:#4e5d52}.book-page .plant-extra strong{color:#7a6034}.book-page .plant-detail{color:#765b30}.book-page .plant-detail:hover{background:rgba(181,145,77,.08)}.book-page .check-section{border-color:#ded5bf;background:rgba(255,255,255,.48)}.book-page .check-head h3{color:#293a31}.book-page .check-head p{color:#5b6b61}.book-page .mode-pill{border-color:rgba(53,101,66,.3);color:#386642}.book-page .check-item{border-color:#ded8c8;background:rgba(255,255,255,.62);color:#39483e}.book-page .check-result{border-color:rgba(65,125,79,.25);background:rgba(65,125,79,.08);color:#32613e}.book-page .check-result.flag{border-color:rgba(163,73,59,.3);background:rgba(163,73,59,.08);color:#8f3d34}.book-page .fine-print{color:#667469}.book-page .clinical-panel h3{color:#293a31}.book-page .clinical-panel>p,.book-page .clinical-panel p,.book-page .clinical-panel li{color:#405047}.book-page .clinical-panel h4{color:#785f34}.book-page .clinical-card{border-color:#ded6c4;background:rgba(255,255,255,.55)}.book-page .clinical-card p{color:#4e5d53}.book-page .clinical-card.warning{border-color:rgba(163,73,59,.25);background:rgba(163,73,59,.06)}.book-page .clinical-card.warning h4{color:#a14338}.book-page .data-table-wrap{border-color:#d9d0ba}.book-page .data-table th,.book-page .data-table td{border-color:#e1d9c8}.book-page .data-table thead th{background:#e8dfc9;color:#4d4029}.book-page .data-table td{color:#39473e}.book-page .risk-label{background:rgba(163,73,59,.12);color:#963f35}.book-page .source-box{border-color:#ded6c4;background:rgba(255,255,255,.42);color:#516057}.book-page .source-box strong{color:#705629}
+.book-page.turning-forward{transform-origin:right center;animation:page-turn-out-forward .27s ease-in both}.book-page.entering-forward{transform-origin:right center;animation:page-turn-in-forward .27s ease-out both}.book-page.turning-backward{transform-origin:left center;animation:page-turn-out-backward .27s ease-in both}.book-page.entering-backward{transform-origin:left center;animation:page-turn-in-backward .27s ease-out both}@keyframes page-turn-out-forward{to{transform:rotateY(-88deg);opacity:.08;filter:brightness(.78)}}@keyframes page-turn-in-forward{from{transform:rotateY(88deg);opacity:.08;filter:brightness(.78)}to{transform:rotateY(0);opacity:1;filter:none}}@keyframes page-turn-out-backward{to{transform:rotateY(88deg);opacity:.08;filter:brightness(.78)}}@keyframes page-turn-in-backward{from{transform:rotateY(-88deg);opacity:.08;filter:brightness(.78)}to{transform:rotateY(0);opacity:1;filter:none}}
+.book-navigation{display:grid;grid-template-columns:minmax(110px,1fr) minmax(135px,1.25fr) minmax(110px,1fr);align-items:center;gap:14px;margin:11px 0 5px}.book-step{min-height:44px}.book-step:first-child{justify-self:start}.book-step:last-child{justify-self:end}.book-step:disabled{opacity:.42;cursor:not-allowed;transform:none}.book-step svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.book-count{text-align:center;color:var(--soft);font-size:11px}.book-count span{display:block}.book-progress{height:4px;overflow:hidden;margin:7px auto 0;max-width:180px;border-radius:999px;background:rgba(255,255,255,.12)}.book-progress span{display:block;width:0;height:100%;border-radius:inherit;background:var(--gold);transition:width .3s ease}.book-page .clinical-panel{animation:none}.book-page .clinical-panel[hidden]{display:none!important}
+@media(max-width:680px){.book-toolbar{align-items:flex-start;margin-top:13px}.book-hint{max-width:52%;font-size:10px}.book-sound{min-height:38px;padding:7px 10px;font-size:10px}.book-shell{padding:8px;border-radius:17px}.book-shell:before{right:5px;width:10px}.book-page{min-height:400px;padding:22px 18px 56px 16px;border-radius:4px 9px 9px 4px}.book-page:after{right:18px;left:16px}.clinician-book-intro{padding:2px 4px 10px}.clinician-tabs{margin-bottom:11px}.book-navigation{grid-template-columns:1fr auto 1fr;gap:6px}.book-step{min-width:92px;padding-inline:9px}.book-count{font-size:10px}.book-progress{max-width:110px}}
+@media(max-width:390px){.book-hint{max-width:47%;line-height:1.55}.book-sound{gap:5px;padding:6px 8px;font-size:9px}.book-navigation{grid-template-columns:minmax(84px,1fr) auto minmax(84px,1fr)}.book-step{min-width:0;min-height:40px;font-size:10px}.book-count{font-size:9px}.book-page{padding-right:15px;padding-left:14px}.book-page:after{right:15px;left:14px}}
+@media(prefers-reduced-motion:reduce){.book-page{scroll-behavior:auto}.book-progress span{transition:none}}
+@media print{.book-toolbar,.book-navigation,.book-shell:before,.book-shell:after,.clinician-tabs{display:none!important}.book-shell{display:block!important;overflow:visible;margin:0;padding:0;border:0;border-radius:0;background:#fff;box-shadow:none;perspective:none}.book-deck:not([hidden]){display:block!important}.book-page,.book-page[hidden]{display:block!important;min-height:0;margin:0;padding:20px 12px 34px;border:0;border-radius:0;box-shadow:none;background:#fff;transform:none!important;animation:none!important;break-after:page;page-break-after:always}.book-page:last-child{break-after:auto;page-break-after:auto}.book-page:after{bottom:8px}.book-page .clinical-panel[hidden],#clinician-area .clinical-panel[hidden]{display:block!important}.book-page .source-box{display:block!important}}
+
 </style>
 </head>
 <body>
@@ -68,7 +80,7 @@
     </div>
     <p class="privacy-line"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v3"/></svg>من غير حساب أو تخزين للإجابات — اختياراتك تفضل على جهازك أثناء التصفح فقط.</p>
 
-    <section class="reader" id="reader" hidden aria-live="polite" aria-label="محتوى الكتيّب">
+    <section class="reader" id="reader" hidden aria-label="محتوى الكتيّب">
       <div class="reader-head">
         <div class="reader-title"><span class="reader-badge" id="reader-icon" aria-hidden="true">م</span><div><h2 id="reader-heading">الدليل المبسّط للمريض والزائر</h2><p id="reader-subheading">اختَر الموضوع الأقرب لسؤالك عشان نرتب لك القراءة.</p></div></div>
         <div class="reader-actions"><span class="mode-pill" id="mode-pill">عرض المريض / الزائر</span><button class="btn" type="button" id="change-role"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5M5.5 9A7 7 0 0 1 18 6l2 2M4 16l2 2a7 7 0 0 0 12.5-3"/></svg>تغيير الدور</button><button class="btn" type="button" id="print-page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8V3h10v5M6 17H3V8h18v9h-3M7 14h10v7H7v-7Zm10-3h.01"/></svg>طباعة</button></div>
@@ -77,7 +89,13 @@
       <div class="notice" id="patient-notice"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.3 4.1 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 4.1a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4m0 4h.01"/></svg><div><strong>مهم:</strong> المعلومات للتوعية وليست تشخيصًا أو وصفة. الأعشاب قد تتفاعل مع الأدوية، و«طبيعي» لا يعني آمنًا للجميع. اسأل طبيبك أو الصيدلي قبل استخدام مستحضر علاجي.</div></div>
       <div class="notice" id="clinician-notice" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.3 4.1 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 4.1a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4m0 4h.01"/></svg><div><strong>للممارسة المهنية:</strong> ملخص تعليمي مستند إلى الكتيّب والمونوجراف المرفقين، ولا يحل محل النشرات المعتمدة أو تقييم الحالة أو الإرشادات المحلية. السيكران الأسود الخام سام — لا يُقطف أو يُحضّر منزليًا.</div></div>
 
-      <div id="patient-area" hidden>
+      <div class="book-toolbar" id="book-toolbar" hidden>
+        <p class="book-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v16H7.5A2.5 2.5 0 0 0 5 21V5.5Z"/><path d="M5 18.5A2.5 2.5 0 0 1 7.5 16H20M9 7h7M9 10h7M9 13h4"/></svg><span>قلّب الصفحات بالسحب أو بالأسهم — صوت الورق اختياري.</span></p>
+        <button class="btn book-sound" id="book-sound" type="button" aria-pressed="true" aria-label="إيقاف صوت تقليب الورق"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h4l5 4V6l-5 4H4Z"/><path d="M16 9a5 5 0 0 1 0 6m2-9a9 9 0 0 1 0 12"/></svg><span id="book-sound-label">صوت الورق: شغّال</span></button>
+      </div>
+      <div class="book-shell" id="book-shell" role="region" aria-label="كتيّب تفاعلي — استخدم سهم اليسار للتقدم أو سهم اليمين للرجوع" tabindex="0" hidden>
+      <div id="patient-area" class="book-deck" data-book-role="patient" hidden>
+        <section class="book-page" data-book-page data-page-title="اختَر موضوعك" role="group" aria-roledescription="صفحة" aria-label="صفحة البداية">
         <p class="section-kicker">مكتبة المريض / اختر مسارك</p><h3 class="section-title">إيه اللي محتاج تعرفه؟</h3><p class="section-intro">اختيارك يفتح خلاصة مرتبطة بسؤالك، بدل ما تدور في صفحات طويلة.</p>
         <div class="goal-grid" role="group" aria-label="اختيار موضوع القراءة">
           <button class="goal-btn" type="button" data-goal="mild" aria-pressed="false"><span class="goal-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 7c1-2 3-3 7-3s6 1 7 3M5 17c1 2 3 3 7 3s6-1 7-3"/></svg></span>غثيان خفيف أو معدة مضطربة</button>
@@ -89,7 +107,9 @@
           <button class="goal-btn" type="button" data-goal="compare" aria-pressed="false"><span class="goal-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h7v14H4zM13 5h7v14h-7zM6 8h3m-3 3h3m6-3h3m-3 3h3"/></svg></span>أقارن النباتات الثلاثة</button>
         </div>
         <div class="result-box empty" id="patient-result" tabindex="-1"><p>اختَر موضوعًا من البطاقات بالأعلى لعرض الخلاصة المناسبة.</p></div>
+        </section>
 
+        <section class="book-page" data-book-page data-page-title="النباتات الثلاثة" role="group" aria-roledescription="صفحة" aria-label="صفحة النباتات الثلاثة">
         <section class="plant-overview" aria-labelledby="patient-plants-title">
           <p class="section-kicker">دليل سريع</p><h3 class="section-title" id="patient-plants-title">النباتات الثلاثة في الكتيّب</h3><p class="section-intro">افتح «اعرف أكتر» لقراءة الفائدة المحتملة، التحذير الأساسي، والخطوة الآمنة.</p>
           <div class="plant-grid">
@@ -110,7 +130,9 @@
             </article>
           </div>
         </section>
+        </section>
 
+        <section class="book-page" data-book-page data-page-title="قبل الاستخدام" role="group" aria-roledescription="صفحة" aria-label="صفحة فحص الأمان">
         <section class="check-section" aria-labelledby="check-title">
           <div class="check-head"><div><h3 id="check-title">فحص أمان سريع قبل الاستخدام</h3><p>علّم «نعم» على أي نقطة تنطبق عليك — لا نرسل ولا نخزن أي إجابة.</p></div><span class="mode-pill">فحص توعوي فقط</span></div>
           <div class="check-grid" id="safety-check">
@@ -124,10 +146,11 @@
           <div class="check-result" id="check-result" role="status" aria-live="polite"><strong>ابدأ من هنا:</strong> راجع النشرة، ولا تستخدم السيكران الخام. إذا لم تكن متأكدًا، اسأل صيدليًا قبل اختيار أي مستحضر.</div>
         </section>
         <p class="fine-print">نصيحة غير دوائية قد تساعد: اجلس قرب نافذة أو في المقعد الأمامي، انظر إلى الأفق، قلّل القراءة واستخدام الهاتف، واختر وجبة خفيفة وتهوية جيدة.</p>
+        </section>
       </div>
 
-      <div id="clinician-area" hidden>
-        <p class="section-kicker">المرجع الأكاديمي / Pharmacognosy &amp; Phytotherapy</p><h3 class="section-title">من التعريف النباتي إلى قرار السلامة</h3><p class="section-intro">اختَر تبويبًا للمونوجراف أو المقارنة أو التداخلات. المحتوى الموجز أدناه يعيد تنظيم الكتيّب الأكاديمي المرفق.</p>
+      <div id="clinician-area" class="book-deck clinician-book" data-book-role="clinician" hidden>
+        <div class="clinician-book-intro"><p class="section-kicker">المرجع الأكاديمي / Pharmacognosy &amp; Phytotherapy</p><h3 class="section-title">من التعريف النباتي إلى قرار السلامة</h3><p class="section-intro">اختَر فصلًا من الفهرس أو قلّب صفحات المرجع. المحتوى الموجز يعيد تنظيم الكتيّب الأكاديمي المرفق.</p></div>
         <div class="clinician-tabs" role="tablist" aria-label="موضوعات المرجع الأكاديمي">
           <button class="clinical-tab" id="tab-overview" role="tab" type="button" aria-selected="true" aria-controls="clinical-overview" tabindex="0" data-clinical-tab="overview">مقارنة سريعة</button>
           <button class="clinical-tab" id="tab-ginger" role="tab" type="button" aria-selected="false" aria-controls="clinical-ginger" tabindex="-1" data-clinical-tab="ginger">الزنجبيل · I</button>
@@ -136,6 +159,7 @@
           <button class="clinical-tab" id="tab-interactions" role="tab" type="button" aria-selected="false" aria-controls="clinical-interactions" tabindex="-1" data-clinical-tab="interactions">الموانع والتداخلات</button>
         </div>
 
+        <section class="book-page" data-book-page data-page-title="مقارنة سريعة" data-chapter="overview" role="group" aria-roledescription="صفحة" aria-label="صفحة المقارنة السريعة">
         <section class="clinical-panel" id="clinical-overview" role="tabpanel" aria-labelledby="tab-overview" data-clinical-panel="overview">
           <h3>جدول القرار السريع</h3><p>ملخص للنبات والجزء المستخدم، الهدف الدوائي، وخطر السلامة الأبرز.</p>
           <div class="data-table-wrap"><table class="data-table"><thead><tr><th>النبات</th><th>الجزء / الشكل الوارد</th><th>آلية أو دور محتمل</th><th>أهم محدد أمان</th></tr></thead><tbody>
@@ -145,7 +169,9 @@
           </tbody></table></div>
           <div class="clinical-grid"><div class="clinical-card"><h4>قراءة سريرية</h4><p>الزنجبيل قد يؤثر في أعراض المعدة ولا يساوي حصرًا مركزيًا لمسارات الدهليز. ينبغي التمييز بين الغثيان وبين الوقاية من دوار الحركة الشديد.</p></div><div class="clinical-card warning"><h4>قاعدة سيكران</h4><p>لا تُحوّل وجود scopolamine أو hyoscyamine في النبات إلى توصية باستعمال العشبة. الخام سام وغير مناسب للتحضير أو التناول الذاتي.</p></div></div>
         </section>
+        </section>
 
+        <section class="book-page" data-book-page data-page-title="الزنجبيل" data-chapter="ginger" role="group" aria-roledescription="صفحة" aria-label="صفحة مونوجراف الزنجبيل">
         <section class="clinical-panel" id="clinical-ginger" role="tabpanel" aria-labelledby="tab-ginger" data-clinical-panel="ginger" hidden>
           <h3>Monograph I · الزنجبيل</h3><p><i class="latin">Zingiber officinale Roscoe</i> · الفصيلة الزنجبيلية <i class="latin">Zingiberaceae</i></p>
           <div class="clinical-grid"><div class="clinical-card"><h4>التعريف النباتي وضبط الجودة</h4><p><strong>الجزء المستخدم:</strong> ريزوم كامل أو مقشّر ومجفف (Zingiberis rhizoma).</p><p>ريزوم متفرع ومضغوط جانبيًا؛ خلايا أوليورزين بإفراز أصفر-بني، ألياف لحائية غير ملجننة ومقسمة، وحبيبات نشا بيضاوية مفلطحة ذات hilum طرفي لا مركزي.</p></div><div class="clinical-card"><h4>مواصفات USP المذكورة في المونوجراف</h4><p>Gingerols وgingerdiones ≥ 0.8%؛ الزيت الطيار ≥ 1.8 mL/100 g؛ النشا ≥ 42%؛ وshogaols ≤ 0.18%. ارتفاع shogaols قد يشير تحليليًا إلى التجفيف الحراري أو التقادم.</p></div></div>
@@ -154,21 +180,27 @@
           <h4>الدليل السريري كما أورده المونوجراف</h4><p>يذكر المصدر تجربة بحر مفتوح (Grøntved, 1988) أبلغت عن حماية من القيء بنسبة 72% وانخفاض العرق البارد، مقابل اختبار كرسي دوّار (Stewart, 1991) لم يُظهر حماية دهليزية مركزية مماثلة بالزنجبيل. تُقرأ هذه النتائج في سياقها ولا تُعمّم على كل مريض أو كل نوع من دوار الحركة.</p>
           <h4>السلامة السريرية</h4><ul><li>خطر نزف محتمل: Warfarin، dabigatran، aspirin، clopidogrel، وNSAIDs؛ واحتمال تعزيز خفض سكر الدم مع أدوية السكري.</li><li>الحذر/التقييم عند اضطرابات النزف، حصوات المرارة، الجراحة، الحمل أو الرضاعة، أو تحسس الزنجبيل.</li><li>آثار جانبية ممكنة: حرقة شرسوفية، إسهال خفيف وتهيج الفم/الحلق.</li><li>يوثّق المصدر EMA dose مقداره 1,000 mg قبل السفر بساعة؛ هذه معلومة من المونوجراف وليست توصية جرعة فردية — تُراجع النشرة والملاءمة السريرية.</li></ul>
         </section>
+        </section>
 
+        <section class="book-page" data-book-page data-page-title="النعناع الفلفلي" data-chapter="peppermint" role="group" aria-roledescription="صفحة" aria-label="صفحة مونوجراف النعناع الفلفلي">
         <section class="clinical-panel" id="clinical-peppermint" role="tabpanel" aria-labelledby="tab-peppermint" data-clinical-panel="peppermint" hidden>
           <h3>Monograph II · النعناع الفلفلي</h3><p><i class="latin">Mentha × piperita L.</i> · الفصيلة الشفوية <i class="latin">Lamiaceae</i> · هجين <i class="latin">M. aquatica × M. spicata</i></p>
           <div class="clinical-grid"><div class="clinical-card"><h4>التشخيص النباتي</h4><p>ساق رباعية الزوايا، أوراق معنّقة مسننة، ثغور diacytic، وشعيرات غدية labiate ذات 8 خلايا تخزن الزيت الطيار؛ الزيت في الورقة المجففة 1.2–3.9% v/w بحسب المصدر.</p></div><div class="clinical-card"><h4>مواصفات الزيت الطيار (Ph. Eur.)</h4><p>(–)-Menthol 30–55%؛ menthone 14–32%؛ menthyl acetate 2.8–10%؛ 1,8-cineole 3.5–14%؛ isomenthone 1.5–10%؛ menthofuran 1–9%؛ limonene 1–3.5%.</p></div></div>
           <h4>الآليات والتطبيقات</h4><ul><li>Menthol: ناهض TRPM8، وحاصر تنافسي لقنوات Ca²⁺ من النمط L؛ قد يرخّي العضلات الملساء في الجهاز الهضمي والـLES.</li><li>الاستنشاق ينشّط مسارات شمية/ثلاثية التوائم وقد يخفف الإحساس بالغثيان؛ يختلف ذلك عن فعالية المستحضرات الفموية وتعرّضها المعوي.</li><li>Menthofuran وpulegone يمكن تنشيطهما استقلابيًا بوساطة CYP450 إلى نواتج تفاعلية؛ لذلك تُقيّد نسبهما في الزيت الدستوري.</li></ul>
           <h4>الحرائك والتحذيرات</h4><ul><li>الرضع: تطبيق الزيت أو المينثول قرب الوجه/المنخرين قد يحفز laryngospasm أو انقطاعًا انعكاسيًا في التنفس؛ تحذير عالي الأهمية. مستحضرات الكبسولات الفموية غير مناسبة للأطفال الصغار وفق حدود المصدر.</li><li>تثبيط حمض المعدة (PPI/H₂ blockers/مضادات الحموضة) قد يغيّر ذوبان الغلاف المعوي لبعض المنتجات، مع إطلاق معدي مبكر وتفاقم الحرقة؛ يختلف باختلاف صيغة المنتج.</li><li>الارتجاع الشديد/الفتق الحجابي، حصوات المرارة أو التهاب القنوات الصفراوية، تحسس menthol، والحمل/الرضاعة تستلزم مراجعة المنتج والنشرة.</li><li>يذكر التقييم الأوروبي احتمال تثبيط عكوس لـCYP3A4 مع الزيت الفموي، مع ارتفاع تعرّض felodipine وcyclosporine؛ تُراجع التداخلات على مستوى المنتج والجرعة الفعلية.</li><li>سمية الجرعات العالية قد تشمل اضطرابًا هضميًا وعصبيًا وقلبيا؛ الحذر مع مرضى الربو أو فرط استجابة المجرى الهوائي.</li></ul>
         </section>
+        </section>
 
+        <section class="book-page" data-book-page data-page-title="السيكران الأسود" data-chapter="henbane" role="group" aria-roledescription="صفحة" aria-label="صفحة مونوجراف السيكران الأسود">
         <section class="clinical-panel" id="clinical-henbane" role="tabpanel" aria-labelledby="tab-henbane" data-clinical-panel="henbane" hidden>
           <h3>Monograph III · السيكران الأسود</h3><p><i class="latin">Hyoscyamus niger L.</i> · الفصيلة الباذنجانية <i class="latin">Solanaceae</i> · مصدر قلويدات تروبان عالية الخطورة</p>
           <div class="clinical-grid"><div class="clinical-card warning"><h4>حالة الاستخدام: خطر مرتفع</h4><p>النبات الخام سام وغير مناسب للاستعمال العشبي المنزلي أو تحضير الشاي/المغلي. لا يُجمع أو يُطحن أو يُتناول. لا تُستنتج منه جرعة أو توصية؛ أي دواء معياري يتطلب تقييمًا سريريًا ووصفة حسب المستحضر المعتمد.</p></div><div class="clinical-card"><h4>الهوية النباتية والكيميائية</h4><p>الأوراق المجففة مذكور لها 0.045–0.14%، والبذور 0.5–0.6% من القلويدات. Hyoscyamine قد يتراكم إلى atropine؛ scopolamine يحمل 6,7-β-epoxide. تشخيص مجهري: أوراق ذات شعيرات غدية وثغور anisocytic وبلورات أوكسالات الكالسيوم؛ بذور كلوية منقّرة.</p></div></div>
           <h4>الآلية والتخليق الحيوي</h4><ul><li>مضادات muscarinic مركزية وطرفية؛ نفاذ scopolamine إلى BBB وحصر M₁/M₃ الدهليزي يفسران التأثير المركزي، كما يصف المصدر.</li><li>مسار الجذر المبسّط: L-ornithine → putrescine (PMT) → tropinone → tropine → littorine → (–)-hyoscyamine → scopolamine (CYP80F1 ثم H6H).</li><li>تُصنّف القلويدات ذات مجال علاجي ضيق؛ لا يناسب الاعتماد على المادة الخام تفاوت المحتوى النباتي والتركيز.</li></ul>
           <h4>الموانع والسمّية</h4><ul><li>مخاطر شديدة مع narrow-angle glaucoma، تضخم البروستاتا/احتباس البول، انسداد الجهاز الهضمي، myasthenia gravis، اضطرابات نظم القلب/أمراض قلب وعائية، والحمل والرضاعة والأطفال وكبار السن؛ يورد المصدر أيضًا متلازمة داون.</li><li>التسمم المضاد للكولين: جفاف الفم، توسع الحدقة/زغللة، تسرع القلب، الإمساك واحتباس البول؛ الشديد قد يتطور إلى هياج/هذيان، ارتفاع حرارة، اختلاجات أو غيبوبة.</li><li>تحتاج أي أعراض تسمم أو ابتلاع للنبات إلى تقييم إسعافي فوري؛ لا تُدار منزليًا ولا تنتظر تحسن الأعراض.</li></ul>
         </section>
+        </section>
 
+        <section class="book-page" data-book-page data-page-title="الموانع والتداخلات" data-chapter="interactions" role="group" aria-roledescription="صفحة" aria-label="صفحة الموانع والتداخلات">
         <section class="clinical-panel" id="clinical-interactions" role="tabpanel" aria-labelledby="tab-interactions" data-clinical-panel="interactions" hidden>
           <h3>الموانع والتداخلات: نقطة الفحص قبل أي قرار</h3><p>خريطة مختصرة للمخاطر التي يجب مراجعتها في التاريخ الدوائي والمرضي، من دون افتراض أن المستحضرات متكافئة.</p>
           <div class="data-table-wrap"><table class="data-table"><thead><tr><th>المستحضر / النبات</th><th>مراجعة خاصة</th><th>عوامل الخطر أو التداخل</th><th>رسالة سلامة</th></tr></thead><tbody>
@@ -178,8 +210,16 @@
           </tbody></table></div>
           <div class="clinical-grid"><div class="clinical-card warning"><h4>فئات تحتاج حذرًا مضاعفًا</h4><p>الأطفال، كبار السن، الحمل والرضاعة، تعدد الأدوية، وضعف وظائف الأعضاء — تفرض مراجعة منتج-محددة وتقييمًا مباشرًا قبل التوصية.</p></div><div class="clinical-card"><h4>إرشاد المريض</h4><p>اسأل عن الشكل والطريق والجرعة المدوّنة، الحساسية، الأمراض، كل الأدوية والمكملات، والقيادة. وضّح أن عدم ذكر تداخل في هذا الملخص لا يعني غيابه.</p></div></div>
         </section>
-
+        </section>
+        <section class="book-page" data-book-page data-page-title="المراجع" data-chapter="sources" role="group" aria-roledescription="صفحة" aria-label="صفحة المصادر والمراجع">
         <div class="source-box"><strong>المراجع الواردة في الكتيّبين:</strong><ul><li>EMA/HMPC: monographs and assessment reports for <i class="latin">Zingiber officinale</i> and <i class="latin">Mentha × piperita</i>; USP quality standards.</li><li>NCCIH/NIH; Memorial Sloan Kettering Cancer Center (MSKCC); StatPearls / PubMed: scopolamine and tropane alkaloids.</li><li>Lien et al., <i>Am J Physiol</i> (2003); Walstab et al., <i>Neurogastroenterol Motil</i> (2013); Grøntved et al. (1988); Stewart et al. (1991); Zhang et al., <i>PNAS</i> (2004).</li></ul><p>تلخيص وتبويب للمحتوى المرفق: <em>Phytotherapy Safety Booklet, Pharmacognosy MNU</em> و<em>Phytotherapy Academic Monograph, Faculty MNU</em>. ارجع إلى المصادر الأصلية والنشرات المعتمدة للتحقق من التفاصيل.</p></div>
+        </section>
+      </div>
+      </div>
+      <div class="book-navigation" id="book-navigation" hidden aria-label="التنقل بين صفحات الكتيّب">
+        <button class="btn book-step" type="button" id="book-prev" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg><span>السابقة</span></button>
+        <div class="book-count"><span id="book-page-status" aria-live="polite">صفحة ١ من ٣</span><div class="book-progress" id="book-progress" role="progressbar" aria-label="تقدم القراءة" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1"><span id="book-progress-bar"></span></div></div>
+        <button class="btn book-step" type="button" id="book-next"><span>التالية</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
       </div>
     </section>
   </section>
@@ -193,29 +233,193 @@
   var reader=document.getElementById('reader');
   var patientArea=document.getElementById('patient-area');
   var clinicianArea=document.getElementById('clinician-area');
+  var bookShell=document.getElementById('book-shell');
+  var bookToolbar=document.getElementById('book-toolbar');
+  var bookNavigation=document.getElementById('book-navigation');
+  var previousPage=document.getElementById('book-prev');
+  var nextPage=document.getElementById('book-next');
+  var pageStatus=document.getElementById('book-page-status');
+  var progress=document.getElementById('book-progress');
+  var progressBar=document.getElementById('book-progress-bar');
+  var soundButton=document.getElementById('book-sound');
+  var soundLabel=document.getElementById('book-sound-label');
   var toast=document.getElementById('toast');
   var toastTimer;
+  var activeDeck=null;
+  var activePages=[];
+  var activePageIndex=0;
+  var isTurning=false;
+  var soundEnabled=true;
+  var pageAudioContext=null;
+  var pageNoiseBuffer=null;
+  var turnMidpointTimer=null;
+  var turnFinishTimer=null;
+  var tabs=[];
+  var reducedMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var turnHalfDuration=reducedMotion?0:270;
   function setRoleHash(value){try{history.replaceState(null,'',location.pathname+location.search+'#'+value);}catch(error){location.hash=value;}}
-  function notify(message){toast.textContent=message;toast.hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(function(){toast.hidden=true;},2300);}
+  function numberLabel(value){try{return new Intl.NumberFormat('ar-EG').format(value);}catch(error){return String(value);}}
+  function updateBookControls(){
+    var current=activePages[activePageIndex];
+    if(!current)return;
+    var total=activePages.length;
+    pageStatus.textContent='صفحة '+numberLabel(activePageIndex+1)+' من '+numberLabel(total)+' · '+current.dataset.pageTitle;
+    previousPage.disabled=isTurning||activePageIndex===0;
+    nextPage.disabled=isTurning||activePageIndex===total-1;
+    bookNavigation.setAttribute('aria-busy',String(isTurning));
+    progress.setAttribute('aria-valuemax',String(total));
+    progress.setAttribute('aria-valuenow',String(activePageIndex+1));
+    progressBar.style.width=((activePageIndex+1)/total*100)+'%';
+  }
+  function syncClinicalChapter(page, focus){
+    if(!page||!page.dataset.chapter||!tabs.length)return;
+    var tab=tabs.find(function(item){return item.dataset.clinicalTab===page.dataset.chapter;});
+    if(tab)activateTab(tab,Boolean(focus));
+  }
+  function setDeckPage(index, focusTab){
+    activePages.forEach(function(page,pageIndex){page.hidden=pageIndex!==index;page.classList.remove('turning-forward','turning-backward','entering-forward','entering-backward');});
+    activePageIndex=index;
+    syncClinicalChapter(activePages[index],focusTab);
+    updateBookControls();
+  }
+  function cancelTurn(){
+    if(turnMidpointTimer!==null)clearTimeout(turnMidpointTimer);
+    if(turnFinishTimer!==null)clearTimeout(turnFinishTimer);
+    turnMidpointTimer=null;turnFinishTimer=null;
+    activePages.forEach(function(page){page.classList.remove('turning-forward','turning-backward','entering-forward','entering-backward');});
+    isTurning=false;
+    if(bookNavigation)bookNavigation.setAttribute('aria-busy','false');
+  }
+  function ensurePageAudio(){
+    var AudioContextType=window.AudioContext||window.webkitAudioContext;
+    if(!AudioContextType)return Promise.resolve(null);
+    try{if(!pageAudioContext)pageAudioContext=new AudioContextType();}catch(error){return Promise.resolve(null);}
+    if(pageAudioContext.state==='suspended')return pageAudioContext.resume().then(function(){return pageAudioContext;}).catch(function(){return null;});
+    return Promise.resolve(pageAudioContext);
+  }
+  function makePageNoise(context){
+    if(pageNoiseBuffer)return pageNoiseBuffer;
+    var duration=.42;
+    var length=Math.floor(context.sampleRate*duration);
+    var buffer=context.createBuffer(1,length,context.sampleRate);
+    var samples=buffer.getChannelData(0);
+    for(var i=0;i<length;i++){
+      var t=i/context.sampleRate;
+      var attack=Math.min(1,t/.012);
+      var firstFlick=Math.exp(-Math.pow((t-.055)/.043,2));
+      var secondFlick=.72*Math.exp(-Math.pow((t-.18)/.067,2));
+      var softTail=.4*Math.exp(-Math.pow((t-.32)/.05,2));
+      var rustle=firstFlick+secondFlick+softTail;
+      samples[i]=(Math.random()*2-1)*attack*rustle*.7;
+    }
+    pageNoiseBuffer=buffer;
+    return buffer;
+  }
+  function playPageRustle(){
+    if(!soundEnabled)return;
+    ensurePageAudio().then(function(context){
+      if(!context||!soundEnabled)return;
+      try{
+        var source=context.createBufferSource();
+        var highpass=context.createBiquadFilter();
+        var lowpass=context.createBiquadFilter();
+        var volume=context.createGain();
+        source.buffer=makePageNoise(context);
+        highpass.type='highpass';highpass.frequency.value=340;
+        lowpass.type='lowpass';lowpass.frequency.value=6200;
+        volume.gain.value=.48;
+        source.connect(highpass);highpass.connect(lowpass);lowpass.connect(volume);volume.connect(context.destination);
+        source.start();
+      }catch(error){/* Sound is an enhancement; page turning still works if audio is unavailable. */}
+    });
+  }
+  function turnToPage(index, focusTab){
+    if(!activeDeck||isTurning||index<0||index>=activePages.length)return false;
+    if(index===activePageIndex){syncClinicalChapter(activePages[index],focusTab);return false;}
+    var oldIndex=activePageIndex;
+    var oldPage=activePages[oldIndex];
+    var newPage=activePages[index];
+    var direction=index>oldIndex?'forward':'backward';
+    playPageRustle();
+    if(turnHalfDuration===0){setDeckPage(index,focusTab);return true;}
+    isTurning=true;
+    updateBookControls();
+    oldPage.classList.add('turning-'+direction);
+    turnMidpointTimer=setTimeout(function(){
+      oldPage.classList.remove('turning-'+direction);
+      oldPage.hidden=true;
+      newPage.hidden=false;
+      activePageIndex=index;
+      syncClinicalChapter(newPage,focusTab);
+      newPage.classList.add('entering-'+direction);
+      updateBookControls();
+      turnMidpointTimer=null;
+    },turnHalfDuration);
+    turnFinishTimer=setTimeout(function(){
+      newPage.classList.remove('entering-'+direction);
+      isTurning=false;
+      updateBookControls();
+      turnFinishTimer=null;
+      bookShell.scrollIntoView({behavior:reducedMotion?'auto':'smooth',block:'start'});
+    },turnHalfDuration*2);
+    return true;
+  }
   function selectRole(role, shouldScroll){
+    cancelTurn();
     var isPatient=role==='patient';
     reader.hidden=false;
     patientArea.hidden=!isPatient;
     clinicianArea.hidden=isPatient;
+    bookShell.hidden=false;
+    bookToolbar.hidden=false;
+    bookNavigation.hidden=false;
     document.getElementById('patient-notice').hidden=!isPatient;
     document.getElementById('clinician-notice').hidden=isPatient;
     document.getElementById('reader-icon').textContent=isPatient?'ز':'ط';
     document.getElementById('reader-heading').textContent=isPatient?'الدليل المبسّط للمريض والزائر':'المرجع الأكاديمي للطبيب والصيدلي';
-    document.getElementById('reader-subheading').textContent=isPatient?'اختَر الموضوع الأقرب لسؤالك عشان نرتب لك القراءة.':'مونوجرافات نباتية، مكوّنات فعالة، آليات، موانع وتداخلات.';
-    document.getElementById('mode-pill').textContent=isPatient?'عرض المريض / الزائر':'عرض الطبيب / الصيدلي';
+    document.getElementById('reader-subheading').textContent=isPatient?'دليل للمريض والزائر — استخدم الأسهم أو اسحب الصفحة للتقليب.':'مونوجرافات نباتية، مكوّنات فعالة، آليات، موانع وتداخلات.';
+    document.getElementById('mode-pill').textContent=isPatient?'كتيّب المريض / الزائر':'كتيّب الطبيب / الصيدلي';
     gate.querySelectorAll('[data-role-choice]').forEach(function(btn){btn.setAttribute('aria-pressed',String(btn.dataset.roleChoice===role));});
     document.body.dataset.role=role;
+    activeDeck=isPatient?patientArea:clinicianArea;
+    activePages=Array.from(activeDeck.querySelectorAll('[data-book-page]'));
+    activePageIndex=0;
+    activePages.forEach(function(page,index){page.hidden=index!==0;});
+    if(!isPatient&&tabs.length)activateTab(tabs[0],false);
+    bookShell.setAttribute('aria-label',isPatient?'كتيّب المريض — استخدم سهم اليسار للتقدم أو سهم اليمين للرجوع':'كتيّب الطبيب والصيدلي — استخدم سهم اليسار للتقدم أو سهم اليمين للرجوع');
     setRoleHash(role);
-    if(shouldScroll){setTimeout(function(){reader.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});},40);}
+    updateBookControls();
+    if(shouldScroll){setTimeout(function(){reader.scrollIntoView({behavior:reducedMotion?'auto':'smooth',block:'start'});bookShell.focus({preventScroll:true});},40);}
   }
   gate.addEventListener('click',function(event){var button=event.target.closest('[data-role-choice]');if(button)selectRole(button.dataset.roleChoice,true);});
-  document.getElementById('change-role').addEventListener('click',function(){reader.hidden=true;gate.querySelector('[data-role-choice="patient"]').focus();document.getElementById('portal').scrollIntoView({behavior:'smooth',block:'start'});setRoleHash('portal');});
+  document.getElementById('change-role').addEventListener('click',function(){cancelTurn();reader.hidden=true;bookShell.hidden=true;bookToolbar.hidden=true;bookNavigation.hidden=true;activeDeck=null;activePages=[];gate.querySelector('[data-role-choice="patient"]').focus();document.getElementById('portal').scrollIntoView({behavior:reducedMotion?'auto':'smooth',block:'start'});setRoleHash('portal');});
   document.getElementById('print-page').addEventListener('click',function(){window.print();});
+  previousPage.addEventListener('click',function(){turnToPage(activePageIndex-1,false);});
+  nextPage.addEventListener('click',function(){turnToPage(activePageIndex+1,false);});
+  soundButton.addEventListener('click',function(){
+    soundEnabled=!soundEnabled;
+    soundButton.setAttribute('aria-pressed',String(soundEnabled));
+    soundButton.setAttribute('aria-label',soundEnabled?'إيقاف صوت تقليب الورق':'تشغيل صوت تقليب الورق');
+    soundLabel.textContent=soundEnabled?'صوت الورق: شغّال':'صوت الورق: مكتوم';
+    if(soundEnabled)ensurePageAudio();
+  });
+  bookShell.addEventListener('keydown',function(event){
+    if(event.target!==bookShell&&event.target.closest('button,input,textarea,select,a,[role="tab"],summary'))return;
+    if(event.key==='ArrowLeft'&&activePageIndex<activePages.length-1){event.preventDefault();turnToPage(activePageIndex+1,false);}
+    else if(event.key==='ArrowRight'&&activePageIndex>0){event.preventDefault();turnToPage(activePageIndex-1,false);}
+  });
+  var swipeStart=null;
+  bookShell.addEventListener('pointerdown',function(event){
+    if(event.pointerType==='mouse'||event.target.closest('button,input,textarea,select,a,[role="tab"],summary'))return;
+    swipeStart={x:event.clientX,y:event.clientY};
+  });
+  bookShell.addEventListener('pointerup',function(event){
+    if(!swipeStart)return;
+    var dx=event.clientX-swipeStart.x;var dy=event.clientY-swipeStart.y;swipeStart=null;
+    if(Math.abs(dx)<58||Math.abs(dx)<Math.abs(dy)*1.25)return;
+    if(dx<0)turnToPage(activePageIndex+1,false);else turnToPage(activePageIndex-1,false);
+  });
+  bookShell.addEventListener('pointercancel',function(){swipeStart=null;});
   var goals={
     mild:{title:'غثيان خفيف أو اضطراب المعدة',body:'<p class="recommend">معلومة للقراءة: الزنجبيل قد يخفف الغثيان أو اضطراب المعدة عند بعض الأشخاص، لكن الاستجابة تختلف ولا يضمن منع دوار الحركة.</p><ul><li>النعناع قد ينعش بعض البالغين؛ طريق الاستخدام يغيّر أثره، وقد يزيد الارتجاع.</li><li>إذا كنت تستخدم أدوية سيولة/سكري، أو لديك حصوات مرارة أو حساسية، راجع الصيدلي أولًا.</li></ul><div class="mini-alert">القراءة هنا لا تختار لك دواءً أو جرعة. اتبع نشرة المنتج واسأل مختصًا عند الشك.</div>'},
     travel:{title:'دوار شديد أو رحلة بحر / طيران',body:'<p>الزنجبيل قد يساعد بعض أعراض المعدة، لكنه لا يوقف بالضرورة إشارات التوازن القادمة من الأذن الداخلية؛ لذلك لا تعتمد عليه وحده لدوار شديد أو متكرر.</p><ul><li>استشر طبيبًا أو صيدليًا لاختيار وسيلة الوقاية المناسبة حسب العمر والأمراض والأدوية.</li><li>لا تستخدم السيكران أو بذوره أو أزهاره خامًا، ولا تصنع منه شايًا أو مغليًا.</li><li>الأدوية التي تحتوي مضادات كولين قد تسبب نعاسًا وزغللة واحتباس بول؛ لا تقد السيارة معها إلا وفق توجيه المختص والنشرة.</li></ul><div class="mini-alert danger"><strong>السيكران الأسود نبات سام عالي الخطورة.</strong> لا تتناوله، ولا تستخدم أي مستحضر منه دون وصفة وتقييم طبي مباشر.</div>'},
@@ -234,8 +438,14 @@
   var checkResult=document.getElementById('check-result');
   document.getElementById('safety-check').addEventListener('change',function(){var checked=this.querySelectorAll('input:checked').length;if(checked){checkResult.classList.add('flag');checkResult.innerHTML='<strong>الأفضل استشارة مختص قبل الاستخدام.</strong> إجابة «نعم» واحدة أو أكثر تعني أن الاختيار يحتاج مراجعة حسب حالتك — وهذا الفحص لا يحدد إن كان المستحضر آمنًا لك.';}else{checkResult.classList.remove('flag');checkResult.innerHTML='<strong>ابدأ من هنا:</strong> راجع النشرة، ولا تستخدم السيكران الخام. إذا لم تكن متأكدًا، اسأل صيدليًا قبل اختيار أي مستحضر.';}});
   function activateTab(tab,focus){var name=tab.dataset.clinicalTab;document.querySelectorAll('[data-clinical-tab]').forEach(function(item){var active=item===tab;item.setAttribute('aria-selected',String(active));item.tabIndex=active?0:-1;});document.querySelectorAll('[data-clinical-panel]').forEach(function(panel){panel.hidden=panel.dataset.clinicalPanel!==name;});if(focus)tab.focus();}
-  var tabs=Array.from(document.querySelectorAll('[data-clinical-tab]'));
-  tabs.forEach(function(tab,index){tab.addEventListener('click',function(){activateTab(tab,false);});tab.addEventListener('keydown',function(event){var next=index;if(event.key==='ArrowLeft'||event.key==='ArrowDown')next=(index+1)%tabs.length;else if(event.key==='ArrowRight'||event.key==='ArrowUp')next=(index-1+tabs.length)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();activateTab(tabs[next],true);});});
+  tabs=Array.from(document.querySelectorAll('[data-clinical-tab]'));
+  function openClinicalChapter(tab,focus){
+    var index=activePages.findIndex(function(page){return page.dataset.chapter===tab.dataset.clinicalTab;});
+    if(index<0)return;
+    if(index===activePageIndex){activateTab(tab,focus);return;}
+    turnToPage(index,focus);
+  }
+  tabs.forEach(function(tab,index){tab.addEventListener('click',function(){openClinicalChapter(tab,false);});tab.addEventListener('keydown',function(event){var next=index;if(event.key==='ArrowLeft'||event.key==='ArrowDown')next=(index+1)%tabs.length;else if(event.key==='ArrowRight'||event.key==='ArrowUp')next=(index-1+tabs.length)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();openClinicalChapter(tabs[next],true);});});
   var initial=location.hash.slice(1);if(initial==='patient'||initial==='clinician'){selectRole(initial,false);}
 })();
 </script>
