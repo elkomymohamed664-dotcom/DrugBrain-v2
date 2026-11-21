@@ -7,14 +7,14 @@
 ### روابط سريعة (بتتخطى الكاش)
 | الصفحة | الرابط |
 |--------|--------|
-| الرئيسية | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=20#/home |
-| فاحص الأمان | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=20#/safety |
-| دليل النباتات | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=20#/plants |
-| المكتبة | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=20#/library |
-| اختبر نفسك + عيادة الحالات | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=20#/quiz |
-| جولة في الموقع | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=20#/guide |
+| الرئيسية | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=21#/home |
+| فاحص الأمان | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=21#/safety |
+| دليل النباتات | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=21#/plants |
+| المكتبة | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=21#/library |
+| اختبر نفسك + عيادة الحالات | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=21#/quiz |
+| جولة في الموقع | https://elkomymohamed664-dotcom.github.io/DrugBrain-v2/?v=21#/guide |
 
-> الرابط الأساسي فوق بيفضل شغال دايمًا — لاحقة `?v=20` مجرد كسر للكاش بعد التحديث.
+> الرابط الأساسي فوق بيفضل شغال دايمًا — لاحقة `?v=21` مجرد كسر للكاش بعد التحديث.
 
 ## عن المشروع
 
@@ -32,6 +32,7 @@
 
 - **شعار الواجهة (v19):** «وعي بسيط، يكمّل معاك الطريق» بقى شارة بارزة فوق العنوان الرئيسي — بخط أوضح، إطار وتوهج ذهبي هادئ، ونسخة مضغوطة للموبايل؛ وله ترجمة عند التحويل للإنجليزي.
 - **الدليل بسرعة (v20):** لكل نبات لوحة واضحة تلخّص الفائدة المحتملة، أهم احتياط، والخطوة الآمنة، مع روابط مباشرة للمراجع؛ والسُّكران له تنبيه سمّية بارز.
+- **شعارات الجهات (v21):** شعارات الجامعة والكلية والقسم تتناوب داخل نفس المساحة الصغيرة في هيدر الصفحة الرئيسية، وعلى الموبايل بجوار ملاحظة التوعية؛ بتلاشي هادئ كل ٣ ثوانٍ ومن غير تغيير مساحة النص، وتتوقف مع إعداد تقليل الحركة.
 - **فاحص الأمان (٣ خطوات):** سنّك وحالتك الصحية وأدويتك → تحذيرات + تأثير محتمل + الخطوة التالية المناسبة
 - **دليل النباتات:** قصة كل نبات لوحده، من غير خلط بين الاسم المألوف والعلاج المثبت
 - **المكتبة:** كتيّب الأمان العربي والمونوغراف العلمي (روابط Google Drive)

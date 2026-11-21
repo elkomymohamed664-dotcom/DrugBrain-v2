@@ -886,6 +886,15 @@ main{position:relative;z-index:1}
 .plant-quick.is-alert .plant-quick-mark{background:#7a3d32;color:#fff0dc}
 @media(max-width:860px){.plant-quick{padding:12px 12px 10px}.plant-quick-row dd{font-size:10px}}
 @media(max-width:640px){.plant-quick{margin:12px 0 15px;padding:13px 14px 11px}.plant-quick-head strong{font-size:14px}.plant-quick-row dt{font-size:10px}.plant-quick-row dd{font-size:12px;line-height:1.75}}
+
+/* fixed logo viewport: crossfade only, never changes the header layout */
+.affiliation-mini img.institution-logo-slot{opacity:1;object-fit:contain;transition:opacity .26s ease}
+.affiliation-mini img.institution-logo-slot.is-fading{opacity:0}
+@media(prefers-reduced-motion:reduce){.affiliation-mini img.institution-logo-slot,.hero-affiliation-mobile img.institution-logo-slot{transition:none}}
+.hero-affiliation-mobile{display:none;align-items:center;margin-inline-start:3px}
+.hero-affiliation-mobile img{display:block;width:26px;height:26px;padding:2px;border:1px solid var(--line);border-radius:50%;background:#f5f1e7;object-fit:contain}
+@media(max-width:860px){.hero-affiliation-mobile{display:inline-flex}}
+@media(max-width:360px){.hero-affiliation-mobile img{width:23px;height:23px}}
 </style>
 </head>
 <body>
@@ -931,7 +940,7 @@ main{position:relative;z-index:1}
 <main>
 <div class="page page-home" data-page="home">
 <section class="container hero" aria-labelledby="hero-heading">
-<div class="hero-copy"><p class="hero-tagline" data-en="A little awareness, with you along the way.">وعي بسيط، يكمّل معاك الطريق</p><div class="eyebrow" data-en="A LITTLE KNOWLEDGE. A SAFER JOURNEY.">دليلك لأمان الأعشاب في السفر</div><h1 id="hero-heading"><span data-en="Natural. But…">طبيعي، لكن…</span><br><em data-en="right for you?">هل يناسبك؟</em></h1><p class="hero-description" data-en="Before choosing a herb, understand its effect on you. Three simple steps reveal the precautions, what could happen, and what to do next.">قبل ما تختار عُشبة، اعرف تأثيرها عليك. جاوب ٣ خطوات، وشوف التحذيرات، إيه اللي ممكن يحصل، وإزاي تتصرّف.</p><div class="hero-actions"><a class="btn btn-primary" href="#/safety" data-page-link="safety"><span data-en="Check your choices">افحص اختياراتك</span><svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-quiet" href="#/plants" data-page-link="plants"><span data-en="Meet the plants">تعرّف على النباتات</span><svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a><a class="btn btn-quiet btn-tour" href="#/guide" data-page-link="guide"><span data-en="60-second tour">جولة ٦٠ ثانية</span><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg></a></div><p class="hero-note"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span data-en="Health education, not a prescription or diagnosis.">توعية دوائية، مش وصفة علاجية أو تشخيص.</span></p><a class="scroll-cue" href="#/guide" data-page-link="guide"><span data-en="Explore in 60 seconds">استكشف في ٦٠ ثانية</span><svg class="cue-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+<div class="hero-copy"><p class="hero-tagline" data-en="A little awareness, with you along the way.">وعي بسيط، يكمّل معاك الطريق</p><div class="eyebrow" data-en="A LITTLE KNOWLEDGE. A SAFER JOURNEY.">دليلك لأمان الأعشاب في السفر</div><h1 id="hero-heading"><span data-en="Natural. But…">طبيعي، لكن…</span><br><em data-en="right for you?">هل يناسبك؟</em></h1><p class="hero-description" data-en="Before choosing a herb, understand its effect on you. Three simple steps reveal the precautions, what could happen, and what to do next.">قبل ما تختار عُشبة، اعرف تأثيرها عليك. جاوب ٣ خطوات، وشوف التحذيرات، إيه اللي ممكن يحصل، وإزاي تتصرّف.</p><div class="hero-actions"><a class="btn btn-primary" href="#/safety" data-page-link="safety"><span data-en="Check your choices">افحص اختياراتك</span><svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-quiet" href="#/plants" data-page-link="plants"><span data-en="Meet the plants">تعرّف على النباتات</span><svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a><a class="btn btn-quiet btn-tour" href="#/guide" data-page-link="guide"><span data-en="60-second tour">جولة ٦٠ ثانية</span><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg></a></div><p class="hero-note"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span data-en="Health education, not a prescription or diagnosis.">توعية دوائية، مش وصفة علاجية أو تشخيص.</span><span class="hero-affiliation-mobile" aria-hidden="true"></span></p><a class="scroll-cue" href="#/guide" data-page-link="guide"><span data-en="Explore in 60 seconds">استكشف في ٦٠ ثانية</span><svg class="cue-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
 <div class="botanical-scene" aria-label="Botanical illustrations of the three plants"><div class="hero-beams" aria-hidden="true"><i></i><i></i><i></i></div>
 <span class="hero-spark" style="top:14%;left:18%"></span>
 <span class="hero-spark" style="top:32%;right:12%;animation-delay:-1.6s"></span>
@@ -3103,6 +3112,77 @@ document.addEventListener('click',function(e){
   });
 })();
 
+</script>
+
+<script>
+/* v21 · gently rotate institutional logos in fixed desktop and mobile slots */
+(function () {
+  'use strict';
+  var headerSlot = document.querySelector('.affiliation-mini img');
+  var logoImages = Array.prototype.slice.call(document.querySelectorAll('.logo-trio img'));
+  if (!headerSlot || logoImages.length < 2) return;
+  var logos = logoImages.map(function (img) {
+    return { src: img.getAttribute('src'), alt: img.getAttribute('alt') || '' };
+  });
+  var slots = [{ el: headerSlot, original: { src: headerSlot.getAttribute('src'), alt: headerSlot.getAttribute('alt') || '' } }];
+  var mobileWrap = document.querySelector('.hero-affiliation-mobile');
+  if (mobileWrap) {
+    var mobileSlot = document.createElement('img');
+    mobileSlot.width = 26; mobileSlot.height = 26;
+    mobileSlot.src = logos[0].src; mobileSlot.alt = logos[0].alt;
+    mobileSlot.className = 'institution-logo-slot';
+    mobileWrap.appendChild(mobileSlot);
+    slots.push({ el: mobileSlot, original: { src: logos[0].src, alt: logos[0].alt } });
+  }
+  var media = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  var reduceMotion = !!(media && media.matches);
+  var current = 0, timer = null, fadeTimer = null;
+  slots.forEach(function (slot) { slot.el.classList.add('institution-logo-slot'); });
+
+  function isHome() {
+    var route = location.hash.replace(/^#\/?/, '').split(/[?&]/)[0];
+    return !route || route === 'home';
+  }
+  function show(index) {
+    if (index < 0 || index >= logos.length) return;
+    current = index;
+    slots.forEach(function (slot) { slot.el.classList.add('is-fading'); });
+    clearTimeout(fadeTimer);
+    fadeTimer = setTimeout(function () {
+      slots.forEach(function (slot) {
+        slot.el.setAttribute('src', logos[index].src);
+        slot.el.setAttribute('alt', logos[index].alt);
+        slot.el.setAttribute('title', logos[index].alt);
+        slot.el.classList.remove('is-fading');
+      });
+    }, reduceMotion ? 0 : 260);
+  }
+  function reset() {
+    clearInterval(timer); timer = null;
+    clearTimeout(fadeTimer);
+    slots.forEach(function (slot) {
+      slot.el.classList.remove('is-fading');
+      slot.el.setAttribute('src', slot.original.src);
+      slot.el.setAttribute('alt', slot.original.alt);
+      slot.el.removeAttribute('title');
+    });
+  }
+  function sync() {
+    reset();
+    if (!isHome() || reduceMotion || document.hidden) return;
+    current = 0;
+    timer = setInterval(function () {
+      if (!isHome() || document.hidden) return;
+      show((current + 1) % logos.length);
+    }, 3000);
+  }
+  window.addEventListener('hashchange', sync);
+  document.addEventListener('visibilitychange', sync);
+  if (media && media.addEventListener) media.addEventListener('change', function (e) {
+    reduceMotion = e.matches; sync();
+  });
+  sync();
+})();
 </script>
 </body>
 </html>
