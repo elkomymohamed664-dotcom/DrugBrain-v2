@@ -866,6 +866,26 @@ main{position:relative;z-index:1}
 .hero-tagline{display:inline-flex;align-items:center;gap:10px;width:fit-content;max-width:100%;margin:0 0 15px;padding:11px 17px;border:1px solid rgba(226,197,133,.76);border-radius:999px;background:linear-gradient(120deg,rgba(215,194,148,.2),rgba(18,47,41,.92) 72%);box-shadow:0 0 0 4px rgba(215,194,148,.055),0 9px 25px rgba(0,0,0,.2),inset 0 1px rgba(255,248,220,.11);color:#f4e2b5;font-family:Plex,Manrope,sans-serif;font-size:18px;line-height:1.45;font-weight:700;letter-spacing:0}
 .hero-tagline:before{content:"✦";display:grid;place-items:center;flex:0 0 25px;width:25px;height:25px;border:1px solid rgba(226,197,133,.45);border-radius:50%;background:rgba(215,194,148,.11);color:var(--gold2);font-size:13px;text-shadow:0 0 11px rgba(241,211,151,.55)}
 @media(max-width:640px){.hero-tagline{font-size:15px;padding:9px 13px;gap:8px;margin:0 auto 12px}.hero-tagline:before{flex-basis:22px;width:22px;height:22px;font-size:12px}}
+
+/* v20 · quick evidence panels on the botanical cards */
+.plant-quick{margin:15px 0 17px;padding:13px 14px 11px;border:1px solid #c9b98f;border-radius:10px;background:linear-gradient(145deg,#f1eadb,#e8e0ce);color:#243b2d;box-shadow:0 6px 18px rgba(0,0,0,.16)}
+.plant-quick-head{display:flex;align-items:center;gap:8px;padding-bottom:9px;border-bottom:1px solid #c9b98f;color:#314d38}
+.plant-quick-head strong{font-family:Plex,Manrope,sans-serif;font-size:13px;letter-spacing:.1px}
+.plant-quick-mark{display:grid;place-items:center;width:24px;height:24px;flex:0 0 24px;border-radius:50%;background:#294a39;color:#f3dfb2;font-size:13px}
+.plant-quick-en{margin-inline-start:auto;color:#687460;font-family:Manrope,sans-serif;font-size:8px;letter-spacing:1px;white-space:nowrap}
+.plant-quick dl{margin:0}
+.plant-quick-row{padding:9px 0 8px;border-bottom:1px solid rgba(71,92,66,.19)}
+.plant-quick-row dt{margin:0 0 3px;color:#6e654d;font-size:9px;font-weight:700;letter-spacing:.2px}
+.plant-quick-row dd{margin:0;color:#263a2d;font-size:11px;line-height:1.7}
+.plant-quick-source{padding-top:9px;display:flex;align-items:start;gap:8px;flex-wrap:wrap;color:#70664f;font-size:9px;font-weight:700}
+.plant-quick-source .citations{display:flex;gap:5px;flex-wrap:wrap;margin:0;font-size:9px}
+.plant-quick .citation{color:#315f43;text-underline-offset:2px}
+.plant-quick .citation:hover{color:#805d20}
+.plant-quick.is-alert{border-color:#bd8470;background:linear-gradient(145deg,#f3e6dc,#ead8cb)}
+.plant-quick.is-alert .plant-quick-head{border-color:#d5b0a1;color:#783e32}
+.plant-quick.is-alert .plant-quick-mark{background:#7a3d32;color:#fff0dc}
+@media(max-width:860px){.plant-quick{padding:12px 12px 10px}.plant-quick-row dd{font-size:10px}}
+@media(max-width:640px){.plant-quick{margin:12px 0 15px;padding:13px 14px 11px}.plant-quick-head strong{font-size:14px}.plant-quick-row dt{font-size:10px}.plant-quick-row dd{font-size:12px;line-height:1.75}}
 </style>
 </head>
 <body>
@@ -1228,7 +1248,7 @@ const plantInfo={
  ginger:{name:pair('الزنجبيل','Ginger'),latin:'Zingiber officinale',evidence:pair('دليل محدود لدوار الحركة','Limited evidence for motion sickness'),
   summary:pair('قد يساعد بعض أنواع الغثيان، لكن فائدته لدوار السفر مش مثبتة بشكل قوي.','It may help some types of nausea, but evidence for travel sickness is not strong.'),
   possible:pair('ممكن تحس براحة، أو ما تحسّش بفرق. وممكن يحصل حرقان، اضطراب معدة، إسهال أو تهيّج بالفم والحلق.','You may feel better or notice no benefit. Heartburn, stomach upset, diarrhoea, or mouth and throat irritation can occur.'),
-  action:pair('ابدأ باحتياطات السفر البسيطة. ما تعتمدش على مكمل زنجبيل بدل التقييم أو العلاج المناسب، وراجع الصيدلي قبل أي مستحضر مركز.','Start with simple travel measures. Do not rely on a ginger supplement instead of appropriate assessment or treatment; check before using a concentrated product.'),refs:['ginger','cdcHerbs']},
+  action:pair('ابدأ باحتياطات السفر البسيطة. ما تعتمدش على مكمل زنجبيل بدل التقييم أو العلاج المناسب، وراجع الصيدلي قبل أي مستحضر مركز.','Start with simple travel measures. Do not rely on a ginger supplement instead of appropriate assessment or treatment; check before using a concentrated product.'),refs:['ginger','travel','cdcHerbs']},
  mint:{name:pair('النعناع الفلفلي','Peppermint'),latin:'Mentha × piperita',evidence:pair('مش علاج مثبت لدوار السفر','Not proven for motion sickness'),
   summary:pair('قد يفيد بعض أعراض الهضم، لكن ريحته أو شايه أو زيته مش علاج مثبت لدوار الحركة.','It may help certain digestive symptoms, but its scent, tea and oil are not established treatments for motion sickness.'),
   possible:pair('النتيجة ممكن تكون بلا تحسّن. المستحضرات بالفم قد تعمل حموضة أو غثيان، والزيت قد يسبب تهيّجًا أو حساسية.','There may be no improvement. Oral products can cause heartburn or nausea; oil may cause irritation or allergy.'),
@@ -1237,6 +1257,23 @@ const plantInfo={
   summary:pair('نبات سام بقلويدات تروبان؛ مش شاي سفر ولا خيار للاستخدام الذاتي. وجود قلويد دوائي فيه لا يجعل النبات الخام دواءً مأمونًا.','A toxic tropane-alkaloid plant, not a travel tea or a self-care option. Containing a medicinal alkaloid does not make the raw plant a safe medicine.'),
   possible:pair('التسمم قد يسبب جفاف فم، اتساع حدقة وزغللة، خفقان، احتباس بول، ارتباك أو هلاوس؛ وقد يصل لتشنجات أو غيبوبة.','Poisoning can cause dry mouth, dilated pupils, blurred vision, a racing heart, urinary retention, confusion or hallucinations; severe cases can cause seizures or coma.'),
   action:pair('ماتستخدمش النبات أو بذوره أو أي تحضير منزلي منه. في المعرض استخدم صورة أو عينة تعليمية محكمة وغير متاحة للتذوق. لو حصل ابتلاع، اطلب مساعدة سموم فورًا وما تحاولش تسبّب قيء.','Do not use the plant, seeds or any homemade preparation. Display a picture or sealed, non-tasting educational sample. If swallowed, seek immediate poison-specialist help and do not induce vomiting.'),refs:['henbane','poison','scopolamine']}
+};
+const quickEvidence={
+ ginger:[
+  {label:pair('الفائدة المحتملة','Potential benefit'),text:pair('قد يساعد بعض أنواع الغثيان؛ الدليل لدوار الحركة محدود.','May help some kinds of nausea; evidence for motion sickness is limited.')},
+  {label:pair('أهم احتياط','Key precaution'),text:pair('قد يسبب حموضة أو اضطراب معدة. راجع المختص مع أدوية السيولة أو الحمل أو حصوات المرارة.','May cause heartburn or stomach upset. Seek professional advice with blood thinners, pregnancy, or gallstones.')},
+  {label:pair('الخطوة الآمنة','Safer next step'),text:pair('ابدأ بإجراءات السفر البسيطة، واسأل الصيدلي قبل المكملات المركزة.','Start with simple travel measures; ask a pharmacist before concentrated supplements.')}
+ ],
+ mint:[
+  {label:pair('الفائدة المحتملة','Potential benefit'),text:pair('قد يفيد بعض أعراض الهضم؛ لكنه غير مثبت لدوار الحركة.','May help some digestive symptoms; it is not established for motion sickness.')},
+  {label:pair('أهم احتياط','Key precaution'),text:pair('قد يزيد الارتجاع. الزيت المركز قد يسبب تهيّجًا أو حساسية.','May worsen reflux. Concentrated oil can cause irritation or allergy.')},
+  {label:pair('الخطوة الآمنة','Safer next step'),text:pair('ما تبلعش الزيت العطري المركز، وأبعده عن وجه الطفل وأنفه.','Do not swallow concentrated essential oil; keep it away from a child’s face and nose.')}
+ ],
+ henbane:[
+  {label:pair('الاستخدام','Use'),text:pair('نبات سام — للتعليم فقط، وليس للاستخدام الذاتي.','A toxic plant — for education only, never for self-use.')},
+  {label:pair('أهم خطر','Key danger'),text:pair('التسمم قد يسبب جفافًا وزغللة وخفقانًا أو ارتباكًا؛ وقد يصل لتشنجات أو غيبوبة.','Poisoning may cause dryness, blurred vision, palpitations or confusion; severe cases can lead to seizures or coma.')},
+  {label:pair('لو حصل ابتلاع','If swallowed'),text:pair('اطلب مساعدة سموم فورًا؛ ما تحاولش تسبّب قيء.','Seek poison-specialist help immediately; do not induce vomiting.')}
+ ]
 };
 function buildAssessment(s){
  const cards=Object.entries(plantInfo).map(([id,p])=>({id,...p,status:id==='henbane'?2:0,risks:[]}));
@@ -1334,7 +1371,8 @@ function renderResults(focus=false){
 }
 function showResults(){lastReport=buildAssessment(state);renderResults(true);}
 function renderPlants(){
- $('#plant-grid').innerHTML=Object.entries(plantInfo).map(([id,p],i)=>`<article class="plant-card"><div class="plant-picture"><img src="${images[id]}" alt="${esc(L(p.name))}" loading="lazy" width="400" height="420"><span class="plant-index">0${i+1} / HERBARIUM</span></div><div class="plant-body"><h3>${esc(L(p.name))}</h3><p class="botanical-name">${p.latin}</p><div class="evidence ${id==='henbane'?'high-alert':''}">${esc(L(p.evidence))}</div><p class="plant-description">${esc(L(p.summary))}</p>${cite(p.refs.slice(0,2))}<button type="button" class="plant-more" data-plant="${id}"><span>${t('التأثير والاحتياطات','Effects & precautions')}</span>${icon('up-right')}</button></div></article>`).join('');
+ const quickHTML=(id,p)=>`<section class="plant-quick ${id==='henbane'?'is-alert':''}" aria-label="${t('الدليل بسرعة','Quick evidence')}"><div class="plant-quick-head"><span class="plant-quick-mark">${id==='henbane'?'!':'✦'}</span><strong>${t('الدليل بسرعة','QUICK GUIDE')}</strong><span class="plant-quick-en">${t('٣ نقاط','3 POINTS')}</span></div><dl>${quickEvidence[id].map(row=>`<div class="plant-quick-row"><dt>${esc(L(row.label))}</dt><dd>${esc(L(row.text))}</dd></div>`).join('')}</dl><div class="plant-quick-source"><span>${t('المصادر','SOURCES')}</span>${cite(p.refs.slice(0,3))}</div></section>`;
+ $('#plant-grid').innerHTML=Object.entries(plantInfo).map(([id,p],i)=>`<article class="plant-card"><div class="plant-picture"><img src="${images[id]}" alt="${esc(L(p.name))}" loading="lazy" width="400" height="420"><span class="plant-index">0${i+1} / HERBARIUM</span></div><div class="plant-body"><h3>${esc(L(p.name))}</h3><p class="botanical-name">${p.latin}</p><div class="evidence ${id==='henbane'?'high-alert':''}">${esc(L(p.evidence))}</div><p class="plant-description">${esc(L(p.summary))}</p>${quickHTML(id,p)}<button type="button" class="plant-more" data-plant="${id}"><span>${t('التأثير والاحتياطات','Effects & precautions')}</span>${icon('up-right')}</button></div></article>`).join('');
 }
 function reset(){state=blankState();currentStep=0;maxReached=0;errors=[];example=null;lastReport=null;$('#results').hidden=true;$('#results').replaceChildren();renderForm(true);toast(t('بدأنا من جديد. اختار إجاباتك بنفسك.','A fresh start. Choose your own answers.'));}
 const scenarioData={reflux:{conditions:['reflux']},blood:{medicines:['blood']},child:{age:'young'},pregnancy:{preg:'pregnant',symptom:'mild'},multiple:{age:'senior',conditions:['reflux','gallstones','glaucoma','heart','urine'],medicines:['blood','sedative']}};
